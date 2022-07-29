@@ -136,29 +136,6 @@ export default class SortingVisualizer extends React.Component {
     container.style.background = "transparent";
   }
 
-  callMergeSort() {
-    this.changeInfoPanelMergeSort();
-    this.mergeSort();
-  }
-
-  changeInfoPanelMergeSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Merge Sort";
-      paragraph.innerHTML =
-        "Merge sort works by dividing the array into smaller and smaller arrays until they are 1 element large, then comparing and combining the arrays while sorting them in the process, until they are combined into one fully sorted array.\nMerge sort has an average and worst case runtime of O(n log n), making it a fast and versatile algorithm, a wonderful example of the divide and conquer paradigm.";
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
-  }
-
   callSelectionSort() {
     this.changeInfoPanelSelectionSort();
     this.selectionSort();
@@ -303,6 +280,29 @@ export default class SortingVisualizer extends React.Component {
     animateSort(animations, SLOW_ALG_ANIMATION_SPEED_MS);
   }
 
+  callMergeSort() {
+    this.changeInfoPanelMergeSort();
+    this.mergeSort();
+  }
+
+  changeInfoPanelMergeSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Merge Sort";
+      paragraph.innerHTML =
+        "Merge sort works by dividing the array into smaller and smaller arrays until they are 1 element large, then comparing and combining the arrays while sorting them in the process, until they are combined into one fully sorted array.\nMerge sort has an average and worst case runtime of O(n log n), making it a fast and versatile algorithm, a wonderful example of the divide and conquer paradigm.";
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
+  }
+
   mergeSort() {
     const animations = getMergeSort(this.state.array);
     changeSpeedFunction();
@@ -357,7 +357,7 @@ export default class SortingVisualizer extends React.Component {
 
               </h3>
               <p id="infoPanelParagraph">
-
+                
               </p>
             </div>
           </div>

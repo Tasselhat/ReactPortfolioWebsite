@@ -24,3 +24,17 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+
+.infoPanel {
+  position: absolute;
+  height: 22vh;
+  width: 30vw;
+  right: 48px;
+  top: 60vh;
+  color: white;
+}
+
+.infoPanelHeader {
+  margin: .5em auto .5em auto;
+}

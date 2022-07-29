@@ -66,6 +66,7 @@ export default class SortingVisualizer extends React.Component {
 
     this.setState({ array });
     changeSpeedFunction();
+    this.clearInfoPanel();
     this.forceUpdate();
   }
 
@@ -94,6 +95,7 @@ export default class SortingVisualizer extends React.Component {
 
     this.setState({ array });
     changeSpeedFunction();
+    this.clearInfoPanel();
     this.forceUpdate();
   }
 
@@ -121,7 +123,63 @@ export default class SortingVisualizer extends React.Component {
 
     this.setState({ array });
     changeSpeedFunction();
+    this.clearInfoPanel();
     this.forceUpdate();
+  }
+
+  clearInfoPanel() {
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "";
+    paragraph.innerHTML = "";
+    container.style.background = "transparent";
+  }
+
+  callMergeSort() {
+    this.changeInfoPanelMergeSort();
+    this.mergeSort();
+  }
+
+  changeInfoPanelMergeSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Merge Sort";
+      paragraph.innerHTML =
+        "Merge sort works by dividing the array into smaller and smaller arrays until they are 1 element large, then comparing and combining the arrays while sorting them in the process, until they are combined into one fully sorted array.\nMerge sort has an average and worst case runtime of O(n log n), making it a fast and versatile algorithm, a wonderful example of the divide and conquer paradigm.";
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
+  }
+
+  callSelectionSort() {
+    this.changeInfoPanelSelectionSort();
+    this.selectionSort();
+  }
+
+  changeInfoPanelSelectionSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Selection Sort";
+      paragraph.innerHTML =
+        "Selection sort works by comparing every value in the unsorted array, finding the minimum of all unsorted elements and placing it at the end of the sorted array.\nSelection sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n<sup>2</sup>), it performs slightly better than bubble and gnome sort.";
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
   }
 
   selectionSort() {
@@ -158,16 +216,85 @@ export default class SortingVisualizer extends React.Component {
     }
   }
 
+  callGnomeSort() {
+    this.changeInfoPanelGnomeSort();
+    this.gnomeSort();
+  }
+
+  changeInfoPanelGnomeSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Gnome Sort";
+      paragraph.innerHTML =
+        "For gnome sort a garden gnome walks along the line of numbers one at a time, looking at the one in front of him and the one to the right of him, and swapping them if they are not in order and moving to the left, if they are in order, or there is nothing in front of him, he moves to the right once. He does this until he reaches the end of the line and he has verified each pot is in it's correct place. \nGnome sort has an average runtime of O(n<sup>2</sup>), he performs better on partially sorted arrays, but his method is generally pretty bad.";
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
+  }
+
   gnomeSort() {
     const animations = getGnomeSort(this.state.array);
     changeSpeedFunction();
     animateSort(animations, SLOW_ALG_ANIMATION_SPEED_MS);
   }
 
+  callInsertionSort() {
+    this.changeInfoPanelInsertionSort();
+    this.insertionSort();
+  }
+
+  changeInfoPanelInsertionSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Insertion Sort";
+      paragraph.innerHTML =
+        "Insertion sort works by building a sorted array one number at a time, comparing the next unsorted element to each previous sorted element until it finds no numbers smaller and inserting the number it into the sorted array.\nInsertion sort has an average runtime of O(n<sup>2</sup>) but is fast for checking if an array is already sorted, and fast if sample size is small, the best of the quadratic sorting algorithms in most cases.";
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
+  }
+
   insertionSort() {
     const animations = getInsertionSort(this.state.array);
     changeSpeedFunction();
     animateSort(animations, SLOW_ALG_ANIMATION_SPEED_MS);
+  }
+
+  callBubbleSort() {
+    this.changeInfoPanelBubbleSort();
+    this.bubbleSort();
+  }
+
+  changeInfoPanelBubbleSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Bubble Sort";
+      paragraph.innerHTML =
+        'Bubble sort works by comparing every element in the array to the one next to it and swapping the larger element to the right until it cannot swap any elements and the array is sorted, this causes large elements to "Bubble" to the top of the array. \n Bubble sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n) making it decent for verifying an already sorted array.';
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
   }
 
   bubbleSort() {
@@ -180,6 +307,29 @@ export default class SortingVisualizer extends React.Component {
     const animations = getMergeSort(this.state.array);
     changeSpeedFunction();
     animateSort(animations, FAST_ALG_ANIMATION_SPEED_MS);
+  }
+
+  callQuickSort() {
+    this.changeInfoPanelQuickSort();
+    this.quickSort();
+  }
+
+  changeInfoPanelQuickSort() {
+    if (
+      arraySizeMediaQ2.matches ||
+      arraySizeMediaQ3.matches ||
+      arraySizeMediaQ4.matches ||
+      arraySizeMediaQ5.matches
+    ) {
+      const header = document.getElementById("infoPanelHeader");
+      const paragraph = document.getElementById("infoPanelParagraph");
+      const container = document.getElementById("infoPanel");
+      header.innerHTML = "Quick Sort";
+      paragraph.innerHTML =
+        "Quick Sort works by selecting a number as a pivot (the rightmost value in this case) partitioning the array, and pushing every value larger than this pivot to the right, then repeating this process again and again until the partitions are small enough to be trivially sorted. \nQuick sort has an average runtime of O(n log n) and a worst case runtime of O(n<sup>2</sup>) such as when the selected pivot is the largest or smallest element in the array (as seen with a reversed array in this case).";
+      container.style.background =
+        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
+    }
   }
 
   quickSort() {
@@ -201,12 +351,12 @@ export default class SortingVisualizer extends React.Component {
               style={{ height: `${value}px` }}
             ></div>
           ))}
-          <div className="infoPanel">
+          <div className="infoPanel" id="infoPanel">
             <div>
-              <h3>
+              <h3 className="infoPanelHeader" id="infoPanelHeader">
 
               </h3>
-              <p>
+              <p id="infoPanelParagraph">
 
               </p>
             </div>
@@ -235,12 +385,18 @@ export default class SortingVisualizer extends React.Component {
           <button onClick={() => this.reversedArray()}>
             Generate Reversed Array
           </button>
-          <button onClick={() => this.bubbleSort()}> Bubble sort </button>
-          <button onClick={() => this.insertionSort()}> Insertion Sort </button>
-          <button onClick={() => this.gnomeSort()}> Gnome Sort </button>
-          <button onClick={() => this.selectionSort()}> Selection Sort </button>
-          <button onClick={() => this.mergeSort()}> Merge Sort </button>
-          <button onClick={() => this.quickSort()}> Quick Sort </button>
+          <button onClick={() => this.callBubbleSort()}> Bubble sort </button>
+          <button onClick={() => this.callInsertionSort()}>
+            {" "}
+            Insertion Sort{" "}
+          </button>
+          <button onClick={() => this.callGnomeSort()}> Gnome Sort </button>
+          <button onClick={() => this.callSelectionSort()}>
+            {" "}
+            Selection Sort{" "}
+          </button>
+          <button onClick={() => this.callMergeSort()}> Merge Sort </button>
+          <button onClick={() => this.callQuickSort()}> Quick Sort </button>
         </div>
       </div>
     );

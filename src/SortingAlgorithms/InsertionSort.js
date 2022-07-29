@@ -13,7 +13,7 @@ function insertionSort(auxiliaryArray, animations) {
 
   for (let i = 1; i < length; i++) {
     // Main loop for each element in array,
-    // Atarts at 1 so theres space for the first element in the "sorted" pile/array
+    // Starts at 1 so theres space for the first element in the "sorted" pile/array
     let current = auxiliaryArray[i]; // Current element of main loop
 
     let j = i - 1; // Compare to previous element of our array

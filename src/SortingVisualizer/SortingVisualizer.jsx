@@ -210,7 +210,7 @@ export default class SortingVisualizer extends React.Component {
       const container = document.getElementById("infoPanel");
       header.innerHTML = "Gnome Sort";
       paragraph.innerHTML =
-        "For gnome sort a garden gnome walks along the line of numbers one at a time, looking at the one in front of him and the one to the right of him, and swapping them if they are not in order and moving to the left, if they are in order, or there is nothing in front of him, he moves to the right once. He does this until he reaches the end of the line and he has verified each pot is in it's correct place. \nGnome sort has an average runtime of O(n<sup>2</sup>), he performs better on partially sorted arrays, but his method is generally pretty bad.";
+        "A garden gnome walks along the line of numbers one at a time, looking at the one in front of him and the one to the right of him, and swapping them if they are not in order and moving to the left, if the numbers are in order, or there is nothing in front of him, he moves to the right once. He does this until he reaches the end of the line and he has verified each number is in it's correct place. \nGnome sort has an average runtime of O(n<sup>2</sup>), he performs better on partially sorted arrays, but his method is generally pretty bad.";
       container.style.background =
         "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
     }
@@ -239,7 +239,7 @@ export default class SortingVisualizer extends React.Component {
       const container = document.getElementById("infoPanel");
       header.innerHTML = "Insertion Sort";
       paragraph.innerHTML =
-        "Insertion sort works by building a sorted array one number at a time, comparing the next unsorted element to each previous sorted element until it finds no numbers smaller and inserting the number it into the sorted array.\nInsertion sort has an average runtime of O(n<sup>2</sup>) but is fast for checking if an array is already sorted, and fast if sample size is small, the best of the quadratic sorting algorithms in most cases.";
+        "Insertion sort works by building a sorted array one number at a time, comparing the next unsorted element to each previous sorted element until it finds no numbers smaller and inserting the number into the sorted array.\nInsertion sort has an average runtime of O(n<sup>2</sup>) but is fast for checking if an array is already sorted, and fast if sample size is small, it is the best of the quadratic sorting algorithms in most cases.";
       container.style.background =
         "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
     }
@@ -268,7 +268,7 @@ export default class SortingVisualizer extends React.Component {
       const container = document.getElementById("infoPanel");
       header.innerHTML = "Bubble Sort";
       paragraph.innerHTML =
-        'Bubble sort works by comparing every element in the array to the one next to it and swapping the larger element to the right until it cannot swap any elements and the array is sorted, this causes large elements to "Bubble" to the top of the array. \n Bubble sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n) making it decent for verifying an already sorted array.';
+        'Bubble sort works by comparing every element in the array to the one next to it and swapping larger elements to the right, repeating this process until it cannot swap any elements and the array is sorted, this causes large elements to "Bubble" to the top of the array. \n Bubble sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n) making it decent for verifying an already sorted array.';
       container.style.background =
         "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
     }

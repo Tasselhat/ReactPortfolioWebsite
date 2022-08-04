@@ -25,7 +25,6 @@
   flex-wrap: wrap;
 }
 
-
 .infoPanel {
   position: absolute;
   height: 22vh;
@@ -36,5 +35,5 @@
 }
 
 .infoPanelHeader {
-  margin: .5em auto .5em auto;
+  margin: 0.5em auto 0.5em auto;
 }

@@ -30,7 +30,7 @@ let ARRAY_SIZE = 100;
 if (arraySizeMediaQ1.matches) {
   ARRAY_SIZE = 150;
 } else if (arraySizeMediaQ2.matches) {
-  ARRAY_SIZE = 200;
+  ARRAY_SIZE = 250;
 } else if (arraySizeMediaQ3.matches) {
   ARRAY_SIZE = 350;
 } else if (arraySizeMediaQ4.matches) {

@@ -7,7 +7,11 @@ import { getMergeSort } from "../SortingAlgorithms/MergeSort.js";
 import { getQuickSort } from "../SortingAlgorithms/QuickSort.js";
 import { getSelectionSort } from "../SortingAlgorithms/SelectionSort";
 
+import Header from "../Components/Header.js";
+import Footer from "../Components/Footer.js";
+
 import "./SortingVisualizer.css";
+import "../General.css";
 import "../index.css";
 
 const arraySizeMediaQ1 = window.matchMedia(
@@ -342,62 +346,61 @@ export default class SortingVisualizer extends React.Component {
     const { array } = this.state;
 
     return (
-      <div className="container">
-        <div className="array_container">
-          {array.map((value, idx) => (
-            <div
-              className="array_bar"
-              key={idx}
-              style={{ height: `${value}px` }}
-            ></div>
-          ))}
-          <div className="infoPanel" id="infoPanel">
-            <div>
-              <h3 className="infoPanelHeader" id="infoPanelHeader">
-
-              </h3>
-              <p id="infoPanelParagraph">
-                
-              </p>
+      <div>
+        <Header />
+        <div className="container">
+          <div className="array_container">
+            {array.map((value, idx) => (
+              <div
+                className="array_bar"
+                key={idx}
+                style={{ height: `${value}px` }}
+              ></div>
+            ))}
+            <div className="infoPanel" id="infoPanel">
+              <div>
+                <h3 className="infoPanelHeader" id="infoPanelHeader"></h3>
+                <p id="infoPanelParagraph"></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="control_container">
-          <div className="speedSliderContainer">
-            <p className="speedSliderTitle">Speed</p>
-            &lt; Faster
-            <input
-              id="changeSpeed"
-              className="speedSlider"
-              type="range"
-              min="1"
-              max="10"
-              onChange={this.handleChange}
-            />
-            Slower &gt;
+          <div className="control_container">
+            <div className="speedSliderContainer">
+              <p className="speedSliderTitle">Speed</p>
+              &lt; Faster
+              <input
+                id="changeSpeed"
+                className="speedSlider"
+                type="range"
+                min="1"
+                max="10"
+                onChange={this.handleChange}
+              />
+              Slower &gt;
+            </div>
+            <button onClick={() => this.resetArray()}>
+              Generate Random Array
+            </button>
+            <button onClick={() => this.linearArray()}>
+              Generate Random Linear Array
+            </button>
+            <button onClick={() => this.reversedArray()}>
+              Generate Reversed Array
+            </button>
+            <button onClick={() => this.callBubbleSort()}> Bubble sort </button>
+            <button onClick={() => this.callInsertionSort()}>
+              Insertion Sort
+            </button>
+            <button onClick={() => this.callGnomeSort()}> Gnome Sort </button>
+            <button onClick={() => this.callSelectionSort()}>
+              Selection Sort
+            </button>
+            <button onClick={() => this.callMergeSort()}> Merge Sort </button>
+            <button onClick={() => this.callQuickSort()}> Quick Sort </button>
           </div>
-          <button onClick={() => this.resetArray()}>
-            Generate Random Array
-          </button>
-          <button onClick={() => this.linearArray()}>
-            Generate Random Linear Array
-          </button>
-          <button onClick={() => this.reversedArray()}>
-            Generate Reversed Array
-          </button>
-          <button onClick={() => this.callBubbleSort()}> Bubble sort </button>
-          <button onClick={() => this.callInsertionSort()}>
-            {" "}
-            Insertion Sort{" "}
-          </button>
-          <button onClick={() => this.callGnomeSort()}> Gnome Sort </button>
-          <button onClick={() => this.callSelectionSort()}>
-            {" "}
-            Selection Sort{" "}
-          </button>
-          <button onClick={() => this.callMergeSort()}> Merge Sort </button>
-          <button onClick={() => this.callQuickSort()}> Quick Sort </button>
         </div>
+        <div className="footer-background-overlay"></div>
+        <Footer />
       </div>
     );
   }
@@ -446,14 +449,6 @@ function changeSpeedFunction() {
 
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function arraysAreEqual(array1, array2) {
-  if (array1.length !== array2.length) return false;
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) return false;
-  }
-  return true;
 }
 
 function shuffle(array) {

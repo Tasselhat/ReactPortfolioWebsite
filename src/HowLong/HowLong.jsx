@@ -1,6 +1,10 @@
 import React from "react";
+
 import { calculateAge } from "./HowLong.js";
+import Header from "../Components/Header.js";
+import Footer from "../Components/Footer.js";
 import "./Main.css";
+import "../General.css";
 import "../index.css";
 
 export default class HowLong extends React.Component {
@@ -16,6 +20,8 @@ export default class HowLong extends React.Component {
       .slice(0, 10);
   }
 
+  // Control
+
   clearCalculations() {
     document.getElementById("years-alive-p").innerHTML = "";
     document.getElementById("days-alive-p").innerHTML = "";
@@ -24,6 +30,48 @@ export default class HowLong extends React.Component {
     document.getElementById("hours-minutes-seconds-p").innerHTML = "";
     document.getElementById("dayofweek").innerHTML = "";
     document.getElementById("happy-new-year").innerHTML = "";
+  }
+
+  submitDates() {
+    let yearBorn = 2001;
+    let monthBorn = 2001;
+    let dayBorn = 2001;
+    let desiredYear = 2001;
+    let desiredMonth = 2001;
+    let desiredD = 2001;
+    const datePicker = document.getElementById("date-of-birth-selector").value;
+    const dateOfBirth = new Date(datePicker);
+    if (!!dateOfBirth.valueOf()) {
+      yearBorn = dateOfBirth.getFullYear();
+      monthBorn = dateOfBirth.getMonth();
+      dayBorn = dateOfBirth.getDate();
+    } else {
+      alert("Invalid Date Selection.");
+      return;
+    }
+
+    const desiredDatePicker = document.getElementById(
+      "current-date-selector"
+    ).value;
+    const desiredDate = new Date(desiredDatePicker);
+    if (!!desiredDate.valueOf()) {
+      desiredYear = desiredDate.getFullYear();
+      desiredMonth = desiredDate.getMonth();
+      desiredD = desiredDate.getDate();
+    }
+    console.log(dateOfBirth, desiredDate);
+    const dayAndYearsAliveFinal = calculateAge(
+      desiredMonth,
+      desiredD,
+      desiredYear,
+      monthBorn,
+      dayBorn,
+      yearBorn
+    );
+    const daysAlive = dayAndYearsAliveFinal[0];
+    const yearsAlive = dayAndYearsAliveFinal[1];
+    this.displayDaysAlive(daysAlive, yearsAlive);
+    this.displayDayOfTheWeekBorn(dateOfBirth);
   }
 
   //View
@@ -85,124 +133,87 @@ export default class HowLong extends React.Component {
       "Hopefully you treasured every single second!";
   }
 
-  submitDates() {
-    let yearBorn = 2001;
-    let monthBorn = 2001;
-    let dayBorn = 2001;
-    let desiredYear = 2001;
-    let desiredMonth = 2001;
-    let desiredD = 2001;
-    const datePicker = document.getElementById("date-of-birth-selector").value;
-    const dateOfBirth = new Date(datePicker);
-    if (!!dateOfBirth.valueOf()) {
-      yearBorn = dateOfBirth.getFullYear();
-      monthBorn = dateOfBirth.getMonth();
-      dayBorn = dateOfBirth.getDate();
-    } else {
-      alert("Invalid Date Selection.");
-      return;
-    }
-
-    const desiredDatePicker = document.getElementById(
-      "current-date-selector"
-    ).value;
-    const desiredDate = new Date(desiredDatePicker);
-    if (!!desiredDate.valueOf()) {
-      desiredYear = desiredDate.getFullYear();
-      desiredMonth = desiredDate.getMonth();
-      desiredD = desiredDate.getDate();
-    }
-    console.log(dateOfBirth, desiredDate);
-    const dayAndYearsAliveFinal = calculateAge(
-      desiredMonth,
-      desiredD,
-      desiredYear,
-      monthBorn,
-      dayBorn,
-      yearBorn
-    );
-    const daysAlive = dayAndYearsAliveFinal[0];
-    const yearsAlive = dayAndYearsAliveFinal[1];
-    this.displayDaysAlive(daysAlive, yearsAlive);
-    this.displayDayOfTheWeekBorn(dateOfBirth);
-  }
-
   render() {
     return (
-      <main id="page" className="main-container" role="main">
-        <img
-          className="background-divider-img"
-          src="../images/5ef2e559f911d339e9e83b94_image-divider-bottom.png"
-          alt=""
-        ></img>
-        <section className="HowLongApplication">
-          <div className="content-wrapper">
-            <h1
-              style={{
-                fontSize: "20px",
-                textAlign: "center",
-              }}
-            >
-              How Long Have I Been Alive?
-            </h1>
-            <div className="HowLongDisplay" id="HowLongDiplay">
-              <div className="date-inputs">
-                <div className="date-selector">
-                  <h3>
-                    Date of birth
-                    <input
-                      id="date-of-birth-selector"
-                      className="date-of-birth-selector"
-                      type="date"
-                    ></input>
-                  </h3>
+      <div>
+        <Header />
+        <main id="page" className="main-container" role="main">
+          <img
+            className="background-divider-img"
+            src="../images/5ef2e559f911d339e9e83b94_image-divider-bottom.png"
+            alt=""
+          ></img>
+          <section className="HowLongApplication">
+            <div className="content-wrapper">
+              <h1
+                style={{
+                  fontSize: "20px",
+                  textAlign: "center",
+                }}
+              >
+                How Long Have I Been Alive?
+              </h1>
+              <div className="HowLongDisplay" id="HowLongDiplay">
+                <div className="date-inputs">
+                  <div className="date-selector">
+                    <h3>
+                      Date of birth
+                      <input
+                        id="date-of-birth-selector"
+                        className="date-of-birth-selector"
+                        type="date"
+                      ></input>
+                    </h3>
+                  </div>
+                  <div className="date-selector">
+                    <h3>
+                      Current date
+                      <input
+                        id="current-date-selector"
+                        className="current-date-selector"
+                        type="date"
+                      ></input>
+                    </h3>
+                  </div>
                 </div>
-                <div className="date-selector">
-                  <h3>
-                    Current date
-                    <input
-                      id="current-date-selector"
-                      className="current-date-selector"
-                      type="date"
-                    ></input>
-                  </h3>
+                <div className="submit-clear-buttons">
+                  <div>
+                    <button
+                      className="submit-button"
+                      onClick={() => this.submitDates()}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      className="clear-button"
+                      onClick={() => this.clearCalculations()}
+                    >
+                      Clear
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className="submit-clear-buttons">
-                <div>
-                  <button
-                    className="submit-button"
-                    onClick={() => this.submitDates()}
-                  >
-                    Submit
-                  </button>
-                </div>
-                <div>
-                  <button
-                    className="clear-button"
-                    onClick={() => this.clearCalculations()}
-                  >
-                    Clear
-                  </button>
-                </div>
+              <div
+                style={{
+                  position: "relative",
+                }}
+              >
+                <p id="years-alive-p"></p>
+                <p id="days-alive-p"></p>
+                <p id="months-alive-p"></p>
+                <p id="weeks-alive-p"></p>
+                <p id="hours-minutes-seconds-p"></p>
+                <p id="dayofweek"></p>
+                <p id="happy-new-year"></p>
               </div>
             </div>
-            <div
-              style={{
-                position: "relative",
-              }}
-            >
-              <p id="years-alive-p"></p>
-              <p id="days-alive-p"></p>
-              <p id="months-alive-p"></p>
-              <p id="weeks-alive-p"></p>
-              <p id="hours-minutes-seconds-p"></p>
-              <p id="dayofweek"></p>
-              <p id="happy-new-year"></p>
-            </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+        <div className="footer-background-overlay"></div>
+        <Footer />
+      </div>
     );
   }
 }

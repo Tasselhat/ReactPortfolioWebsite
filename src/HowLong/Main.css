@@ -1,0 +1,173 @@
+.main-container {
+  min-height: 100vh;
+}
+
+.background-divider-img {
+  width: 100%;
+}
+
+.content-wrapper {
+  padding: 64px 6vw 0 6vw;
+  box-sizing: border-box;
+}
+.HowLongApplication {
+  max-width: 3840px;
+  margin-right: auto;
+  margin-left: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.HowLongDisplay {
+  max-width: 3840px;
+  margin-right: auto;
+  margin-left: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.date-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-selector {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.date-of-birth-selector {
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+
+  background: transparent;
+  border-color: #000000;
+  color: #000000;
+  border-style: solid;
+  cursor: pointer;
+  border-width: 2px;
+  border-radius: 2px;
+  padding: 0.6vw 0.7vw 0.6vw 0.7vw;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
+  transition: background-color 200ms, color 60ms, padding 200ms, margin 200ms;
+}
+
+.date-of-birth-selector:hover {
+  background-color: #ffcd00;
+  color: black;
+  padding-left: 1.1vw;
+  padding-right: 1.1vw;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.current-date-selector {
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc(0.2 * 1vw + 1rem);
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+
+  background: transparent;
+  border-color: #000000;
+  color: #000000;
+  border-style: solid;
+  cursor: pointer;
+  border-width: 2px;
+  border-radius: 2px;
+  padding: 0.6vw 0.7vw 0.6vw 0.7vw;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
+  transition: background-color 200ms, color 60ms, padding 200ms, margin 200ms;
+}
+
+.current-date-selector:hover {
+  background-color: #ffcd00;
+  color: black;
+  padding-left: 1.1vw;
+  padding-right: 1.1vw;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.submit-clear-buttons {
+  margin: 19px 0 0 0.5vw;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.submit-button {
+  background-color: #182b49;
+  color: white;
+  border: none;
+  vertical-align: baseline;
+  font-weight: bold;
+  cursor: pointer;
+  height: 44px;
+  width: 70px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
+  transition: box-shadow 199ms, opacity 150ms, margin 100ms;
+}
+
+.submit-button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.submit-button:active {
+  opacity: 0.6;
+  box-shadow: none;
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+.clear-button {
+  background-color: #182b49;
+  color: white;
+  border: none;
+  vertical-align: baseline;
+  font-weight: bold;
+  cursor: pointer;
+  height: 44px;
+  width: 70px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
+  transition: box-shadow 199ms, opacity 150ms, margin 100ms;
+}
+
+.clear-button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.clear-button:active {
+  opacity: 0.6;
+  box-shadow: none;
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+@media (min-width: 0) and (max-width: 547px) {
+  .clear-button {
+    margin-top: 20px;
+  }
+  .submit-button {
+    margin-top: 20px;
+  }
+}

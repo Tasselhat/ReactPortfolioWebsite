@@ -20,10 +20,10 @@ export default class Projects extends React.Component {
       <div>
         <Header />
         <img
-            className="background-divider-img"
-            src={backgroundDividerImg}
-            alt=""
-          />
+          className="background-divider-img"
+          src={backgroundDividerImg}
+          alt=""
+        />
         <main id="page" className="main-container-resume" role="main">
           <div className="Resume-Wrapper">
             <header>
@@ -35,7 +35,9 @@ export default class Projects extends React.Component {
               </p>
             </header>
             <div className="Education-Wrapper">
-              <h2><u>EDUCATION</u></h2>
+              <h2>
+                <u>EDUCATION</u>
+              </h2>
               <p>
                 B.S. in Psychology with a Specialization in Developmental
                 Psychology / 3.96 GPA / <b>UC San Diego </b>/ September 2021 -
@@ -47,7 +49,9 @@ export default class Projects extends React.Component {
               </p>
             </div>
             <div className="Work-Experience-Wrapper">
-              <h2><u>WORK EXPERIENCE</u></h2>
+              <h2>
+                <u>WORK EXPERIENCE</u>
+              </h2>
               <h3>San Diego UNITED Training Center</h3>
               <p>
                 Gymnastics/Camp Coach November 2021 - Present (San Diego, CA)
@@ -86,7 +90,9 @@ export default class Projects extends React.Component {
               </li>
             </div>
             <div className="Skills-Wrapper">
-              <h3><u>SKILLS & CHARACTERISTICS</u></h3>
+              <h3>
+                <u>SKILLS & CHARACTERISTICS</u>
+              </h3>
               <div>
                 <li> Leadership and Teaching experience</li>
                 <li>
@@ -101,7 +107,9 @@ export default class Projects extends React.Component {
               </div>
             </div>
             <div className="Languages-Wrapper">
-              <h3><u>PROGRAMMING LANGUAGES & TOOLS</u></h3>
+              <h3>
+                <u>PROGRAMMING LANGUAGES & TOOLS</u>
+              </h3>
               <div>
                 <li> Javascript, Vannila and React</li>
                 <li> Python</li>
@@ -114,7 +122,9 @@ export default class Projects extends React.Component {
               </div>
             </div>
             <div className="Leadership-Awards-Wrapper">
-              <h3><u>LEADERSHIP & AWARDS</u></h3>
+              <h3>
+                <u>LEADERSHIP & AWARDS</u>
+              </h3>
               <p>
                 <b>Eagle Scout Award </b>/ Boy Scouts of America - Awarded July
                 18, 2016

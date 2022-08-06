@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import UCSDSeal from "../images/UCSD_Seal.png";
 import { ReactComponent as GithubLogo } from "../images/github.svg";
@@ -8,8 +8,8 @@ import { ReactComponent as FacebookLogo } from "../images/facebook.svg";
 import { ReactComponent as GmailLogo } from "../images/gmail.svg";
 import { ReactComponent as InstagramLogo } from "../images/instagram.svg";
 
-import "../Header.css"
-import "../General.css"
+import "../Header.css";
+import "../General.css";
 
 class Header extends Component {
   render() {
@@ -30,7 +30,9 @@ class Header extends Component {
                   </button>
                 </a>
                 <a className="header-nav-item" href="/About">
-                  <button className="header-nav-button about-button">About</button>
+                  <button className="header-nav-button about-button">
+                    About
+                  </button>
                 </a>
                 <a className="header-nav-item" href="/Resume">
                   <button className="header-nav-button resume-button">

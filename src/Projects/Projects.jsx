@@ -7,7 +7,7 @@ import backgroundDividerImg from "../images/5ef2e559f911d339e9e83b94_image-divid
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
 import "./Main.css";
-import "../General.css"
+import "../General.css";
 import "../index.css";
 
 export default class Projects extends React.Component {

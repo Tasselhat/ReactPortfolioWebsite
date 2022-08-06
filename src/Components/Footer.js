@@ -83,14 +83,21 @@ class Footer extends Component {
           <div className="footer-column">
             <div className="footer-column-content">
               <div className="line"></div>
-              <a href="/Contact" className="footer-link padding-bottom-24">Contact Me</a>
+              <a href="/Contact" className="footer-link padding-bottom-24">
+                Contact Me
+              </a>
               <a
                 href="mailto: tim.b.schneider@gmail.com"
                 className="footer-link padding-bottom-24"
               >
                 Tim.b.schneider@gmail.com
               </a>
-              <a href="tel:5035167078" className="footer-link padding-bottom-24">(503)-516-7078</a>
+              <a
+                href="tel:5035167078"
+                className="footer-link padding-bottom-24"
+              >
+                (503)-516-7078
+              </a>
               <div className="line"></div>
               <div>
                 <a

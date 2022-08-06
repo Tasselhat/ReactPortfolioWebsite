@@ -22,22 +22,25 @@ export function calculateAge(
     yearsAlive += 1;
   }
 
-
   let daysAlive = 0; //adds total days you have been alive cumulatively starting from 0
 
-  if (yearBorn === currentYear && currentMonth === monthBorn && currentDay === dayBorn) {
+  if (
+    yearBorn === currentYear &&
+    currentMonth === monthBorn &&
+    currentDay === dayBorn
+  ) {
     daysAlive = 0;
   } else if (yearBorn === currentYear) {
-    daysAlive += daysAliveCalculator(monthBorn, currentMonth-1, yearBorn);
-    daysAlive -= dayBorn
-    daysAlive += currentDay
-  } else if (currentYear - yearBorn === 1){
-    daysAlive += daysAliveCalculator(monthBorn+1, 12, yearBorn); //add days alive from first year
+    daysAlive += daysAliveCalculator(monthBorn, currentMonth - 1, yearBorn);
+    daysAlive -= dayBorn;
+    daysAlive += currentDay;
+  } else if (currentYear - yearBorn === 1) {
+    daysAlive += daysAliveCalculator(monthBorn + 1, 12, yearBorn); //add days alive from first year
     daysAlive = daysAlive - dayBorn; //subtract day born so the days of the month before you were born aren't added to total
     daysAlive += daysAliveCalculator(1, currentMonth, currentYear); //1 to start at January, end before the current month (add days from current year alive)
     daysAlive += currentDay; //add the current day of the month to total
   } else {
-    daysAlive += daysAliveCalculator(monthBorn+1, 12, yearBorn); //add days alive from first year
+    daysAlive += daysAliveCalculator(monthBorn + 1, 12, yearBorn); //add days alive from first year
     daysAlive = daysAlive - dayBorn; //subtract day born so the days of the month before you were born aren't added to total
     for (let year = yearBorn + 1; year < currentYear; year++) {
       /* iterates through each year adding the days to the total accounting for leap years 
@@ -47,9 +50,9 @@ export function calculateAge(
     daysAlive += daysAliveCalculator(1, currentMonth, currentYear); //1 to start at January, end before the current month (add days from current year alive)
     daysAlive += currentDay; //add the current day of the month to total
   }
-  
+
   const daysAliveFinal = daysAlive;
-  
+
   return [daysAliveFinal, yearsAlive];
 }
 

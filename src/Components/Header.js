@@ -24,26 +24,26 @@ class Header extends Component {
                 </Link>
               </nav>
               <nav className="header-nav-list">
-                <a className="header-nav-item" href="/Projects">
+                <Link to="/Projects" className="header-nav-item">
                   <button className="header-nav-button projects-button">
                     Projects
                   </button>
-                </a>
-                <a className="header-nav-item" href="/About">
+                </Link>
+                <Link to="/About" className="header-nav-item">
                   <button className="header-nav-button about-button">
                     About
                   </button>
-                </a>
-                <a className="header-nav-item" href="/Resume">
+                </Link>
+                <Link to="/Resume" className="header-nav-item">
                   <button className="header-nav-button resume-button">
                     Resume
                   </button>
-                </a>
-                <a className="header-nav-item" href="/Contact">
+                </Link>
+                <Link to="/Contact" className="header-nav-item">
                   <button className="header-nav-button contact-button">
                     Contact
                   </button>
-                </a>
+                </Link>
               </nav>
             </div>
             <div className="header-socials-right">

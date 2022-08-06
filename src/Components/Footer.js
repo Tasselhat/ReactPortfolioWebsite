@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as GithubLogo } from "../images/github.svg";
 import { ReactComponent as LinkedinLogo } from "../images/linkedin.svg";
@@ -27,24 +28,24 @@ class Footer extends Component {
               <div className="line"></div>
               <ul>
                 <li className="list-item">
-                  <a href="Projects" className="footer-link">
+                  <Link to="/Projects" className="footer-link">
                     Projects
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <a href="About" className="footer-link">
+                  <Link to="/About" className="footer-link">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <a href="Tools" className="footer-link">
+                  <Link to="/Tools" className="footer-link">
                     Tools
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <a href="Resume" className="footer-link">
+                  <Link to="/Resume" className="footer-link">
                     Resume
-                  </a>
+                  </Link>
                 </li>
                 <li className="list-item">
                   <a className="footer-link"></a>
@@ -83,9 +84,9 @@ class Footer extends Component {
           <div className="footer-column">
             <div className="footer-column-content">
               <div className="line"></div>
-              <a href="/Contact" className="footer-link padding-bottom-24">
+              <Link to="/Contact" className="footer-link padding-bottom-24">
                 Contact Me
-              </a>
+              </Link>
               <a
                 href="mailto: tim.b.schneider@gmail.com"
                 className="footer-link padding-bottom-24"

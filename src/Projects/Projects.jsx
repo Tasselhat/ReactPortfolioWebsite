@@ -30,7 +30,7 @@ export default class Projects extends React.Component {
           <div className="content-wrapper">
             <div className="content-container">
               <div className="grid-thumbs">
-                <a href="/SortingVisualizer" className="grid-item">
+                <a href="SortingVisualizer" className="grid-item">
                   <div className="preview-img">
                     <img src={sortingVisPng} alt="" />
                   </div>
@@ -38,7 +38,7 @@ export default class Projects extends React.Component {
                     <h1>Sorting Visualizer</h1>
                   </div>
                 </a>
-                <a href="/HowLong" className="grid-item">
+                <a href="HowLong" className="grid-item">
                   <div className="preview-img">
                     <img src={howLongImage} alt="" />
                   </div>

@@ -27,22 +27,22 @@ class Footer extends Component {
               <div className="line"></div>
               <ul>
                 <li className="list-item">
-                  <a href="/Projects" className="footer-link">
+                  <a href="Projects" className="footer-link">
                     Projects
                   </a>
                 </li>
                 <li className="list-item">
-                  <a href="/About" className="footer-link">
+                  <a href="About" className="footer-link">
                     About
                   </a>
                 </li>
                 <li className="list-item">
-                  <a href="/Tools" className="footer-link">
+                  <a href="Tools" className="footer-link">
                     Tools
                   </a>
                 </li>
                 <li className="list-item">
-                  <a href="/Resume" className="footer-link">
+                  <a href="Resume" className="footer-link">
                     Resume
                   </a>
                 </li>

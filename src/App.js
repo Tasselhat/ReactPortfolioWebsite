@@ -11,7 +11,7 @@ import { Route, Link, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Routes><Route path="/" element={<Projects />} /></Routes>
+      <Routes><Route path="ReactPortfolioWebsite/" element={<Projects />} /></Routes>
       <Routes><Route path="/Projects" element={<Projects />} /></Routes>
       <Routes><Route path="/About" element={<About />} /></Routes>
       <Routes><Route path="/HowLong" element={<HowLong />} /></Routes>

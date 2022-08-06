@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 import UCSDSeal from "../images/UCSD_Seal.png";
 import { ReactComponent as GithubLogo } from "../images/github.svg";
@@ -18,9 +19,9 @@ class Header extends Component {
           <div className="header-display-desktop">
             <div className="header-title-nav">
               <nav className="header-title-logo">
-                <a href="/Projects">
+                <Link to="/Projects">
                   <img src={UCSDSeal} alt="Tim Schneider" />
-                </a>
+                </Link>
               </nav>
               <nav className="header-nav-list">
                 <a className="header-nav-item" href="/Projects">

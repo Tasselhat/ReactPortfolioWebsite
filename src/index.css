@@ -5,10 +5,11 @@
 }
 
 body {
+  background-color: rgba(253, 253, 253, 0.979);
+  font-family: "EB Garamond", "Maven Pro", serif;
+  font-size: 17px;
+  font-weight: 500;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

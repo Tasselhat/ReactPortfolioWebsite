@@ -1,12 +1,3 @@
-body {
-  background-color: rgba(253, 253, 253, 0.979);
-  font-family: "EB Garamond", "Maven Pro", serif;
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
 
 @media (min-width: 0) and (max-width: 1511px) and (orientation: landscape) {
   .body {

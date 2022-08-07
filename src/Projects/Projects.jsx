@@ -22,7 +22,7 @@ export default class Projects extends React.Component {
     return (
       <div>
         <Header />
-        <main id="page" className="main-container" role="main">
+        <main id="projectspage" className="projects-container" role="main">
           <img
             className="background-divider-img"
             src={backgroundDividerImg}

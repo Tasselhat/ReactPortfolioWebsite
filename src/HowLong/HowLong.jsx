@@ -137,14 +137,14 @@ export default class HowLong extends React.Component {
     return (
       <div>
         <Header />
-        <main id="page" className="main-container" role="main">
+        <main id="page" className="HowLong-container" role="main">
           <img
             className="background-divider-img"
             src="../images/5ef2e559f911d339e9e83b94_image-divider-bottom.png"
             alt=""
           ></img>
           <section className="HowLongApplication">
-            <div className="content-wrapper">
+            <div className="HowLong-wrapper">
               <h1
                 style={{
                   fontSize: "20px",

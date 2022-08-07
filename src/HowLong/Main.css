@@ -1,4 +1,4 @@
-.main-container {
+.HowLong-container {
   min-height: 100vh;
 }
 
@@ -6,10 +6,11 @@
   width: 100%;
 }
 
-.content-wrapper {
+.HowLong-wrapper {
   padding: 100px 6vw 0 6vw;
   box-sizing: border-box;
 }
+
 .HowLongApplication {
   max-width: 3840px;
   margin-right: auto;

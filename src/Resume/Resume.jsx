@@ -54,7 +54,7 @@ export default class Projects extends React.Component {
               </h2>
               <h3>San Diego UNITED Training Center</h3>
               <p>
-                Gymnastics/Camp Coach November 2021 - Present (San Diego, CA)
+                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;November 2021 - Present &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
               </p>
               <li>
                 {" "}
@@ -75,13 +75,13 @@ export default class Projects extends React.Component {
               </li>
               <h3>Tumbleweeds Gymnastics</h3>
               <p>
-                Gymnastics/Camp Coach June 2018 - September 2021 (Minden &
+                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;June 2018 - September 2021 &nbsp;&nbsp;&nbsp;&nbsp;(Minden &
                 Carson City, NV)
               </p>
               <li>
                 Coaching introductory level men's and women's artistic
-                gymnastics, and trampoline gymnastics (T&T), as well as
-                competitive women's artistic level 3, Xcel Bronze, and Pre-Team.
+                gymnastics, and trampoline gymnastics (T&T). As well as Pre-Team, and assistant coaching
+                competitive women's artistic level 3, and Xcel Bronze.
               </li>
               <li>
                 {" "}
@@ -100,8 +100,8 @@ export default class Projects extends React.Component {
                   Continually seeking improvement and expanding education
                 </li>
                 <li> Passionate about teaching and movement</li>
-                <li>Effective class management</li>
-                <li> Research experience</li>
+                <li> Effective class management</li>
+                <li> Developmental research experience</li>
                 <li> Background in childhood development</li>
                 <li> Emphasis on safety and self-confidence</li>
               </div>

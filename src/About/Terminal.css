@@ -13,26 +13,67 @@
   margin: 0;
   background: black;
   color: rgba(0, 255, 0, 0.78);
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   text-shadow: 0 0.2rem 1rem #27e90e;
 }
 
-.terminal img[src*="blob:"],
-.terminal video {
-  max-width: 100%;
-}
-
 #terminal {
-  height: 100vh;
 }
 
-/* glow */
 .terminal {
 }
 
-:root {
-  --background: #031e11;
+.Console {
+  height: 94vh;
+  padding-bottom: 6vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll; 
+}
+
+.Console::-webkit-scrollbar {
+  display: none;
+}
+
+.terminalOutput {
+  white-space: pre-line;
+}
+
+.textInputWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+}
+
+.promptLine {
+  margin: 0;
+}
+
+.inputText {
+  position: relative;
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: rgba(0, 255, 0, 0.78);
+  text-align: start;
+  font-family: "IBM VGA 8x16", "Verite 8x16", monospace;
+  font-size: 16px;
+  line-height: 16px;
+  height: 15px;
+  padding: 0 0 0 0;
+  text-shadow: 0 0.2rem 1rem #27e90e;
+}
+
+.inputText:focus {
+  outline: none;
+}
+
+.collection {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
 }
 
 @media (min-width: 800px) {
@@ -44,6 +85,12 @@
 @media (min-width: 1200px) {
   :root {
     --size: 1.4;
+  }
+}
+
+@media (min-width: 1650px) {
+  :root {
+    --size: 1.6;
   }
 }
 
@@ -228,15 +275,4 @@
     opacity: 0;
   }
 }
-/*
- * Collection footer to match terminal style
- * it will be easier after this feature is implemented
- * https://github.com/jcubic/jquery.terminal/issues/731
- */
 
-.collection {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-}

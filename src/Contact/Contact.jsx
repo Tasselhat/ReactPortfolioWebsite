@@ -11,7 +11,7 @@ export default class Projects extends React.Component {
 
   render() {
     return (
-      <main id="page" class="main-container" role="main">
+      <main id="page" class="contact-container" role="main">
         
       </main>
     );

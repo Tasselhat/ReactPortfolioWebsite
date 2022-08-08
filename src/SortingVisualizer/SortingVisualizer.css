@@ -68,6 +68,13 @@ button:active {
   right: 48px;
   top: 60vh;
   color: white;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll; 
+}
+
+.infoPanel::-webkit-scrollbar {
+  display: none;
 }
 
 .infoPanelHeader {

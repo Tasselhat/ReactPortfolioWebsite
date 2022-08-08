@@ -113,7 +113,7 @@ export default class SortingVisualizer extends React.Component {
       if (arraySizeMediaQ1.matches) {
         startBarHeight -= 5;
       } else if (arraySizeMediaQ2.matches) {
-        startBarHeight -= 4;
+        startBarHeight -= 3;
       } else if (arraySizeMediaQ3.matches) {
         startBarHeight -= 2;
       } else if (arraySizeMediaQ4.matches) {
@@ -146,21 +146,14 @@ export default class SortingVisualizer extends React.Component {
   }
 
   changeInfoPanelSelectionSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Selection Sort";
-      paragraph.innerHTML =
-        "Selection sort works by comparing every value in the unsorted array, finding the minimum of all unsorted elements and placing it at the end of the sorted array.\nSelection sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n<sup>2</sup>), it performs slightly better than bubble and gnome sort.";
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "Selection Sort";
+    paragraph.innerHTML =
+      "Selection sort works by comparing every value in the unsorted array, finding the minimum of all unsorted elements and placing it at the end of the sorted array.\nSelection sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n<sup>2</sup>), it performs slightly better than bubble and gnome sort.";
+    container.style.background =
+      "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
   }
 
   selectionSort() {
@@ -203,21 +196,14 @@ export default class SortingVisualizer extends React.Component {
   }
 
   changeInfoPanelGnomeSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Gnome Sort";
-      paragraph.innerHTML =
-        "A garden gnome walks along the line of numbers one at a time, looking at the one in front of him and the one to the right of him, and swapping them if they are not in order and moving to the left, if the numbers are in order, or there is nothing in front of him, he moves to the right once. He does this until he reaches the end of the line and he has verified each number is in it's correct place. \nGnome sort has an average runtime of O(n<sup>2</sup>), he performs better on partially sorted arrays, but his method is generally pretty bad.";
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "Gnome Sort";
+    paragraph.innerHTML =
+      "A garden gnome walks along the line of numbers one at a time, looking at the one in front of him and the one to the right of him, and swapping them if they are not in order and moving to the left, if the numbers are in order, or there is nothing in front of him, he moves to the right once. He does this until he reaches the end of the line and he has verified each number is in it's correct place. \nGnome sort has an average runtime of O(n<sup>2</sup>), he performs better on partially sorted arrays, but his method is generally pretty bad.";
+    container.style.background =
+      "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
   }
 
   gnomeSort() {
@@ -232,21 +218,14 @@ export default class SortingVisualizer extends React.Component {
   }
 
   changeInfoPanelInsertionSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Insertion Sort";
-      paragraph.innerHTML =
-        "Insertion sort works by building a sorted array one number at a time, comparing the next unsorted element to each previous sorted element until it finds no numbers smaller and inserting the number into the sorted array.\nInsertion sort has an average runtime of O(n<sup>2</sup>) but is fast for checking if an array is already sorted, and fast if sample size is small, it is the best of the quadratic sorting algorithms in most cases.";
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "Insertion Sort";
+    paragraph.innerHTML =
+      "Insertion sort works by building a sorted array one number at a time, comparing the next unsorted element to each previous sorted element until it finds no numbers smaller and inserting the number into the sorted array.\nInsertion sort has an average runtime of O(n<sup>2</sup>) but is fast for checking if an array is already sorted, and fast if sample size is small, it is the best of the quadratic sorting algorithms in most cases.";
+    container.style.background =
+      "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
   }
 
   insertionSort() {
@@ -261,21 +240,14 @@ export default class SortingVisualizer extends React.Component {
   }
 
   changeInfoPanelBubbleSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Bubble Sort";
-      paragraph.innerHTML =
-        'Bubble sort works by comparing every element in the array to the one next to it and swapping larger elements to the right, repeating this process until it cannot swap any elements and the array is sorted, this causes large elements to "Bubble" to the top of the array. \n Bubble sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n) making it decent for verifying an already sorted array.';
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "Bubble Sort";
+    paragraph.innerHTML =
+      'Bubble sort works by comparing every element in the array to the one next to it and swapping larger elements to the right, repeating this process until it cannot swap any elements and the array is sorted, this causes large elements to "Bubble" to the top of the array. \n Bubble sort has an average runtime of O(n<sup>2</sup>) and a best case runtime of O(n) making it decent for verifying an already sorted array.';
+    container.style.background =
+      "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
   }
 
   bubbleSort() {
@@ -290,21 +262,14 @@ export default class SortingVisualizer extends React.Component {
   }
 
   changeInfoPanelMergeSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Merge Sort";
-      paragraph.innerHTML =
-        "Merge sort works by dividing the array into smaller and smaller arrays until they are 1 element large, then comparing and combining the arrays while sorting them in the process, until they are combined into one fully sorted array.\nMerge sort has an average and worst case runtime of O(n log n), making it a fast and versatile algorithm, a wonderful example of the divide and conquer paradigm.";
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "Merge Sort";
+    paragraph.innerHTML =
+      "Merge sort works by dividing the array into smaller and smaller arrays until they are 1 element large, then comparing and combining the arrays while sorting them in the process, until they are combined into one fully sorted array.\nMerge sort has an average and worst case runtime of O(n log n), making it a fast and versatile algorithm, a wonderful example of the divide and conquer paradigm.";
+    container.style.background =
+      "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
   }
 
   mergeSort() {
@@ -319,21 +284,14 @@ export default class SortingVisualizer extends React.Component {
   }
 
   changeInfoPanelQuickSort() {
-    if (
-      arraySizeMediaQ2.matches ||
-      arraySizeMediaQ3.matches ||
-      arraySizeMediaQ4.matches ||
-      arraySizeMediaQ5.matches
-    ) {
-      const header = document.getElementById("infoPanelHeader");
-      const paragraph = document.getElementById("infoPanelParagraph");
-      const container = document.getElementById("infoPanel");
-      header.innerHTML = "Quick Sort";
-      paragraph.innerHTML =
-        "Quick Sort works by selecting a number as a pivot (the rightmost value in this case) partitioning the array, and pushing every value larger than this pivot to the right, then repeating this process again and again until the partitions are small enough to be trivially sorted. \nQuick sort has an average runtime of O(n log n) and a worst case runtime of O(n<sup>2</sup>) such as when the selected pivot is the largest or smallest element in the array (as seen with a reversed array in this case).";
-      container.style.background =
-        "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
-    }
+    const header = document.getElementById("infoPanelHeader");
+    const paragraph = document.getElementById("infoPanelParagraph");
+    const container = document.getElementById("infoPanel");
+    header.innerHTML = "Quick Sort";
+    paragraph.innerHTML =
+      "Quick Sort works by selecting a number as a pivot (the rightmost value in this case) partitioning the array, and pushing every value larger than this pivot to the right, then repeating this process again and again until the partitions are small enough to be trivially sorted. \nQuick sort has an average runtime of O(n log n) and a worst case runtime of O(n<sup>2</sup>) such as when the selected pivot is the largest or smallest element in the array (as seen with a reversed array in this case).";
+    container.style.background =
+      "linear-gradient(rgba(24, 43, 73, 1),rgba(24, 43, 73, 0.6))";
   }
 
   quickSort() {
@@ -378,25 +336,46 @@ export default class SortingVisualizer extends React.Component {
               />
               Slower &gt;
             </div>
-            <button onClick={() => this.resetArray()}>
+            <button className="sortButton" onClick={() => this.resetArray()}>
               Generate Random Array
             </button>
-            <button onClick={() => this.linearArray()}>
+            <button className="sortButton" onClick={() => this.linearArray()}>
               Generate Random Linear Array
             </button>
-            <button onClick={() => this.reversedArray()}>
+            <button className="sortButton" onClick={() => this.reversedArray()}>
               Generate Reversed Array
             </button>
-            <button onClick={() => this.callBubbleSort()}> Bubble sort </button>
-            <button onClick={() => this.callInsertionSort()}>
+            <button
+              className="sortButton"
+              onClick={() => this.callBubbleSort()}
+            >
+              {" "}
+              Bubble sort{" "}
+            </button>
+            <button
+              className="sortButton"
+              onClick={() => this.callInsertionSort()}
+            >
               Insertion Sort
             </button>
-            <button onClick={() => this.callGnomeSort()}> Gnome Sort </button>
-            <button onClick={() => this.callSelectionSort()}>
+            <button className="sortButton" onClick={() => this.callGnomeSort()}>
+              {" "}
+              Gnome Sort{" "}
+            </button>
+            <button
+              className="sortButton"
+              onClick={() => this.callSelectionSort()}
+            >
               Selection Sort
             </button>
-            <button onClick={() => this.callMergeSort()}> Merge Sort </button>
-            <button onClick={() => this.callQuickSort()}> Quick Sort </button>
+            <button className="sortButton" onClick={() => this.callMergeSort()}>
+              {" "}
+              Merge Sort{" "}
+            </button>
+            <button className="sortButton" onClick={() => this.callQuickSort()}>
+              {" "}
+              Quick Sort{" "}
+            </button>
           </div>
         </div>
         <div className="footer-background-overlay"></div>

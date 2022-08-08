@@ -4,12 +4,12 @@ import { useState, useRef, useEffect } from "react";
 const Console = () => {
   const [inputText, setInput] = useState("");
   const [consoleOutput, setOutput] = useState("");
+  let [prompt, setPrompt] = useState("C:\\WINDOWS\\system32>");
   const inputRef = useRef();
   const scrollRef = useRef();
 
   const currentDateTime = Date().toLocaleString();
 
-  let [prompt, setPrompt] = useState("C:\\WINDOWS\\system32>");
 
   useEffect(() => {
     if (scrollRef.current)

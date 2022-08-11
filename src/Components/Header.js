@@ -8,7 +8,7 @@ import { ReactComponent as FacebookLogo } from "../images/facebook.svg";
 import { ReactComponent as GmailLogo } from "../images/gmail.svg";
 import { ReactComponent as InstagramLogo } from "../images/instagram.svg";
 
-import "../Header.css";
+import "./Header.css";
 import "../General.css";
 
 class Header extends Component {

@@ -1,4 +1,4 @@
-button {
+.sortButton {
   font-weight: 500;
   font-style: normal;
   font-size: calc(0.05 * 1vw + 1rem);
@@ -19,7 +19,7 @@ button {
   transition: background-color 200ms, color 60ms, padding 200ms, margin 200ms;
 }
 
-button:hover {
+.sortButton:hover {
   background-color: var(--secondary-color);
   color: black;
   padding-left: 0.5vw;
@@ -30,7 +30,7 @@ button:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
 }
 
-button:active {
+.sortButton:active {
   opacity: 0.6;
 }
 
@@ -70,7 +70,7 @@ button:active {
   color: white;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 
 .infoPanel::-webkit-scrollbar {

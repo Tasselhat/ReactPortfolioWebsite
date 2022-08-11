@@ -106,17 +106,17 @@
   margin: 19px 0 0 0.5vw;
   width: 180px;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
-.submit-button {
+.form-button {
   background-color: #182b49;
   color: white;
   border: none;
   vertical-align: baseline;
   font-weight: bold;
   cursor: pointer;
+  flex: 1;
   height: 44px;
   width: 70px;
   border-radius: 20px;
@@ -126,38 +126,11 @@
   transition: box-shadow 199ms, opacity 150ms, margin 100ms;
 }
 
-.submit-button:hover {
+.form-button:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
 }
 
-.submit-button:active {
-  opacity: 0.6;
-  box-shadow: none;
-  margin-top: 7px;
-  margin-left: 7px;
-}
-
-.clear-button {
-  background-color: #182b49;
-  color: white;
-  border: none;
-  vertical-align: baseline;
-  font-weight: bold;
-  cursor: pointer;
-  height: 44px;
-  width: 70px;
-  border-radius: 20px;
-  font-size: 15px;
-  margin-right: 0.4vw;
-  margin-left: 0.4vw;
-  transition: box-shadow 199ms, opacity 150ms, margin 100ms;
-}
-
-.clear-button:hover {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
-}
-
-.clear-button:active {
+.form-button:active {
   opacity: 0.6;
   box-shadow: none;
   margin-top: 7px;
@@ -165,10 +138,7 @@
 }
 
 @media (min-width: 0) and (max-width: 547px) {
-  .clear-button {
-    margin-top: 20px;
-  }
-  .submit-button {
+  .form-button {
     margin-top: 20px;
   }
 }

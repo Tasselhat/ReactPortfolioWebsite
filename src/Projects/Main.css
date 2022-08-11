@@ -39,6 +39,7 @@
 .preview-img img {
   display: inline-block;
   max-width: 100%;
+  max-height: 550px;
   vertical-align: middle;
   align-items: center;
 }

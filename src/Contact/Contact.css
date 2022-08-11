@@ -1,0 +1,82 @@
+.contact-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contact-form-wrapper {
+  padding: 64px 6vw 0 6vw;
+  height: 60%;
+  box-sizing: border-box;
+}
+
+.background-divider-img {
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-element {
+  text-align: left;
+  display: flex;
+  margin: 10px 0 10px 0;
+  width: 45%;
+}
+
+.form-labels {
+  width: 166px;
+}
+
+.form-control {
+  width: 100%;
+  height: 4vh;
+}
+
+.message-box {
+  width: 100%;
+  height: 50vh;
+}
+
+.submit-clear-buttons {
+  margin: 19px 0 0 0.5vw;
+  width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-button {
+  background-color: #182b49;
+  color: white;
+  border: none;
+  vertical-align: baseline;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+  height: 44px;
+  width: 70px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 0.4vw;
+  margin-left: 0.4vw;
+  transition: box-shadow 199ms, opacity 150ms, margin 100ms;
+}
+
+.form-button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.form-button:active {
+  opacity: 0.6;
+  box-shadow: none;
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+@media (min-width: 0) and (max-width: 547px) {
+  .form-button {
+    margin-top: 20px;
+  }
+}

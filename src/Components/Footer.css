@@ -103,3 +103,22 @@ ul {
   width: 100%;
   border-radius: 3px;
 }
+
+
+.scroll-button {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  text-align: left;
+  letter-spacing: 0px;
+  text-decoration: none;
+  background: none;
+  border-radius: 3px;
+}
+
+.scroll-button:hover {
+  cursor: pointer;
+}

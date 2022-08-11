@@ -3,7 +3,7 @@ import React from "react";
 import { calculateAge } from "./HowLong.js";
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
-import "./Main.css";
+import "./HowLong.css";
 import "../General.css";
 import "../index.css";
 
@@ -162,6 +162,11 @@ export default class HowLong extends React.Component {
                         id="date-of-birth-selector"
                         className="date-of-birth-selector"
                         type="date"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            this.submitDates()
+                          }
+                        }}
                       ></input>
                     </h3>
                   </div>
@@ -172,27 +177,28 @@ export default class HowLong extends React.Component {
                         id="current-date-selector"
                         className="current-date-selector"
                         type="date"
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            this.submitDates()
+                          }
+                        }}
                       ></input>
                     </h3>
                   </div>
                 </div>
                 <div className="submit-clear-buttons">
-                  <div>
                     <button
-                      className="submit-button"
+                      className="form-button"
                       onClick={() => this.submitDates()}
                     >
                       Submit
                     </button>
-                  </div>
-                  <div>
                     <button
-                      className="clear-button"
+                      className="form-button"
                       onClick={() => this.clearCalculations()}
                     >
                       Clear
                     </button>
-                  </div>
                 </div>
               </div>
               <div

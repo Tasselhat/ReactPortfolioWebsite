@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 
+
 const Console = () => {
   const [inputText, setInput] = useState("");
   const [consoleOutput, setOutput] = useState("");
@@ -71,7 +72,7 @@ const Console = () => {
           Type 'help' for a list of possible commands, or try some you already know.<br></br>
           <br></br>
         </p>
-        <div className="terminalOutput">
+        <div id="terminalOutput" className="terminalOutput">
           <p>{consoleOutput}</p>
         </div>
         <div className="textInputWrapper">
@@ -97,33 +98,37 @@ const Console = () => {
                   case "help":
                     newOuput += `about          Who is Tim Schneider?
 help           List commands
-projects       More of my projects
-socials        My social media accounts
 clear          Clear the terminal feed 
 date / time    Display the current time
+font           Display font name
+dir            List directory
+cat            conCATenate
 tabsorspaces   The age old debate
 vimoremacs     The less age old debate\n `; 
                     break;
                   case "about":
-                    newOuput += "need help\n ";
-                    break;
-                  case "projects":
-                    newOuput += "need help\n ";
-                    break;
-                  case "socials":
-                    newOuput += "need help\n ";
+                    newOuput += `\nName: Tim Schneider
+
+Location: San Diego
+
+School: University of California, San Diego
+
+Programming Languages: Javascript, Python, HTML/CSS, Java (Elementary)
+
+"..."
+\n `;
                     break;
                   case "dir":
-                    newOuput += "\n   Directory of " + prompt + "\n \n 04/20/2022  04:20 PM    <DIR>        Sorry nothing to see here \n ";
+                    newOuput += "\n   Directory of " + prompt + "\n \n 08/04/2004  04:19 PM    <DIR>        Sorry nothing to see here \n ";
                     break;
                   case "log":
-                    newOuput += "\n   Directory of " + prompt + "\n \n 04/20/2022  04:20 PM    <DIR>        Sorry nothing to see here \n ";
+                    newOuput += "\n   Directory of " + prompt + "\n \n 06/05/2022  04:19 PM    <DIR>        Sorry nothing to see here \n ";
                     break;
                   case "ls":
                     newOuput += "\n Does this look like Linux to you silly?\n ";
                     break;
                   case "type":
-                    newOuput += "\n Uhhh, good?\n ";
+                    newOuput += "\n Uhhhhhhhhhhhhh\n ";
                     break;
                   case "font":
                     newOuput += "IBM VGA 8x16 Plus\n ";
@@ -179,6 +184,9 @@ vimoremacs     The less age old debate\n `;
                   case "rm":
                     newOuput = "\n Careful with that one, don't want to go breaking anything\n ";
                     break;
+                  case "rm dir":
+                    newOuput += "\n No, thanks.\n ";
+                    break;
                   case "date":
                     newOuput += currentDateTime+"\n ";
                     break;
@@ -187,11 +195,11 @@ vimoremacs     The less age old debate\n `;
                     break;
                   case "tabsorspaces":
                     newOuput +=
-                      "The compiler doesn't care, but I do. My answer is tabs.\n ";
+                      "\nThe compiler doesn't care, but I do. My answer is tabs.\n ";
                     break;
                   case "vimoremacs":
                     newOuput +=
-                      "What do I look like a neanderthal? Vim obviously.\n ";
+                      "\nWhat do I look like a neanderthal? Vim obviously.\n ";
                     break;
                   case "cd":
                     newOuput += "cd (directory)\n ";

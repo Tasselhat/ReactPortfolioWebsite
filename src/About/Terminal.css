@@ -35,7 +35,7 @@
   padding-bottom: 6vh;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 
 .Console::-webkit-scrollbar {
@@ -113,7 +113,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(18, 16, 16, 0.18);
+  background: rgba(18, 16, 16, 0.2);
   opacity: 0;
   z-index: 1000;
   pointer-events: none;
@@ -281,4 +281,3 @@
     opacity: 0;
   }
 }
-

@@ -7,7 +7,7 @@ import { ReactComponent as FacebookLogo } from "../images/facebook.svg";
 import { ReactComponent as GmailLogo } from "../images/gmail.svg";
 import { ReactComponent as InstagramLogo } from "../images/instagram.svg";
 
-import "../Footer.css";
+import "./Footer.css";
 import "../General.css";
 
 class Footer extends Component {
@@ -58,7 +58,7 @@ class Footer extends Component {
               <div className="line"></div>
               <ul>
                 <li className="list-item">
-                  <button
+                  <button className="scroll-button"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                     }}

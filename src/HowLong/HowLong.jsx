@@ -164,7 +164,7 @@ export default class HowLong extends React.Component {
                         type="date"
                         onKeyDown={(e) => {
                           if (e.key === "Enter") {
-                            this.submitDates()
+                            this.submitDates();
                           }
                         }}
                       ></input>
@@ -179,7 +179,7 @@ export default class HowLong extends React.Component {
                         type="date"
                         onKeyDown={(e) => {
                           if (e.key === "Enter") {
-                            this.submitDates()
+                            this.submitDates();
                           }
                         }}
                       ></input>
@@ -187,18 +187,18 @@ export default class HowLong extends React.Component {
                   </div>
                 </div>
                 <div className="submit-clear-buttons">
-                    <button
-                      className="form-button"
-                      onClick={() => this.submitDates()}
-                    >
-                      Submit
-                    </button>
-                    <button
-                      className="form-button"
-                      onClick={() => this.clearCalculations()}
-                    >
-                      Clear
-                    </button>
+                  <button
+                    className="form-button"
+                    onClick={() => this.submitDates()}
+                  >
+                    Submit
+                  </button>
+                  <button
+                    className="form-button"
+                    onClick={() => this.clearCalculations()}
+                  >
+                    Clear
+                  </button>
                 </div>
               </div>
               <div

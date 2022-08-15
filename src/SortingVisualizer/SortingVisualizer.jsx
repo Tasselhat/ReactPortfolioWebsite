@@ -349,8 +349,7 @@ export default class SortingVisualizer extends React.Component {
               className="sortButton"
               onClick={() => this.callBubbleSort()}
             >
-              {" "}
-              Bubble sort{" "}
+              Bubble sort
             </button>
             <button
               className="sortButton"
@@ -359,8 +358,7 @@ export default class SortingVisualizer extends React.Component {
               Insertion Sort
             </button>
             <button className="sortButton" onClick={() => this.callGnomeSort()}>
-              {" "}
-              Gnome Sort{" "}
+              Gnome Sort
             </button>
             <button
               className="sortButton"
@@ -369,12 +367,10 @@ export default class SortingVisualizer extends React.Component {
               Selection Sort
             </button>
             <button className="sortButton" onClick={() => this.callMergeSort()}>
-              {" "}
-              Merge Sort{" "}
+              Merge Sort
             </button>
             <button className="sortButton" onClick={() => this.callQuickSort()}>
-              {" "}
-              Quick Sort{" "}
+              Quick Sort
             </button>
           </div>
         </div>

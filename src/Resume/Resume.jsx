@@ -57,7 +57,6 @@ export default class Projects extends React.Component {
                 Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;November 2021 - Present &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
               </p>
               <li>
-                {" "}
                 Coaching Developmental level 3/4/5, and assistant coaching
                 Optional level and Xcel Bronze-Diamond competitive women's
                 gymnastics.
@@ -67,7 +66,6 @@ export default class Projects extends React.Component {
                 tumbling classes
               </li>
               <li>
-                {" "}
                 Maintaining a safe learning environment, creating lesson plans,
                 Fostering an encouraging and fun atmosphere. Completing daily
                 tasks and duties. Speaking with parents with regards to athlete
@@ -84,7 +82,6 @@ export default class Projects extends React.Component {
                 competitive women's artistic level 3, and Xcel Bronze.
               </li>
               <li>
-                {" "}
                 Summer camp coach responsibilities include supervising campers,
                 completing daily tasks/chores, and organizing games/activities.
               </li>
@@ -94,14 +91,15 @@ export default class Projects extends React.Component {
                 <u>SKILLS & CHARACTERISTICS</u>
               </h3>
               <div>
+                <li> User Experience</li>
+                <li> UI/UX design</li>
                 <li> Leadership and Teaching experience</li>
                 <li>
-                  {" "}
                   Continually seeking improvement and expanding education
                 </li>
                 <li> Passionate about teaching and movement</li>
                 <li> Effective class management</li>
-                <li> Developmental research experience</li>
+                <li> Research experience</li>
                 <li> Background in childhood development</li>
                 <li> Emphasis on safety and self-confidence</li>
               </div>
@@ -113,12 +111,12 @@ export default class Projects extends React.Component {
               <div>
                 <li> Javascript, Vannila and React</li>
                 <li> Python</li>
-                <li> Html 5</li>
+                <li> HTML 5</li>
                 <li> Responsive CSS</li>
                 <li> Java (Elementary)</li>
-                <li>Git + Github</li>
-                <li>VSCode, Visual Studio Code</li>
-                <li>Sublime Text Editor</li>
+                <li> Git + Github</li>
+                <li> VS Code, Visual Studio</li>
+                <li> Sublime Text Editor</li>
               </div>
             </div>
             <div className="Leadership-Awards-Wrapper">

@@ -8,20 +8,26 @@ export let getMergeSort = (array) => {
 
 function mergeSortHelper(
   mainArray,
-  startIdx,
-  endIdx,
+  startIndx,
+  endIndx,
   auxiliaryArray,
   animations
 ) {
-  if (startIdx === endIdx) return;
-  const middleIdx = Math.floor((startIdx + endIdx) / 2);
-  mergeSortHelper(auxiliaryArray, startIdx, middleIdx, mainArray, animations);
-  mergeSortHelper(auxiliaryArray, middleIdx + 1, endIdx, mainArray, animations);
+  if (startIndx === endIndx) return;
+  const middleIndx = Math.floor((startIndx + endIndx) / 2);
+  mergeSortHelper(auxiliaryArray, startIndx, middleIndx, mainArray, animations);
+  mergeSortHelper(
+    auxiliaryArray,
+    middleIndx + 1,
+    endIndx,
+    mainArray,
+    animations
+  );
   doMergeSort(
     mainArray,
-    startIdx,
-    middleIdx,
-    endIdx,
+    startIndx,
+    middleIndx,
+    endIndx,
     auxiliaryArray,
     animations
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 
-
 const Console = () => {
   const [inputText, setInput] = useState("");
   const [consoleOutput, setOutput] = useState("");

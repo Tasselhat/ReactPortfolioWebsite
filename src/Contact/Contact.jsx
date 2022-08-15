@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
   }
 
   resetForm() {
-    this.setState({ name: "", email: "", message: ""});
+    this.setState({ name: "", email: "", message: "" });
   }
 
   render() {
@@ -97,9 +97,7 @@ export default class Contact extends React.Component {
                   rows="5"
                   value={this.state.message}
                   onChange={this.onMessageChange.bind(this)}
-                >
-                  {" "}
-                </textarea>
+                ></textarea>
               </div>
               <div className="submit-clear-buttons">
                 <button type="submit" className="form-button">

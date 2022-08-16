@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+#local
+config.js
+**/log
+
 # production
 /build
 

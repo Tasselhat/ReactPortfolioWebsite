@@ -8,6 +8,11 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "email-templates": "^10.0.1",
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.8",
+    "pug": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
@@ -44,5 +49,17 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
+  },
+  "description": "This project is a sorting algorithm visualization app. Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. App page can be acessed here: https://tasselhat.github.io/SortingAlgorithmReactApp/ (Google Chrome recommended but can be used with any browser or device)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tasselhat/ReactPortfolioWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tasselhat/ReactPortfolioWebsite/issues"
   }
 }

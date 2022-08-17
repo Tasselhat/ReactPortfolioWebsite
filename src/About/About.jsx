@@ -5,6 +5,10 @@ import Console from "./Console";
 import "../index.css";
 import "./Terminal.css";
 
+import "../Fonts/WebPlus_IBM_VGA_8x16-2x.woff"
+import "../Fonts/WebPlus_IBM_VGA_8x16.woff"
+import "../Fonts/Px437_IBM_VGA_8x16.ttf"
+
 export default class About extends React.Component {
   constructor(props) {
     super(props);

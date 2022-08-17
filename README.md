@@ -2,6 +2,8 @@
 
 This project is a collection of my projects and pages for my portfolio website.
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 # Sorting Visualizer
 Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. App page can be acessed here: https://tasselhat.github.io/SortingAlgorithmReactApp/ (Google Chrome recommended but can be used with any browser or device)
 
@@ -11,4 +13,3 @@ Program to calculate the number of days, as well as months/weeks/hours/minutes/s
 # Vintage Computer Terminal
 An oldschool vintage black and green terminal display much like an old IBM dos, made this mostly for fun and visual appeal, also functions as an About page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

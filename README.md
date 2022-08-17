@@ -5,7 +5,7 @@ This project is a collection of my projects and pages for my portfolio website.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Sorting Visualizer
-Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. App page can be acessed here: https://tasselhat.github.io/SortingAlgorithmReactApp/ (Google Chrome recommended but can be used with any browser or device)
+Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. (Google Chrome recommended but can be used with any browser or device)
 
 # How Long Have I Been Alive
 Program to calculate the number of days, as well as months/weeks/hours/minutes/seconds between two dates. One of my first programming projects I created in java that I then refactored to work with vanilla javascript + HTML/CSS, then refactored again to function within this react app.

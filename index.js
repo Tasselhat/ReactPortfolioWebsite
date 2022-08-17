@@ -1,10 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var nodemailer = require('nodemailer');
-var cors = require('cors');
+const express = require('express');
+const router = express.Router();
+const nodemailer = require('nodemailer');
+const cors = require('cors');
 const creds = require('./config.js');
 
-var transport = {
+const transport = {
+    service: "gmail",
     host: 'smtp.gmail.com',
     port: 465,
     secure: true, //use SSL
@@ -14,7 +15,7 @@ var transport = {
     }
 }
 
-var transporter = nodemailer.createTransport(transport)
+let transporter = nodemailer.createTransport(transport)
 
 transporter.verify((error, success) => {
   if (error) {
@@ -25,12 +26,12 @@ transporter.verify((error, success) => {
 });
 
 router.post('/send', (req, res, next) => {
-  var name = req.body.name
-  var email = req.body.email
-  var message = req.body.message
-  var content = `name: ${name} \nemail: ${email} \nmessage: ${message} `
+  const name = req.body.name
+  const email = req.body.email
+  const message = req.body.message
+  let content = `name: ${name} \nemail: ${email} \nmessage: ${message} `
 
-  var mail = {
+  const mail = {
     from: name,
     to: 'tim.b.schneider@gmail.com',  // Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',

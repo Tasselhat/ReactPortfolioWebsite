@@ -89,7 +89,7 @@ export default class Contact extends React.Component {
 
               <div className="form-element">
                 <label className="form-labels" htmlFor="message">
-                  Message (This page is not yet functional, sorry)
+                  Your message to me:
                 </label>
                 <textarea
                   type="text"
@@ -101,10 +101,10 @@ export default class Contact extends React.Component {
               </div>
               <div className="submit-clear-buttons">
                 <button type="submit" className="form-button">
-                  {" "}
                   Submit
                 </button>
-                <button type="clear" className="form-button">
+                <button type="clear" className="form-button" 
+                    onClick={() => this.resetForm()}>
                   Clear
                 </button>
               </div>

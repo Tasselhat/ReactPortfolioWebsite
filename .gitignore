@@ -10,6 +10,7 @@
 
 #local
 config.js
+config
 **/log
 
 # production

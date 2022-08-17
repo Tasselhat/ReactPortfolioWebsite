@@ -16,8 +16,10 @@
 
 @font-face {
   font-family: "WebPlus_IBM_VGA_8x16_Bold";
-  src: local("IBM_VGA_8x16-2x"), url(./Fonts/WebPlus_IBM_VGA_8x16-2x.woff) format("woff"),
-  local("IBM_VGA_8x16-2x"), url(./Fonts/WebPlus_IBM_VGA_8x16-2x.woff) format("woff");
+  src: local("IBM_VGA_8x16-2x"),
+    url(./Fonts/WebPlus_IBM_VGA_8x16-2x.woff) format("woff"),
+    local("IBM_VGA_8x16-2x"),
+    url(./Fonts/WebPlus_IBM_VGA_8x16-2x.woff) format("woff");
   font-weight: bold;
   font-style: normal;
 }

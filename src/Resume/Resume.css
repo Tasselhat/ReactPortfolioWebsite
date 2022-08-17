@@ -1,23 +1,12 @@
 .main-container-resume {
-    padding: 30px 6vw 0 6vw;
+  padding: 30px 6vw 0 6vw;
 }
 
-.Education-Wrapper {
-    text-align: left;
+.Resume-Wrapper {
+  text-align: left;
+  padding-bottom: 40px;
 }
 
-.Skills-Wrapper {
-    text-align: left;
-}
-
-.Languages-Wrapper {
-    text-align: left;
-}
-
-.Leadership-Awards-Wrapper {
-    text-align: left;
-}
-
-.Work-Experience-Wrapper {
-    text-align: left;
+.resume-info {
+  text-align: center;
 }

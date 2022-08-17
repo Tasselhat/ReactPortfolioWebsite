@@ -108,13 +108,25 @@ vimoremacs     The less age old debate\n `;
                   case "about":
                     newOuput += `\nName: Tim Schneider
 
-Location: San Diego
+Location: San Diego/Poway, CA
 
 School: University of California, San Diego
 
-Programming Languages: Javascript, Python, HTML/CSS, Java (Elementary)
+Programming Languages & Tools: Javascript, Python, HTML5, Responsive CSS, 
+Java (Elementary), React.js, Node.js, git version control, GitHub, 
+Command Line, npm (Node Package Manager)
 
-"..."
+My name is Tim, I'm a web developer, design enthusiast, coach, and eternal student. 
+I enjoy designing user experiences and interactive web applications. 
+I've always had an interest in science and computers, 
+even back when I was 10 years old I would use inspect element on webpages to change the values of HTML elements 
+to trick my friends into thinking I was better at online games than I actually was.
+
+Now I use programming tools to make web apps to solve problems and create interactive experiences!
+
+If you want to see my resume, contact me, or see more of my work, click one of the buttons in the bottom right corner to be redirected.
+
+
 \n `;
                     break;
                   case "dir":

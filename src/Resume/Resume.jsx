@@ -26,7 +26,7 @@ export default class Projects extends React.Component {
         />
         <main id="page" className="main-container-resume" role="main">
           <div className="Resume-Wrapper">
-            <header>
+            <header className="resume-info">
               <h1>Tim Schneider</h1>
               <h2>Web Development, Design, Gymnastics Coach, Education</h2>
               <p>
@@ -54,7 +54,8 @@ export default class Projects extends React.Component {
               </h2>
               <h3>San Diego UNITED Training Center</h3>
               <p>
-                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;November 2021 - Present &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
+                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;November 2021 -
+                Present &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
               </p>
               <li>
                 Coaching Developmental level 3/4/5, and assistant coaching
@@ -73,13 +74,15 @@ export default class Projects extends React.Component {
               </li>
               <h3>Tumbleweeds Gymnastics</h3>
               <p>
-                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;June 2018 - September 2021 &nbsp;&nbsp;&nbsp;&nbsp;(Minden &
-                Carson City, NV)
+                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;June 2018 -
+                September 2021 &nbsp;&nbsp;&nbsp;&nbsp;(Minden & Carson City,
+                NV)
               </p>
               <li>
                 Coaching introductory level men's and women's artistic
-                gymnastics, and trampoline gymnastics (T&T). As well as Pre-Team, and assistant coaching
-                competitive women's artistic level 3, and Xcel Bronze.
+                gymnastics, and trampoline gymnastics (T&T). As well as
+                Pre-Team, and assistant coaching competitive women's artistic
+                level 3, and Xcel Bronze.
               </li>
               <li>
                 Summer camp coach responsibilities include supervising campers,
@@ -94,14 +97,10 @@ export default class Projects extends React.Component {
                 <li> User Experience</li>
                 <li> UI/UX design</li>
                 <li> Leadership and Teaching experience</li>
-                <li>
-                  Continually seeking improvement and expanding education
-                </li>
-                <li> Passionate about teaching and movement</li>
-                <li> Effective class management</li>
+                <li>Continually seeking improvement and expanding education</li>
+                <li> Passionate about teaching</li>
                 <li> Research experience</li>
                 <li> Background in childhood development</li>
-                <li> Emphasis on safety and self-confidence</li>
               </div>
             </div>
             <div className="Languages-Wrapper">
@@ -109,13 +108,17 @@ export default class Projects extends React.Component {
                 <u>PROGRAMMING LANGUAGES & TOOLS</u>
               </h3>
               <div>
-                <li> Javascript, Vannila and React</li>
+                <li> Javascript</li>
+                <li> React.js</li>
                 <li> Python</li>
                 <li> HTML 5</li>
                 <li> Responsive CSS</li>
                 <li> Java (Elementary)</li>
-                <li> Git + Github</li>
+                <li> Git + Github for version control</li>
                 <li> VS Code, Visual Studio</li>
+                <li> Node.js</li>
+                <li> npm (Node Package Manager)</li>
+                <li> Command Line</li>
                 <li> Sublime Text Editor</li>
               </div>
             </div>
@@ -141,6 +144,16 @@ export default class Projects extends React.Component {
               <p>
                 <b>Soroptimist International of South Lake Tahoe Scholarship</b>
                 / Awarded Fall 2020
+              </p>
+            </div>
+            <div>
+              <h3>
+                <u>RELEVANT COURSEWORK</u>
+              </h3>
+              <p>
+                <b>Intro to computer programming </b>/ Fall 2020 - Introduction
+                to computer programming basics and object oriented programming
+                using the Java programming langauge
               </p>
             </div>
           </div>

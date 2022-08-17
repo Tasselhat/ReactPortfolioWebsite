@@ -1,12 +1,12 @@
 import React from "react";
 import Projects from "./Projects/Projects.jsx";
 import SortingVisualizer from "./SortingVisualizer/SortingVisualizer.jsx";
-import HowLong from "./HowLong/HowLong.jsx"
-import Resume from "./Resume/Resume.jsx"
-import About from "./About/About.jsx"
-import Contact from "./Contact/Contact.jsx"
+import HowLong from "./HowLong/HowLong.jsx";
+import Resume from "./Resume/Resume.jsx";
+import About from "./About/About.jsx";
+import Contact from "./Contact/Contact.jsx";
 import "./App.css";
-import { Route, Link, Routes } from 'react-router-dom';
+import { Route, Link, Routes } from "react-router-dom";
 
 function App() {
   return (

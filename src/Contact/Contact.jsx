@@ -103,8 +103,11 @@ export default class Contact extends React.Component {
                 <button type="submit" className="form-button">
                   Submit
                 </button>
-                <button type="clear" className="form-button" 
-                    onClick={() => this.resetForm()}>
+                <button
+                  type="clear"
+                  className="form-button"
+                  onClick={() => this.resetForm()}
+                >
                   Clear
                 </button>
               </div>

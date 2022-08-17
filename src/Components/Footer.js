@@ -58,7 +58,8 @@ class Footer extends Component {
               <div className="line"></div>
               <ul>
                 <li className="list-item">
-                  <button className="scroll-button"
+                  <button
+                    className="scroll-button"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                     }}

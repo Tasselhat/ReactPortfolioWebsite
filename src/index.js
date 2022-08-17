@@ -11,6 +11,4 @@ root.render(
   </BrowserRouter>
 );
 
-
-
 reportWebVitals(console.log);

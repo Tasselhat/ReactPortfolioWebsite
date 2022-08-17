@@ -2,6 +2,8 @@
 
 This project is a collection of my projects and pages for my portfolio website.
 
+Project can be accessed at: https://tasselhat.github.io/ReactPortfolioWebsite/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Sorting Visualizer

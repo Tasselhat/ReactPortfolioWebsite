@@ -107,19 +107,26 @@ export default class Projects extends React.Component {
               <h3>
                 <u>PROGRAMMING LANGUAGES & TOOLS</u>
               </h3>
-              <div>
-                <li> Javascript</li>
-                <li> React.js</li>
-                <li> Python</li>
-                <li> HTML 5</li>
-                <li> Responsive CSS</li>
-                <li> Java (Elementary)</li>
-                <li> Git + Github for version control</li>
-                <li> VS Code, Visual Studio</li>
-                <li> Node.js</li>
-                <li> npm (Node Package Manager)</li>
-                <li> Command Line</li>
-                <li> Sublime Text Editor</li>
+              <div className="languages-container">
+                <div>
+                  <li> Javascript</li>
+                  <li> React.js</li>
+                  <li> Python</li>
+                  <li> HTML 5</li>
+                  <li> Responsive CSS</li>
+                  <li> Java (Elementary)</li>
+                  <li> Git + Github for version control</li>
+                  <li> VS Code, Visual Studio</li>
+                  <li> Node.js</li>
+                  <li> npm (Node Package Manager)</li>
+                  <li> Command Line</li>
+                  <li> Sublime Text Editor</li>
+                </div>
+                <div>
+                  <figure className="wakatime-piechart">
+                    <embed src="https://wakatime.com/share/@TasselHat/8cf6e5cd-c294-4305-9b17-4b0e31297e0f.svg"></embed>
+                  </figure>
+                </div>
               </div>
             </div>
             <div className="Leadership-Awards-Wrapper">

@@ -10,3 +10,11 @@
 .resume-info {
   text-align: center;
 }
+
+.languages-container {
+  display: flex;
+}
+
+.wakatime-piechart {
+  width: 45vw;
+}

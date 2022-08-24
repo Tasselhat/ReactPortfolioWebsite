@@ -30,8 +30,8 @@ export default class Projects extends React.Component {
               <h1>Tim Schneider</h1>
               <h2>Web Development, Design, Gymnastics Coach, Education</h2>
               <p>
-                Tim.b.schneider@gmail.com - (503) 516-7078 - San Diego, CA -
-                linkedin.com/in/timbschneider
+                Tim.b.schneider@gmail.com &nbsp;&nbsp;-&nbsp;&nbsp; (503) 516-7078 &nbsp;&nbsp;-&nbsp;&nbsp; San Diego, CA &nbsp;&nbsp;-&nbsp;&nbsp;
+                <a href="linkedin.com/in/timbschneider"> linkedin.com/in/timbschneider&nbsp;&nbsp;</a> <a href="https://github.com/Tasselhat"> -&nbsp;&nbsp; github.com/Tasselhat</a>
               </p>
             </header>
             <div className="Education-Wrapper">
@@ -94,7 +94,7 @@ export default class Projects extends React.Component {
                 <u>SKILLS & CHARACTERISTICS</u>
               </h3>
               <div>
-                <li> User Experience</li>
+                <li> User Experience Focus</li>
                 <li> UI/UX design</li>
                 <li> Leadership and Teaching experience</li>
                 <li>Continually seeking improvement and expanding education</li>
@@ -115,7 +115,7 @@ export default class Projects extends React.Component {
                   <li> HTML 5</li>
                   <li> Responsive CSS</li>
                   <li> Java (Elementary)</li>
-                  <li> Git + Github for version control</li>
+                  <li> <a href="https://github.com/Tasselhat">Git + Github for version control</a></li>
                   <li> VS Code, Visual Studio</li>
                   <li> Node.js</li>
                   <li> npm (Node Package Manager)</li>
@@ -158,8 +158,8 @@ export default class Projects extends React.Component {
                 <u>RELEVANT COURSEWORK</u>
               </h3>
               <p>
-                <b>Intro to computer programming </b>/ Fall 2020 - Introduction
-                to computer programming basics and object oriented programming
+                <b>Intro to Computer Programming </b>/ Fall 2020 - Introduction
+                to computer programming and object oriented programming
                 using the Java programming langauge
               </p>
             </div>

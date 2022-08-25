@@ -15,3 +15,5 @@ Program to calculate the number of days, as well as months/weeks/hours/minutes/s
 # Vintage Computer Terminal
 An oldschool vintage black and green terminal display much like an old IBM dos, made this mostly for fun and visual appeal, also functions as an About page.
 
+# Budget Tracker Web App
+A react web app with ability to login and track how to budget your paychecks based on user determined percentages or expenses. Made to help learn Node.js/Express/MongoDB backend development.

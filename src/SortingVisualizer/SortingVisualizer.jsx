@@ -106,24 +106,25 @@ export default class SortingVisualizer extends React.Component {
   reversedArray() {
     const array = [];
     let i = 0;
-    let startBarHeight = 800;
+    let x = 5;
     while (i <= ARRAY_SIZE) {
-      array.push(startBarHeight);
+      array.push(x);
       i++;
       if (arraySizeMediaQ1.matches) {
-        startBarHeight -= 5;
+        x += 5;
       } else if (arraySizeMediaQ2.matches) {
-        startBarHeight -= 3;
+        x += 4;
       } else if (arraySizeMediaQ3.matches) {
-        startBarHeight -= 2;
+        x += 2;
       } else if (arraySizeMediaQ4.matches) {
-        startBarHeight -= 1;
+        x += 2;
       } else if (arraySizeMediaQ5.matches) {
-        startBarHeight -= 1;
+        x += 2;
       } else {
-        startBarHeight -= 8;
+        x += 6;
       }
     }
+    array.reverse();
 
     this.setState({ array });
     changeSpeedFunction();
@@ -394,7 +395,7 @@ function animateSort(animations, speed) {
       }
       const [barOneIndx, barTwoIndx] = animations[i];
       if (barTwoIndx > ARRAY_SIZE) {
-        //This is for bubble sort, returns an animation barTwoIndx value outside the array index due to comparing i to i+1 in it's iterations.
+        //This is for bubble sort, returns an animation for barTwoIndx outside the array index size due to comparing i to i+1 in it's iterations.
         continue;
       }
       const barOneStyle = arrayBars[barOneIndx].style;

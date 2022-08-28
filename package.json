@@ -25,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "nodemon"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +47,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "nodemon": "^2.0.19"
   },
   "description": "This project is a sorting algorithm visualization app. Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. App page can be acessed here: https://tasselhat.github.io/SortingAlgorithmReactApp/ (Google Chrome recommended but can be used with any browser or device)",
   "main": "index.js",

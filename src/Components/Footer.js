@@ -18,8 +18,8 @@ class Footer extends Component {
           <div className="footer-column">
             <div className="footer-column-content">
               <h3>Tim Schneider</h3>
-              <div style={{ paddingbottom: "40px" }}>
-                Web Development, Design Enthusiast
+              <div className="footer-title">
+                Web Development, <br></br> Design Enthusiast
               </div>
             </div>
           </div>

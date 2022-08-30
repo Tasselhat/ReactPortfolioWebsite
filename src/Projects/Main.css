@@ -3,6 +3,10 @@
   min-height: 100vh;
 }
 
+.projects-header {
+  margin: 3vh 0 0 0;
+}
+
 .content-wrapper {
   padding: 64px 6vw 0 6vw;
   box-sizing: border-box;
@@ -17,6 +21,11 @@
   margin-right: auto;
   margin-left: auto;
   flex: 1;
+}
+
+.on-hover-info {
+  background: linear-gradient(#FFF, #FFF, #aaa);
+  border-radius: 70px;
 }
 
 .grid-thumbs {

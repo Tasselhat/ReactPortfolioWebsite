@@ -4,17 +4,33 @@
 
 .Resume-Wrapper {
   text-align: left;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .resume-info {
   text-align: center;
 }
 
-.languages-container {
+.languages-wrapper {
   display: flex;
 }
 
+@media (max-width: 850px) {
+  .languages-wrapper {
+    display: block;
+  }
+}
+
 .wakatime-piechart {
-  width: 45vw;
+  width: 55vw;
+}
+
+@media (max-width: 850px) {
+  .wakatime-piechart {
+    width: 70vw;
+  }
+}
+
+h4 {
+  white-space: pre-wrap;
 }

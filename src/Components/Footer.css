@@ -10,7 +10,7 @@
 
 .footer-box {
   margin-top: auto;
-  padding: 4vw 48px;
+  padding: 5vh 3vw;
   display: flex;
   position: relative;
   bottom: 0;
@@ -21,6 +21,7 @@
 }
 
 .footer-row {
+  width: 100%;
   flex: 1fr;
   display: grid;
   grid-column-start: 1;
@@ -45,8 +46,8 @@
 
 .footer-column {
   display: flex;
-  padding-right: 4vw;
-  padding-left: 4vw;
+  padding-right: 3vw;
+  padding-left: 3vw;
   flex-direction: column;
 }
 
@@ -67,6 +68,11 @@ ul {
   margin-bottom: 16px;
   list-style-type: none;
   justify-content: left;
+}
+
+.footer-title {
+  padding-bottom: 40px;
+  text-align: start;
 }
 
 .footer-link {
@@ -120,4 +126,9 @@ ul {
 
 .scroll-button:hover {
   cursor: pointer;
+  background-color: rgba(112, 112, 112, 0.2);
+}
+
+.scroll-button:active {
+  opacity: 0.75;
 }

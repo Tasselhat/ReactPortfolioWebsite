@@ -28,11 +28,22 @@ export default class Projects extends React.Component {
           <div className="Resume-Wrapper">
             <header className="resume-info">
               <h1>Tim Schneider</h1>
-              <h2>Web Development, Design, Gymnastics Coach, Education</h2>
-              <p>
-                Tim.b.schneider@gmail.com &nbsp;&nbsp;-&nbsp;&nbsp; (503) 516-7078 &nbsp;&nbsp;-&nbsp;&nbsp; San Diego, CA &nbsp;&nbsp;-&nbsp;&nbsp;
-                <a href="linkedin.com/in/timbschneider"> linkedin.com/in/timbschneider&nbsp;&nbsp;</a> <a href="https://github.com/Tasselhat"> -&nbsp;&nbsp; github.com/Tasselhat</a>
-              </p>
+              <h2>Web Development, Design, Gymnastics Coach</h2>
+              <h4>
+                <a href="mailto:Tim.b.schneider@gmail.com">
+                  Tim.b.schneider@gmail.com &nbsp;&nbsp;
+                </a>
+                <a href="tel:5035167078">
+                  -&nbsp;&nbsp; (503) 516-7078 &nbsp;&nbsp;
+                </a>
+                -&nbsp;&nbsp; San Diego, CA &nbsp;&nbsp;-&nbsp;&nbsp;
+                <a href="linkedin.com/in/timbschneider">
+                  <u>linkedin.com/in/timbschneider</u>&nbsp;&nbsp;
+                </a>
+                <a href="https://github.com/Tasselhat">
+                  -&nbsp;&nbsp; <u>github.com/Tasselhat</u>
+                </a>
+              </h4>
             </header>
             <div className="Education-Wrapper">
               <h2>
@@ -48,14 +59,44 @@ export default class Projects extends React.Component {
                 <b>Lake Tahoe Community College </b>/ September 2019 - June 2021
               </p>
             </div>
+            <div className="languages-wrapper">
+              <div className="languages-container">
+                <h3>
+                  <u>PROGRAMMING LANGUAGES & TOOLS</u>
+                </h3>
+                <div>
+                  <li> Javascript</li>
+                  <li> React.js</li>
+                  <li> Python</li>
+                  <li> HTML 5</li>
+                  <li> Responsive CSS</li>
+                  <li> Java (Elementary)</li>
+                  <li>
+                    {" "}
+                    <a href="https://github.com/Tasselhat">
+                      Git + Github for version control
+                    </a>
+                  </li>
+                  <li> VS Code Editor</li>
+                  <li> Node.js with Express.js</li>
+                  <li> npm (Node Package Manager)</li>
+                  <li> Command Line</li>
+                </div>
+              </div>
+              <div>
+                <figure className="wakatime-piechart">
+                  <embed src="https://wakatime.com/share/@TasselHat/8cf6e5cd-c294-4305-9b17-4b0e31297e0f.svg"></embed>
+                </figure>
+              </div>
+            </div>
             <div className="Work-Experience-Wrapper">
               <h2>
                 <u>WORK EXPERIENCE</u>
               </h2>
               <h3>San Diego UNITED Training Center</h3>
               <p>
-                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;November 2021 -
-                Present &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
+                Gymnastics &nbsp;&nbsp;&nbsp;&nbsp;November 2021 - Present
+                &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
               </p>
               <li>
                 Coaching Developmental level 3/4/5, and assistant coaching
@@ -95,40 +136,18 @@ export default class Projects extends React.Component {
               </h3>
               <div>
                 <li> User Experience Focus</li>
-                <li> UI/UX design</li>
+                <li> UI design</li>
                 <li> Leadership and Teaching experience</li>
-                <li>Continually seeking improvement and expanding education</li>
-                <li> Passionate about teaching</li>
+                <li>
+                  {" "}
+                  Continually seeking improvement and expanding education
+                </li>
+                <li> Passionate about teaching, learning, and creating</li>
                 <li> Research experience</li>
-                <li> Background in childhood development</li>
+                <li> Background in psychology and human development</li>
               </div>
             </div>
-            <div className="Languages-Wrapper">
-              <h3>
-                <u>PROGRAMMING LANGUAGES & TOOLS</u>
-              </h3>
-              <div className="languages-container">
-                <div>
-                  <li> Javascript</li>
-                  <li> React.js</li>
-                  <li> Python</li>
-                  <li> HTML 5</li>
-                  <li> Responsive CSS</li>
-                  <li> Java (Elementary)</li>
-                  <li> <a href="https://github.com/Tasselhat">Git + Github for version control</a></li>
-                  <li> VS Code, Visual Studio</li>
-                  <li> Node.js</li>
-                  <li> npm (Node Package Manager)</li>
-                  <li> Command Line</li>
-                  <li> Sublime Text Editor</li>
-                </div>
-                <div>
-                  <figure className="wakatime-piechart">
-                    <embed src="https://wakatime.com/share/@TasselHat/8cf6e5cd-c294-4305-9b17-4b0e31297e0f.svg"></embed>
-                  </figure>
-                </div>
-              </div>
-            </div>
+            
             <div className="Leadership-Awards-Wrapper">
               <h3>
                 <u>LEADERSHIP & AWARDS</u>
@@ -159,8 +178,8 @@ export default class Projects extends React.Component {
               </h3>
               <p>
                 <b>Intro to Computer Programming </b>/ Fall 2020 - Introduction
-                to computer programming and object oriented programming
-                using the Java programming langauge
+                to computer programming and object oriented programming using
+                the Java programming langauge.
               </p>
             </div>
           </div>

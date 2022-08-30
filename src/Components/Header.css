@@ -6,7 +6,9 @@
   top: 0;
   left: 0;
   right: 0;
-
+  padding-top: 1.5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
   background: linear-gradient(#182b49, rgba(24, 43, 73, 0));
 
   line-height: 1;
@@ -27,10 +29,9 @@
   height: inherit;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-bottom: 1vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
 }
 
 .header-display-desktop {
@@ -75,6 +76,7 @@
   color: #ffcd00;
   margin: 1vw 0 1vw 1vw;
   background-color: transparent;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 550px) {

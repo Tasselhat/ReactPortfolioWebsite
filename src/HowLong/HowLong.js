@@ -123,5 +123,3 @@ function daysAliveCalculator(startingMonth, finishMonth, year) {
   }
   return daysOfYear;
 }
-
-//Controller

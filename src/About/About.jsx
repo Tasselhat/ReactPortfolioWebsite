@@ -22,9 +22,9 @@ export default class About extends React.Component {
         <div className="tv">
           <Console />
           <div className="collection">
-            More: <Link to="/Projects">Projects</Link>, or{" "}
-            <Link to="/Resume">Resume</Link> and{" "}
-            <Link to="/Contact">Contact</Link>{" "}
+            More: <Link to="/Projects">Projects</Link>, or
+            <Link to="/Resume">Resume</Link> and
+            <Link to="/Contact">Contact</Link>
           </div>
           <div className="flicker"></div>
           <div className="scanlines"></div>

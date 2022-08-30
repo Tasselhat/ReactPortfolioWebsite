@@ -62,9 +62,11 @@ export default class Projects extends React.Component {
                   {this.state.isHovering && projectHoverID === 1 && (
                     <div className="on-hover-info">
                       <h2>
-                        Sorting alogrithms vizualizer made with React and vanilla Javascript,
-                        vizualizer for bubble sort, gnome sort, selection sort, insertion sort, merge sort, and quick sort. (Laptop/Desktop and Google Chrome recommended but can be used
-                        with any browser or device)
+                        Sorting alogrithms vizualizer made with React and
+                        vanilla Javascript, vizualizer for bubble sort, gnome
+                        sort, selection sort, insertion sort, merge sort, and
+                        quick sort. (Laptop/Desktop and Google Chrome
+                        recommended but can be used with any browser or device)
                       </h2>
                     </div>
                   )}
@@ -85,7 +87,12 @@ export default class Projects extends React.Component {
                   </div>
                   {this.state.isHovering && projectHoverID === 2 && (
                     <div className="on-hover-info">
-                      <h2>Simple react webpage that takes two input dates and tells you the length of time between those dates in days. As well as weeks, months, years, minutes, seconds, and hours.</h2>
+                      <h2>
+                        Simple react webpage that takes two input dates and
+                        tells you the length of time between those dates in
+                        days. As well as weeks, months, years, minutes, seconds,
+                        and hours.
+                      </h2>
                     </div>
                   )}
                   {(!this.state.isHovering || projectHoverID !== 2) && (
@@ -105,7 +112,11 @@ export default class Projects extends React.Component {
                   </div>
                   {this.state.isHovering && projectHoverID === 3 && (
                     <div className="on-hover-info">
-                      <h2>Animated vintage terminal display that takes simple commands as inputs and returns outputs on the terminal display.</h2>
+                      <h2>
+                        Animated vintage terminal display that takes simple
+                        commands as inputs and returns outputs on the terminal
+                        display.
+                      </h2>
                     </div>
                   )}
                   {(!this.state.isHovering || projectHoverID !== 3) && (
@@ -128,7 +139,16 @@ export default class Projects extends React.Component {
                   </div>
                   {this.state.isHovering && projectHoverID === 4 && (
                     <div className="on-hover-info">
-                      <h2>Budget tracker full stack web app, with registration and log in to save your budgets, designed to let users enter monthly expenses as well as desired spending on non-essentials, saving, and investing. With expert reccomendations for saving and investing, users enter paycheck amount and the app will return donut charts with exact dollar amounts for each category of spending and saving to help users spend their money mindfully. </h2>
+                      <h2>
+                        Budget tracker full stack web app, with registration and
+                        log in to save your budgets, designed to let users enter
+                        monthly expenses as well as desired spending on
+                        non-essentials, saving, and investing. With expert
+                        reccomendations for saving and investing, users enter
+                        paycheck amount and the app will return donut charts
+                        with exact dollar amounts for each category of spending
+                        and saving to help users spend their money mindfully.{" "}
+                      </h2>
                     </div>
                   )}
                   {(!this.state.isHovering || projectHoverID !== 4) && (

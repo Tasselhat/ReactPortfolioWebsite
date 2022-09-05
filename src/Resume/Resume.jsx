@@ -147,7 +147,6 @@ export default class Projects extends React.Component {
                 <li> Background in psychology and human development</li>
               </div>
             </div>
-            
             <div className="Leadership-Awards-Wrapper">
               <h3>
                 <u>LEADERSHIP & AWARDS</u>

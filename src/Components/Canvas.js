@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
+const width = document.documentElement.clientWidth;
+
 const Canvas = (props) => {
 	const { draw, ...rest } = props;
 
@@ -23,7 +25,7 @@ const Canvas = (props) => {
 		};
 	}, [draw]);
 
-	return <canvas width="4000" height="2200" ref={canvasRef} {...props} />;
+	return <canvas width={width} height="2200" ref={canvasRef} {...props} />;
 };
 
 export default Canvas;

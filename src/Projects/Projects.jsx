@@ -84,7 +84,7 @@ export default class Projects extends React.Component {
 									)}
 									{(!this.state.isHovering || projectHoverID !== 1) && (
 										<div className="project-title">
-											<h1>Budget Tracker (WIP, github repo)</h1>
+											<h1>Budget Tracker (WIP, github repository)</h1>
 										</div>
 									)}
 								</a>

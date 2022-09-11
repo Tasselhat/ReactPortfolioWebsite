@@ -51,7 +51,7 @@ const drawLine = (point, other, d, ctx) => {
 	ctx.moveTo(point.x, point.y);
 	ctx.lineTo(other.x, other.y);
 	if (point.d < 255 && other.d < 255) {
-		ctx.strokeStyle = `rgba(0, 0, ${Math.abs(point.d)}, ${Math.abs(
+		ctx.strokeStyle = `rgba(0, 0, ${point.d}, ${Math.abs(
 			d / CONNECT_DISTANCE - 1
 		)})`;
 	} else {

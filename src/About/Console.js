@@ -80,8 +80,8 @@ const Console = () => {
             type="text"
             className="inputText"
             id="inputText"
-            autocomplete="off"
-            spellcheck="false"
+            autoComplete="off"
+            spellCheck="false"
             ref={inputRef}
             value={inputText}
             onChange={(e) => setInput(e.target.value)}

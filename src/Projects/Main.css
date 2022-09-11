@@ -1,75 +1,95 @@
 .projects-container {
-  position: relative;
-  min-height: 100vh;
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
 }
 
 .projects-header {
-  margin: 3vh 0 0 0;
+	margin: 3vh 0 0 0;
 }
 
 .content-wrapper {
-  padding: 64px 6vw 0 6vw;
-  box-sizing: border-box;
+	padding: 64px 6vw 0 6vw;
+	box-sizing: border-box;
 }
 
 .background-divider-img {
-  width: 100%;
+	width: 100%;
+	min-height: 125px;
 }
 
 .content-container {
-  max-width: 3840px;
-  margin-right: auto;
-  margin-left: auto;
-  flex: 1;
+	max-width: 3840px;
+	margin-right: auto;
+	margin-left: auto;
+	flex: 1;
 }
 
 .on-hover-info {
-  background: linear-gradient(#fdfdfd, #fdfdfd, #aaa);
-  border-radius: 70px;
+	background: linear-gradient(#fdfdfd, #fdfdfd, #aaa);
+	border-radius: 70px;
 }
 
 .grid-thumbs {
-  width: 100%;
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 8vw;
-  grid-row-gap: 8vw;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+	width: 100%;
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-column-gap: 8vw;
+	grid-row-gap: 8vw;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
 }
 
 .grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	color: black;
 }
 
 .preview-img img {
-  display: inline-block;
-  max-width: 100%;
-  max-height: 550px;
-  vertical-align: middle;
-  align-items: center;
+	display: inline-block;
+	max-width: 100%;
+	max-height: 550px;
+	vertical-align: middle;
+	align-items: center;
 }
 
 .preview-img {
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  transition: 200ms;
+	transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+		rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	transform-style: preserve-3d;
+	transition: 200ms;
 }
 
 .preview-img:hover {
-  transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
+	transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg)
+		rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+	transform-style: preserve-3d;
 }
 
 .preview-img:active {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 .project-title:active {
-  opacity: 0.7;
+	opacity: 0.7;
+}
+
+.canvas {
+	position: absolute;
+	top: 200px;
+	left: 0;
+}
+
+@media (min-width: 2200px) {
+	.canvas {
+		top: 300px;
+	}
+}
+
+@media (min-width: 3000px) {
+	.canvas {
+		top: 400px;
+	}
 }

@@ -26,6 +26,7 @@
 }
 
 .on-hover-info {
+	text-shadow: 1px 1px white;
 	background: linear-gradient(#fdfdfd, #fdfdfd, #aaa);
 	border-radius: 70px;
 }

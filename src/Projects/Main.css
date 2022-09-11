@@ -5,6 +5,7 @@
 }
 
 .projects-header {
+	text-shadow: 1px 1px 4px white;
 	margin: 3vh 0 0 0;
 }
 
@@ -27,8 +28,9 @@
 
 .on-hover-info {
 	text-shadow: 1px 1px white;
-	background: linear-gradient(#fdfdfd, #fdfdfd, #aaa);
+	background: linear-gradient(rgba(253,253,253,0.2), rgba(253,253,253,0.8), rgba(170,170,170,0.8));
 	border-radius: 70px;
+	z-index: 3;
 }
 
 .grid-thumbs {

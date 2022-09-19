@@ -1,8 +1,8 @@
 .tv {
 	text-align: left;
 	font-family: "IBM_VGA_8x16", "IBM_VGA_8x16_Bold", monospace;
-	font-size: 16px;
-	line-height: 16px;
+	font-size: calc(16px * var(--size));
+	line-height: calc(16px * var(--size));
 	font-weight: normal;
 	font-style: normal;
 	margin: 0;
@@ -77,25 +77,30 @@
 	padding: 10px;
 }
 
-@media (min-width: 800px) {
-	:root {
-		--size: 1.2;
+@media (max-width: 1199px) {
+	body {
+		--size: 0.75;
 	}
 }
 
 @media (min-width: 1200px) {
-	:root {
-		--size: 1.4;
+	body {
+		--size: 1;
 	}
 }
 
 @media (min-width: 1650px) {
-	:root {
-		--size: 1.6;
+	body {
+		--size: 1.125;
 	}
 }
 
-/* to see yourself like in a mirror */
+@media (min-width: 2500px) {
+	body {
+		--size: 2;
+	}
+}
+
 .self {
 	transform: scale(-1, 1);
 }

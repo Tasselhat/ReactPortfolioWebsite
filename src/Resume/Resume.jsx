@@ -1,6 +1,17 @@
 import React from "react";
 
-import backgroundDividerImg from "../images/5ef2e559f911d339e9e83b94_image-divider-bottom.png";
+import backgroundDividerImg from "../images/background-divider-img.png";
+import CMDlogo from "../images/cmd-logo.png";
+import CSS3logo from "../images/CSS3-Logo.png";
+import Githublogo from "../images/Github-logo.png";
+import Javalogo from "../images/Java-logo.png";
+import JavaScriptlogo from "../images/JavaScript-logo.png";
+import Nodejslogo from "../images/Node.js-logo.png";
+import Npmlogo from "../images/Npm-logo.png";
+import Pythonlogo from "../images/Python-logo.png";
+import Reactlogo from "../images/React-logo.png";
+import HTMLlogo from "../images/HTML5-logo.png";
+import VSCodelogo from "../images/VSCode-logo.png";
 
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
@@ -65,22 +76,21 @@ export default class Projects extends React.Component {
                   <u>PROGRAMMING LANGUAGES & TOOLS</u>
                 </h3>
                 <div>
-                  <li> Javascript</li>
-                  <li> React.js</li>
-                  <li> Python</li>
-                  <li> HTML 5</li>
-                  <li> Responsive CSS</li>
-                  <li> Java (Elementary)</li>
+                  <li> Javascript <img src={JavaScriptlogo} alt="" className="tool-logo" /></li>
+                  <li> React.js <img src={Reactlogo} alt="" className="tool-logo" /></li>
+                  <li> Python <img src={Pythonlogo} alt="" className="tool-logo" /></li>
+                  <li> HTML 5 <img src={HTMLlogo} alt="" className="tool-logo" /></li>
+                  <li> Responsive CSS <img src={CSS3logo} alt="" className="tool-logo" /></li>
+                  <li> Java (Elementary) <img src={Javalogo} alt="" className="tool-logo" /></li>
                   <li>
-                    {" "}
                     <a href="https://github.com/Tasselhat">
-                      Git + Github for version control
+                      Git + Github for version control <img src={Githublogo} alt="" className="tool-logo" />
                     </a>
                   </li>
-                  <li> VS Code Editor</li>
-                  <li> Node.js with Express.js</li>
-                  <li> npm (Node Package Manager)</li>
-                  <li> Command Line</li>
+                  <li> VS Code Editor <img src={VSCodelogo} alt="" className="tool-logo" /></li>
+                  <li> Node.js with Express.js <img src={Nodejslogo} alt="" className="tool-logo" /></li>
+                  <li> npm (Node Package Manager) <img src={Npmlogo} alt="" className="tool-logo" /></li>
+                  <li> Command Line <img src={CMDlogo} alt="" className="tool-logo" /></li>
                 </div>
               </div>
               <div>
@@ -142,7 +152,7 @@ export default class Projects extends React.Component {
                   {" "}
                   Continually seeking improvement and expanding education
                 </li>
-                <li> Passionate about teaching, learning, and creating</li>
+                <li> Passionate about teaching, learning, and mentorship</li>
                 <li> Research experience</li>
                 <li> Background in psychology and human development</li>
               </div>

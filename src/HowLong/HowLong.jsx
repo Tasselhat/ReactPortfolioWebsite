@@ -3,7 +3,7 @@ import React from "react";
 import { calculateAge } from "./HowLong.js";
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
-import backgroundDividerImg from "../images/5ef2e559f911d339e9e83b94_image-divider-bottom.png";
+import backgroundDividerImg from "../images/background-divider-img.png";
 import "./HowLong.css";
 import "../General.css";
 import "../index.css";

@@ -13,7 +13,7 @@ import placeholderImage from "../images/himalayas-mountain-range-sunrise-winter-
 import floatingMoney from "../images/TasselHat_dollar_bills_floating_around_17529129-3d9b-4f68-8309-9596ec01b529 - Copy.png";
 import howLongImage from "../images/TasselHat_hourglass_ultra_realistic_cinematic_lighting_volumetr_6b725a44-8920-4117-8b52-5a2d212d9529.png";
 import sortingVisImage from "../images/TasselHat_sorting_algorithm_visualizer_4da05818-e32d-4852-bda1-d11d7f3bfd87.png";
-import backgroundDividerImg from "../images/5ef2e559f911d339e9e83b94_image-divider-bottom.png";
+import backgroundDividerImg from "../images/background-divider-img.png";
 import terminalImage from "../images/TasselHat_vintage_computer_terminal_with_a_black_screen_b8caed54-9099-4b43-9803-7f9fc29ae758.png";
 
 let projectHoverID = 0;
@@ -33,9 +33,8 @@ export default class Projects extends React.Component {
 		projectHoverID = id;
 	}
 
-	handleMouseOut(id) {
+	handleMouseOut() {
 		this.setState({ isHovering: false });
-		projectHoverID = id;
 	}
 
 	render() {
@@ -60,12 +59,22 @@ export default class Projects extends React.Component {
 									className="grid-item"
 								>
 									<div className="preview-img">
-										<img
-											src={floatingMoney}
-											alt=""
-											onMouseOver={() => this.handleMouseOver(1)}
-											onMouseOut={() => this.handleMouseOut()}
-										/>
+										{this.state.isHovering && projectHoverID === 1 && (
+											<img
+												src={placeholderImage}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(1)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
+										{(!this.state.isHovering || projectHoverID !== 1) && (
+											<img
+												src={floatingMoney}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(1)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
 									</div>
 									{this.state.isHovering && projectHoverID === 1 && (
 										<div className="on-hover-info">
@@ -90,12 +99,22 @@ export default class Projects extends React.Component {
 								</a>
 								<Link to="/SortingVisualizer" className="grid-item">
 									<div className="preview-img">
-										<img
-											src={sortingVisImage}
-											alt=""
-											onMouseOver={() => this.handleMouseOver(2)}
-											onMouseOut={() => this.handleMouseOut(0)}
-										/>
+										{this.state.isHovering && projectHoverID === 2 && (
+											<img
+												src={placeholderImage}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(2)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
+										{(!this.state.isHovering || projectHoverID !== 2) && (
+											<img
+												src={sortingVisImage}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(2)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
 									</div>
 									{this.state.isHovering && projectHoverID === 2 && (
 										<div className="on-hover-info">
@@ -116,12 +135,22 @@ export default class Projects extends React.Component {
 								</Link>
 								<Link to="/HowLong" className="grid-item">
 									<div className="preview-img">
-										<img
-											src={howLongImage}
-											alt=""
-											onMouseOver={() => this.handleMouseOver(3)}
-											onMouseOut={() => this.handleMouseOut()}
-										/>
+										{this.state.isHovering && projectHoverID === 3 && (
+											<img
+												src={placeholderImage}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(3)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
+										{(!this.state.isHovering || projectHoverID !== 3) && (
+											<img
+												src={howLongImage}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(3)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
 									</div>
 									{this.state.isHovering && projectHoverID === 3 && (
 										<div className="on-hover-info">
@@ -141,12 +170,22 @@ export default class Projects extends React.Component {
 								</Link>
 								<Link to="/About" className="grid-item">
 									<div className="preview-img">
-										<img
-											src={terminalImage}
-											alt="vintage computer terminal"
-											onMouseOver={() => this.handleMouseOver(4)}
-											onMouseOut={() => this.handleMouseOut()}
-										/>
+										{this.state.isHovering && projectHoverID === 4 && (
+											<img
+												src={placeholderImage}
+												alt=""
+												onMouseOver={() => this.handleMouseOver(4)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
+										{(!this.state.isHovering || projectHoverID !== 4) && (
+											<img
+												src={terminalImage}
+												alt="vintage computer terminal"
+												onMouseOver={() => this.handleMouseOver(4)}
+												onMouseOut={() => this.handleMouseOut()}
+											/>
+										)}
 									</div>
 									{this.state.isHovering && projectHoverID === 4 && (
 										<div className="on-hover-info">
@@ -206,6 +245,10 @@ export default class Projects extends React.Component {
 							</div>
 						</div>
 					</div>
+					<img src={floatingMoney} alt="" className="offscreen" />
+					<img src={sortingVisImage} alt="" className="offscreen" />
+					<img src={howLongImage} alt="" className="offscreen" />
+					<img src={terminalImage} alt="" className="offscreen" />
 				</main>
 				<div className="footer-background-overlay"></div>
 				<Footer />

@@ -1,36 +1,42 @@
 .main-container-resume {
-  padding: 30px 6vw 0 6vw;
+	padding: 30px 6vw 0 6vw;
 }
 
 .Resume-Wrapper {
-  text-align: left;
-  padding-bottom: 60px;
+	text-align: left;
+	padding-bottom: 60px;
+}
+
+.tool-logo {
+	height: 30px;
+	-webkit-filter: drop-shadow(0.2rem 0.2rem 1px #222);
+	filter: drop-shadow(0.2rem 0.2rem 2px #222);
 }
 
 .resume-info {
-  text-align: center;
+	text-align: center;
 }
 
 .languages-wrapper {
-  display: flex;
+	display: flex;
 }
 
 @media (max-width: 850px) {
-  .languages-wrapper {
-    display: block;
-  }
+	.languages-wrapper {
+		display: block;
+	}
 }
 
 .wakatime-piechart {
-  width: 55vw;
+	width: 52vw;
 }
 
 @media (max-width: 850px) {
-  .wakatime-piechart {
-    width: 70vw;
-  }
+	.wakatime-piechart {
+		width: 70vw;
+	}
 }
 
 h4 {
-  white-space: pre-wrap;
+	white-space: pre-wrap;
 }

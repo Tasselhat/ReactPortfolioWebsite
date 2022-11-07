@@ -6,7 +6,7 @@ import ScrollToTop from "./Hooks/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="/ReactPortfolioWebsite">
+  <BrowserRouter basename="/">
     <ScrollToTop />
     <App />
   </BrowserRouter>

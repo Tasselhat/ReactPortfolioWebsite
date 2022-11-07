@@ -79,14 +79,13 @@ export default class Projects extends React.Component {
 									{this.state.isHovering && projectHoverID === 1 && (
 										<div className="on-hover-info">
 											<h2>
-												Budget tracker full stack web app, connected to mongoDB
-												with registration/login to save budgets. Designed to let
-												users enter monthly expenses as well as desired spending
-												on non-essentials, saving, and investing. With
+												Full stack web app, budget tracker connected to mongoDB
+												with registration to save budgets. Allows
+												users to enter monthly expenses, savings, and investments. With
 												reccomendations for saving and investing, users enter
-												monthly income and the app will return donut charts with
-												exact dollar amounts for expenses, discretionary
-												spending, and saving to help users spend their money
+												monthly income and the app will return charts with
+												exact amounts for for expenses, discretionary
+												spending, and saving, as well as a compound interest calculator to help users spend their money
 												mindfully.
 											</h2>
 										</div>

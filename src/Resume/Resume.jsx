@@ -12,6 +12,7 @@ import Pythonlogo from "../images/Python-logo.png";
 import Reactlogo from "../images/React-logo.png";
 import HTMLlogo from "../images/HTML5-logo.png";
 import VSCodelogo from "../images/VSCode-logo.png";
+import MongoDBlogo from "../images/mongodb.svg";
 
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
@@ -81,6 +82,8 @@ export default class Projects extends React.Component {
                   <li> Python <img src={Pythonlogo} alt="" className="tool-logo" /></li>
                   <li> HTML 5 <img src={HTMLlogo} alt="" className="tool-logo" /></li>
                   <li> Responsive CSS <img src={CSS3logo} alt="" className="tool-logo" /></li>
+                  <li> Node.js + Express.js <img src={Nodejslogo} alt="" className="tool-logo" /></li>
+                  <li> MongoDB + Atlas <img src={MongoDBlogo} alt="" className="tool-logo" /></li>
                   <li> Java (Elementary) <img src={Javalogo} alt="" className="tool-logo" /></li>
                   <li>
                     <a href="https://github.com/Tasselhat">
@@ -88,9 +91,8 @@ export default class Projects extends React.Component {
                     </a>
                   </li>
                   <li> VS Code Editor <img src={VSCodelogo} alt="" className="tool-logo" /></li>
-                  <li> Node.js with Express.js <img src={Nodejslogo} alt="" className="tool-logo" /></li>
                   <li> npm (Node Package Manager) <img src={Npmlogo} alt="" className="tool-logo" /></li>
-                  <li> Command Line <img src={CMDlogo} alt="" className="tool-logo" /></li>
+                  <li> Command Line + Git Bash <img src={CMDlogo} alt="" className="tool-logo" /></li>
                 </div>
               </div>
               <div>
@@ -142,14 +144,13 @@ export default class Projects extends React.Component {
             </div>
             <div className="Skills-Wrapper">
               <h3>
-                <u>SKILLS & CHARACTERISTICS</u>
+                <u>SKILLS & FOCUSES</u>
               </h3>
               <div>
-                <li> User Experience Focus</li>
+                <li> User Experience</li>
                 <li> UI design</li>
                 <li> Leadership and Teaching experience</li>
                 <li>
-                  {" "}
                   Continually seeking improvement and expanding education
                 </li>
                 <li> Passionate about teaching, learning, and mentorship</li>

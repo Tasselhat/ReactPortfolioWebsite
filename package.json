@@ -1,7 +1,7 @@
 {
   "name": "reactportfoliowebsite",
-  "version": "1.0.0",
-  "homepage": "https://www.timbschneider.com/",
+  "version": "1.1.4",
+  "homepage": "https://tasselhat.github.io/ReactPortfolioWebsite/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -21,6 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,9 +47,10 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.19"
   },
-  "description": "Collection of personal projects for my developer portfolio. -Tim Schneider",
+  "description": "Collection of personal projects and freelance work from my developer portfolio. -Tim Schneider",
   "main": "index.js",
   "repository": {
     "type": "git",

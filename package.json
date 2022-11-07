@@ -1,7 +1,7 @@
 {
   "name": "reactportfoliowebsite",
-  "version": "0.1.4",
-  "homepage": "https://tasselhat.github.io/ReactPortfolioWebsite/",
+  "version": "1.0.0",
+  "homepage": "https://www.timbschneider.com/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -21,7 +21,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,10 +46,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.19"
   },
-  "description": "This project is a sorting algorithm visualization app. Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. App page can be acessed here: https://tasselhat.github.io/SortingAlgorithmReactApp/ (Google Chrome recommended but can be used with any browser or device)",
+  "description": "Collection of personal projects for my developer portfolio. -Tim Schneider",
   "main": "index.js",
   "repository": {
     "type": "git",

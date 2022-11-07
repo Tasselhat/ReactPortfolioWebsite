@@ -22,7 +22,7 @@ export default class Contact extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 
-		fetch("http://localhost:3000/send", {
+		fetch("https://budget-node-server.herokuapp.com/send", {
 			method: "POST",
 			body: JSON.stringify(this.state),
 			headers: {

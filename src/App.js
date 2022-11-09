@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Projects />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/HowLong" element={<HowLong />} />
-        <Route path="/Resume" element={<Resume />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/SortingVisualizer" element={<SortingVisualizer />} />
+        <Route sensitive={false} path="/Projects" element={<Projects />} />
+        <Route sensitive={false} path="/About" element={<About />} />
+        <Route sensitive={false} path="/HowLong" element={<HowLong />} />
+        <Route sensitive={false} path="/Resume" element={<Resume />} />
+        <Route sensitive={false} path="/Contact" element={<Contact />} />
+        <Route sensitive={false} path="/SortingVisualizer" element={<SortingVisualizer />} />
       </Routes>
     </div>
   );

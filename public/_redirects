@@ -1,6 +1,7 @@
-/login  /            200
-/register  /            200
-/home  /            200
-/projects  /            200
-/about  /            200
-/*  /index.html  200
+/Projects  /index.html  200
+/Home  /index.html  200
+/About  /index.html  200
+/HowLong  /index.html  200
+/Resume  /index.html  200
+/Contact  /index.html  200
+/SortingVisualizer  /index.html  200

@@ -1,0 +1,6 @@
+/login  /            200
+/register  /            200
+/home  /            200
+/projects  /            200
+/about  /            200
+/*  /index.html  301

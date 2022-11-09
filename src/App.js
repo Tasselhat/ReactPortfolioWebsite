@@ -19,7 +19,7 @@ function App() {
         <Route path="/Resume" element={<Resume />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/SortingVisualizer" element={<SortingVisualizer />} />
-        <Route path="/*" element={<About />} />
+        <Route path="/*" render={() => <About />} />
       </Routes>
     </div>
   );

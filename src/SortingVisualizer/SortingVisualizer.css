@@ -67,6 +67,7 @@
   width: 30vw;
   right: 48px;
   top: 60vh;
+  border-radius: 3px;
   color: white;
   -ms-overflow-style: none;
   scrollbar-width: none;

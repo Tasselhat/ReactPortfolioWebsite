@@ -5,6 +5,7 @@ import HowLong from "./HowLong/HowLong.jsx";
 import Resume from "./Resume/Resume.jsx";
 import About from "./About/About.jsx";
 import Contact from "./Contact/Contact.jsx";
+import Missing from "./Pages/Missing.jsx";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
         <Route sensitive={false} path="/Resume" element={<Resume />} />
         <Route sensitive={false} path="/Contact" element={<Contact />} />
         <Route sensitive={false} path="/SortingVisualizer" element={<SortingVisualizer />} />
+				<Route path="*" element={<Missing />} />
       </Routes>
     </div>
   );

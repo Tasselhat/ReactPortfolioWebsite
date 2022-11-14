@@ -55,7 +55,7 @@ export default class Projects extends React.Component {
 						<div className="content-container">
 							<div className="grid-thumbs">
 								<a
-									href="https://github.com/Tasselhat/BudgetTracker"
+									href="https://www.budgetappfree.com/"
 									className="grid-item"
 								>
 									<div className="preview-img">
@@ -92,7 +92,7 @@ export default class Projects extends React.Component {
 									)}
 									{(!this.state.isHovering || projectHoverID !== 1) && (
 										<div className="project-title">
-											<h1>Budget Tracker (WIP, github repository)</h1>
+											<h1>Budget Tracker Web App (M.E.R.N Stack)</h1>
 										</div>
 									)}
 								</a>
@@ -201,7 +201,7 @@ export default class Projects extends React.Component {
 										</div>
 									)}
 								</Link>
-								<a className="grid-item">
+								<Link to="#" className="grid-item">
 									<div className="preview-img">
 										<img
 											src={placeholderImage}
@@ -220,8 +220,8 @@ export default class Projects extends React.Component {
 											<h1>Project Placeholder Name</h1>
 										</div>
 									)}
-								</a>
-								<a className="grid-item">
+								</Link>
+								<Link to="#" className="grid-item">
 									<div className="preview-img">
 										<img
 											src={placeholderImage}
@@ -240,7 +240,7 @@ export default class Projects extends React.Component {
 											<h1>Project Placeholder Name</h1>
 										</div>
 									)}
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

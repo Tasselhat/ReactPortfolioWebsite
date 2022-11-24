@@ -85,6 +85,12 @@
   }
 }
 
+@media (max-width: 899px) {
+  .header-title-logo {
+    display: none;
+  }
+}
+
 .icon:hover {
   opacity: 0.7;
 }

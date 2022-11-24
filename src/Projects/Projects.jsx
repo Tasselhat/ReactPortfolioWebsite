@@ -12,6 +12,10 @@ import "../index.css";
 import placeholderImage from "../images/himalayas-mountain-range-sunrise-winter-above-clouds-3200x2560-1165.jpg";
 import floatingMoney from "../images/TasselHat_dollar_bills_floating_around_17529129-3d9b-4f68-8309-9596ec01b529 - Copy.png";
 import howLongImage from "../images/TasselHat_hourglass_ultra_realistic_cinematic_lighting_volumetr_6b725a44-8920-4117-8b52-5a2d212d9529.png";
+import howLongHover from "../images/HowLongHover.png";
+import budgetHover from "../images/Screenshot 2022-10-18 204020.png";
+import sortingHover from "../images/SortingHover.png";
+import terminalHover from "../images/TerminalHover.png";
 import sortingVisImage from "../images/TasselHat_sorting_algorithm_visualizer_4da05818-e32d-4852-bda1-d11d7f3bfd87.png";
 import backgroundDividerImg from "../images/background-divider-img.png";
 import terminalImage from "../images/TasselHat_vintage_computer_terminal_with_a_black_screen_b8caed54-9099-4b43-9803-7f9fc29ae758.png";
@@ -61,7 +65,7 @@ export default class Projects extends React.Component {
 									<div className="preview-img">
 										{this.state.isHovering && projectHoverID === 1 && (
 											<img
-												src={placeholderImage}
+												src={budgetHover}
 												alt=""
 												onMouseOver={() => this.handleMouseOver(1)}
 												onMouseOut={() => this.handleMouseOut()}
@@ -100,7 +104,7 @@ export default class Projects extends React.Component {
 									<div className="preview-img">
 										{this.state.isHovering && projectHoverID === 2 && (
 											<img
-												src={placeholderImage}
+												src={sortingHover}
 												alt=""
 												onMouseOver={() => this.handleMouseOver(2)}
 												onMouseOut={() => this.handleMouseOut()}
@@ -136,7 +140,7 @@ export default class Projects extends React.Component {
 									<div className="preview-img">
 										{this.state.isHovering && projectHoverID === 3 && (
 											<img
-												src={placeholderImage}
+												src={howLongHover}
 												alt=""
 												onMouseOver={() => this.handleMouseOver(3)}
 												onMouseOut={() => this.handleMouseOut()}
@@ -171,7 +175,7 @@ export default class Projects extends React.Component {
 									<div className="preview-img">
 										{this.state.isHovering && projectHoverID === 4 && (
 											<img
-												src={placeholderImage}
+												src={terminalHover}
 												alt=""
 												onMouseOver={() => this.handleMouseOver(4)}
 												onMouseOut={() => this.handleMouseOut()}

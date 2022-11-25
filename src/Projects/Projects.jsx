@@ -58,10 +58,7 @@ export default class Projects extends React.Component {
 					<div className="content-wrapper">
 						<div className="content-container">
 							<div className="grid-thumbs">
-								<a
-									href="https://www.budgetappfree.com/"
-									className="grid-item"
-								>
+								<a href="https://www.budgetappfree.com/" className="grid-item">
 									<div className="preview-img">
 										{this.state.isHovering && projectHoverID === 1 && (
 											<img
@@ -84,13 +81,13 @@ export default class Projects extends React.Component {
 										<div className="on-hover-info">
 											<h2>
 												Full stack web app, budget tracker connected to mongoDB
-												with registration to save budgets. Allows
-												users to enter monthly expenses, savings, and investments. With
+												with registration to save budgets. Allows users to enter
+												monthly expenses, savings, and investments. With
 												reccomendations for saving and investing, users enter
-												monthly income and the app will return charts with
-												exact amounts for for expenses, discretionary
-												spending, and saving, as well as a compound interest calculator to help users spend their money
-												mindfully.
+												monthly income and the app will return charts with exact
+												amounts for for expenses, discretionary spending, and
+												saving, as well as a compound interest calculator to
+												help users spend their money mindfully.
 											</h2>
 										</div>
 									)}
@@ -252,6 +249,10 @@ export default class Projects extends React.Component {
 					<img src={sortingVisImage} alt="" className="offscreen" />
 					<img src={howLongImage} alt="" className="offscreen" />
 					<img src={terminalImage} alt="" className="offscreen" />
+					<img src={howLongHover} alt="" className="offscreen" />
+					<img src={sortingHover} alt="" className="offscreen" />
+					<img src={terminalHover} alt="" className="offscreen" />
+					<img src={budgetHover} alt="" className="offscreen" />
 				</main>
 				<div className="footer-background-overlay"></div>
 				<Footer />

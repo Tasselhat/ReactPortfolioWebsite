@@ -104,4 +104,5 @@
 .offscreen {
 	position: absolute;
 	left: -9999px;
+	height: min-content;
 }

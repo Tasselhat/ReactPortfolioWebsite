@@ -28,6 +28,7 @@ for (let i = 0; i < TOTAL_POINTS; i++) {
 		y: getRandomInRange(0, maxHeight),
 		d: getRandomInRange(0, 360),
 		s: 0.8,
+		size: (Math.floor(getRandomInRange(100,350))/100),
 	});
 }
 
@@ -42,9 +43,10 @@ const movePoint = (point) => {
 
 const drawPoint = (point, ctx) => {
 	ctx.beginPath();
-	ctx.arc(point.x, point.y, 1.2, 0, 2 * Math.PI);
+	ctx.arc(point.x, point.y, point.size, 0, 2 * Math.PI);
 	ctx.fill();
 };
+
 
 const drawLine = (point, other, d, ctx) => {
 	ctx.beginPath();
@@ -80,6 +82,7 @@ const draw = (ctx, frameCount) => {
 				y: getRandomInRange(0, maxHeight),
 				d: getRandomInRange(0, 360),
 				s: 0.8,
+				size: (Math.floor(getRandomInRange(100,350))/100),
 			});
 		}
 	}

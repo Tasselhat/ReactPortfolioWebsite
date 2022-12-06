@@ -1,283 +1,283 @@
 .tv {
-	text-align: left;
-	font-family: "IBM_VGA_8x16", "IBM_VGA_8x16_Bold", monospace;
-	font-size: calc(16px * var(--size));
-	line-height: calc(16px * var(--size));
-	font-weight: normal;
-	font-style: normal;
-	margin: 0;
-	background: black;
-	color: rgba(0, 255, 0, 0.8);
-	min-height: 100vh;
-	position: relative;
-	text-shadow: 0 0.2rem 1rem #27e90e;
+  text-align: left;
+  font-family: "IBM_VGA_8x16", "IBM_VGA_8x16_Bold", monospace;
+  font-size: calc(16px * var(--size));
+  line-height: calc(16px * var(--size));
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  background: black;
+  color: rgba(0, 255, 0, 0.8);
+  min-height: 100vh;
+  position: relative;
+  text-shadow: 0 0.2rem 1rem #27e90e;
 }
 
 .asciiName {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 #terminal {
-	margin: 0;
+  margin: 0;
 }
 
 .terminal {
-	margin: 0;
+  margin: 0;
 }
 
 .Console {
-	height: 94vh;
-	padding-bottom: 6vh;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-	overflow-y: scroll;
+  height: 94vh;
+  padding-bottom: 6vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
 }
 
 .Console::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .terminalOutput {
-	white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 .textInputWrapper {
-	display: flex;
-	width: 100%;
-	justify-content: flex-start;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .promptLine {
-	margin: 0;
+  margin: 0;
 }
 
 .inputText {
-	position: relative;
-	flex: 1;
-	background: transparent;
-	border: none;
-	color: rgba(0, 255, 0, 0.8);
-	text-align: left;
-	font-family: "IBM_VGA_8x16", "IBM_VGA_8x16_Bold", monospace;
-	font-size: 16px;
-	line-height: 16px;
-	height: 15px;
-	padding: 0 0 0 0;
-	text-shadow: 0 0.2rem 1rem #27e90e;
+  position: relative;
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: rgba(0, 255, 0, 0.8);
+  text-align: left;
+  font-family: "IBM_VGA_8x16", "IBM_VGA_8x16_Bold", monospace;
+  font-size: calc(16px * var(--size));
+  line-height: calc(16px * var(--size));
+  font-weight: 500;
+  padding: 0;
+  text-shadow: 0 0.2rem 1rem #27e90e;
 }
 
 .inputText:focus {
-	outline: none;
+  outline: none;
 }
 
 .collection {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	padding: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
 }
 
 @media (max-width: 1199px) {
-	body {
-		--size: 0.75;
-	}
+  body {
+    --size: 0.75;
+  }
 }
 
 @media (min-width: 1200px) {
-	body {
-		--size: 1;
-	}
+  body {
+    --size: 1;
+  }
 }
 
 @media (min-width: 1650px) {
-	body {
-		--size: 1.125;
-	}
+  body {
+    --size: 1.125;
+  }
 }
 
 @media (min-width: 2500px) {
-	body {
-		--size: 2;
-	}
+  body {
+    --size: 2;
+  }
 }
 
 .self {
-	transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 /* flicker animation taken from http://goonhub.com/secret */
 
 .flicker {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background: rgba(18, 16, 16, 0.2);
-	opacity: 0;
-	z-index: 1000;
-	pointer-events: none;
-	animation: flicker 0.12s infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.2);
+  opacity: 0;
+  z-index: 1000;
+  pointer-events: none;
+  animation: flicker 0.12s infinite;
 }
 
 @keyframes flicker {
-	0% {
-		opacity: 0.552;
-	}
-	5% {
-		opacity: 0.48287;
-	}
-	10% {
-		opacity: 0.59134;
-	}
-	15.0% {
-		opacity: 0.79543;
-	}
-	20% {
-		opacity: 0.75134;
-	}
-	25% {
-		opacity: 0.1956;
-	}
-	30.0% {
-		opacity: 0.90687;
-	}
-	35% {
-		opacity: 0.122;
-	}
-	40% {
-		opacity: 0.62254;
-	}
-	45% {
-		opacity: 0.56977;
-	}
-	50% {
-		opacity: 0.9925;
-	}
-	55.0% {
-		opacity: 0.55487;
-	}
-	60.0% {
-		opacity: 0.16607;
-	}
-	65% {
-		opacity: 0.12353;
-	}
-	70% {
-		opacity: 0.2214;
-	}
-	75% {
-		opacity: 0.67908;
-	}
-	80% {
-		opacity: 0.97163;
-	}
-	85.0% {
-		opacity: 0.1275;
-	}
-	90% {
-		opacity: 0.37186;
-	}
-	95% {
-		opacity: 0.24475;
-	}
-	100% {
-		opacity: 0.37221;
-	}
+  0% {
+    opacity: 0.552;
+  }
+  5% {
+    opacity: 0.48287;
+  }
+  10% {
+    opacity: 0.59134;
+  }
+  15.0% {
+    opacity: 0.79543;
+  }
+  20% {
+    opacity: 0.75134;
+  }
+  25% {
+    opacity: 0.1956;
+  }
+  30.0% {
+    opacity: 0.90687;
+  }
+  35% {
+    opacity: 0.122;
+  }
+  40% {
+    opacity: 0.62254;
+  }
+  45% {
+    opacity: 0.56977;
+  }
+  50% {
+    opacity: 0.9925;
+  }
+  55.0% {
+    opacity: 0.55487;
+  }
+  60.0% {
+    opacity: 0.16607;
+  }
+  65% {
+    opacity: 0.12353;
+  }
+  70% {
+    opacity: 0.2214;
+  }
+  75% {
+    opacity: 0.67908;
+  }
+  80% {
+    opacity: 0.97163;
+  }
+  85.0% {
+    opacity: 0.1275;
+  }
+  90% {
+    opacity: 0.37186;
+  }
+  95% {
+    opacity: 0.24475;
+  }
+  100% {
+    opacity: 0.37221;
+  }
 }
 
 .scanlines {
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(
-		to bottom,
-		rgba(255, 255, 255, 0),
-		rgba(255, 255, 255, 0) 50%,
-		rgba(3, 3, 3, 0.2) 70%,
-		rgba(3, 3, 3, 0.6)
-	);
-	background-size: 100% 0.3rem;
-	position: fixed;
-	pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(3, 3, 3, 0.2) 70%,
+    rgba(3, 3, 3, 0.6)
+  );
+  background-size: 100% 0.3rem;
+  position: fixed;
+  pointer-events: none;
 }
 
 .scanlines:before {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	height: 5px;
-	background: #fff;
-	background: linear-gradient(
-		to bottom,
-		rgba(255, 0, 0, 0) 0%,
-		rgba(255, 250, 250, 0.2) 50%,
-		rgba(255, 255, 255, 0.2) 51%,
-		rgba(255, 0, 0, 0) 100%
-	); /* W3C */
-	opacity: 0.1;
-	content: "";
-	display: block;
-	animation: vline 3s linear infinite;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgba(255, 250, 250, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 51%,
+    rgba(255, 0, 0, 0) 100%
+  ); /* W3C */
+  opacity: 0.1;
+  content: "";
+  display: block;
+  animation: vline 3s linear infinite;
 }
 
 .scanlines:after {
-	box-shadow: 0 2px 6px rgba(25, 25, 25, 0.2), inset 0 1px rgba(50, 50, 50, 0.1),
-		inset 0 3px rgba(50, 50, 50, 0.05), inset 0 3px 8px rgba(64, 64, 64, 0.05),
-		inset 0 -5px 10px rgba(25, 25, 25, 0.1);
+  box-shadow: 0 2px 6px rgba(25, 25, 25, 0.2), inset 0 1px rgba(50, 50, 50, 0.1),
+    inset 0 3px rgba(50, 50, 50, 0.05), inset 0 3px 8px rgba(64, 64, 64, 0.05),
+    inset 0 -5px 10px rgba(25, 25, 25, 0.1);
 }
 
 @supports (-ms-ime-align: auto) {
-	.scanlines:before {
-		content: "";
-		animation: vline 3s linear infinite;
-	}
+  .scanlines:before {
+    content: "";
+    animation: vline 3s linear infinite;
+  }
 }
 @keyframes vline {
-	to {
-		transform: translate(0, 100vh);
-	}
+  to {
+    transform: translate(0, 100vh);
+  }
 }
 /* turn off animation */
 
 .tv.collapse {
-	animation: size 2s ease-out;
-	animation-fill-mode: forwards;
+  animation: size 2s ease-out;
+  animation-fill-mode: forwards;
 }
 
 .tv.collapse:before {
-	content: "";
-	display: block;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	background: white;
-	z-index: 1;
-	opacity: 0;
-	animation: opacity 2s ease-out;
-	animation-fill-mode: forwards;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: white;
+  z-index: 1;
+  opacity: 0;
+  animation: opacity 2s ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes opacity {
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
 @keyframes size {
-	50% {
-		transform: scaleX(calc(1 / var(--width)));
-		opacity: 1;
-	}
-	98% {
-		transform: scaleX(calc(1 / var(--width))) scaleY(calc(1 / var(--height)));
-		opacity: 1;
-	}
-	100% {
-		transform: scaleX(calc(1 / var(--width))) scaleY(calc(1 / var(--height)));
-		opacity: 0;
-	}
+  50% {
+    transform: scaleX(calc(1 / var(--width)));
+    opacity: 1;
+  }
+  98% {
+    transform: scaleX(calc(1 / var(--width))) scaleY(calc(1 / var(--height)));
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(calc(1 / var(--width))) scaleY(calc(1 / var(--height)));
+    opacity: 0;
+  }
 }

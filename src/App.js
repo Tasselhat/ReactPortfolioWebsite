@@ -19,8 +19,12 @@ function App() {
         <Route sensitive={false} path="/HowLong" element={<HowLong />} />
         <Route sensitive={false} path="/Resume" element={<Resume />} />
         <Route sensitive={false} path="/Contact" element={<Contact />} />
-        <Route sensitive={false} path="/SortingVisualizer" element={<SortingVisualizer />} />
-				<Route path="*" element={<Missing />} />
+        <Route
+          sensitive={false}
+          path="/SortingVisualizer"
+          element={<SortingVisualizer />}
+        />
+        <Route path="*" element={<Missing />} />
       </Routes>
     </div>
   );

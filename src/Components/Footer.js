@@ -11,7 +11,7 @@ import "./Footer.css";
 import "../General.css";
 
 class Footer extends Component {
-render() {
+  render() {
     return (
       <footer id="footer" className="footer-box">
         <div className="footer-row">
@@ -137,8 +137,8 @@ render() {
           </div>
         </div>
       </footer>
-);
-}
+    );
+  }
 }
 
 export default Footer;

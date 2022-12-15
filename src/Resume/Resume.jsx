@@ -20,6 +20,21 @@ import "./Resume.css";
 import "../General.css";
 import "../index.css";
 
+// Function will execute on click of button
+const onButtonClick = () => {
+  // using JavaScript method to get PDF file
+  fetch("Engineering Resume Dec 2022.pdf").then((response) => {
+    response.blob().then((blob) => {
+      // Creating new object of PDF file
+      const fileURL = window.URL.createObjectURL(blob);
+      // Setting various property values
+      let alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = "Engineering Resume Dec 2022.pdf";
+      alink.click();
+    });
+  });
+};
 export default class Projects extends React.Component {
   constructor(props) {
     super(props);
@@ -39,6 +54,14 @@ export default class Projects extends React.Component {
         <main id="page" className="main-container-resume" role="main">
           <div className="Resume-Wrapper">
             <header className="resume-info">
+              <button
+                onClick={() => onButtonClick()}
+                className="pdf-download-button"
+              >
+                <span className="pdf-download-button-front">
+                  Download PDF version
+                </span>
+              </button>
               <h1>Tim Schneider</h1>
               <h2>Web Development, Design, Gymnastics Coach</h2>
               <h4>
@@ -50,7 +73,8 @@ export default class Projects extends React.Component {
                 </a>
                 -&nbsp;&nbsp; San Diego, CA &nbsp;&nbsp;-&nbsp;&nbsp;
                 <a href="linkedin.com/in/timbschneider">
-                  <u>linkedin.com/in/timbschneider</u>&nbsp;&nbsp;
+                  <u>linkedin.com/in/timbschneider</u>
+                  &nbsp;&nbsp;
                 </a>
                 <a href="https://github.com/Tasselhat">
                   -&nbsp;&nbsp; <u>github.com/Tasselhat</u>
@@ -63,12 +87,12 @@ export default class Projects extends React.Component {
               </h2>
               <p>
                 B.S. in Psychology with a Specialization in Developmental
-                Psychology / 3.96 GPA / <b>UC San Diego </b>/ September 2021 -
+                Psychology / 3.96 GPA /<b>UC San Diego </b>/ September 2021 -
                 June 2023
               </p>
               <p>
-                AA-T Psychology / 3.87 GPA /{" "}
-                <b>Lake Tahoe Community College </b>/ September 2019 - June 2021
+                AA-T Psychology / 3.87 GPA /<b>Lake Tahoe Community College </b>
+                / September 2019 - June 2021
               </p>
             </div>
             <div className="languages-wrapper">
@@ -77,22 +101,56 @@ export default class Projects extends React.Component {
                   <u>PROGRAMMING LANGUAGES & TOOLS</u>
                 </h3>
                 <div>
-                  <li> Javascript <img src={JavaScriptlogo} alt="" className="tool-logo" /></li>
-                  <li> React.js <img src={Reactlogo} alt="" className="tool-logo" /></li>
-                  <li> Python <img src={Pythonlogo} alt="" className="tool-logo" /></li>
-                  <li> HTML 5 <img src={HTMLlogo} alt="" className="tool-logo" /></li>
-                  <li> Responsive CSS <img src={CSS3logo} alt="" className="tool-logo" /></li>
-                  <li> Node.js + Express.js <img src={Nodejslogo} alt="" className="tool-logo" /></li>
-                  <li> MongoDB + Atlas <img src={MongoDBlogo} alt="" className="tool-logo" /></li>
-                  <li> Java (Elementary) <img src={Javalogo} alt="" className="tool-logo" /></li>
+                  <li>
+                    Javascript
+                    <img src={JavaScriptlogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    React.js
+                    <img src={Reactlogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    Python
+                    <img src={Pythonlogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    HTML 5
+                    <img src={HTMLlogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    Responsive CSS
+                    <img src={CSS3logo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    Node.js + Express.js
+                    <img src={Nodejslogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    MongoDB + Atlas
+                    <img src={MongoDBlogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    Java (Elementary)
+                    <img src={Javalogo} alt="" className="tool-logo" />
+                  </li>
                   <li>
                     <a href="https://github.com/Tasselhat">
-                      Git + Github for version control <img src={Githublogo} alt="" className="tool-logo" />
+                      Git + Github for version control
+                      <img src={Githublogo} alt="" className="tool-logo" />
                     </a>
                   </li>
-                  <li> VS Code Editor <img src={VSCodelogo} alt="" className="tool-logo" /></li>
-                  <li> npm (Node Package Manager) <img src={Npmlogo} alt="" className="tool-logo" /></li>
-                  <li> Command Line + Git Bash <img src={CMDlogo} alt="" className="tool-logo" /></li>
+                  <li>
+                    VS Code Editor
+                    <img src={VSCodelogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    npm (Node Package Manager)
+                    <img src={Npmlogo} alt="" className="tool-logo" />
+                  </li>
+                  <li>
+                    Command Line + Git Bash
+                    <img src={CMDlogo} alt="" className="tool-logo" />
+                  </li>
                 </div>
               </div>
               <div>
@@ -101,45 +159,65 @@ export default class Projects extends React.Component {
                 </figure>
               </div>
             </div>
+            <div className="Projects-Wrapper">
+              <h2>
+                <u>PROJECTS</u>
+              </h2>
+              <p>
+                <h3>Budget App Free</h3>
+                <a href="https://www.budgetappfree.com/">
+                  <u>www.BudgetAppFree.com</u>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href="https://github.com/Tasselhat/BudgetTracker">
+                  <u>github.com/Tasselhat/BudgetTracker</u>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+              </p>
+              <br />
+              <p>
+                Full-stack&nbsp;&nbsp;&nbsp;&nbsp;Personal
+                Project&nbsp;&nbsp;&nbsp;&nbsp;Sept 2022 - Nov 2022
+              </p>
+              <p>
+                Web app for submitting and saving user budget, displaying to
+                users a breakdown of their expenses and savings (React , Node ,
+                Express , MongoDB, Heroku )
+              </p>
+              <p>
+                <h3>Optiwing SEO tool (W.I.P)</h3>
+                <a href="https://www.optiwing.com/">
+                  <u>www.Optiwing.com</u>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                Private Repository
+              </p>
+              <br />
+              <p>
+                Full-stack&nbsp;&nbsp;&nbsp;&nbsp;Personal
+                Project&nbsp;&nbsp;&nbsp;&nbsp;Sept 2022 - Nov 2022
+              </p>
+              <p>
+                Web tool for submitting keywords as a csv file and receiving a
+                ranking list and connection map of related search terms for
+                google search engine optimization. (React , Node , Express ,
+                MongoDB, Heroku )
+              </p>
+            </div>
             <div className="Work-Experience-Wrapper">
               <h2>
                 <u>WORK EXPERIENCE</u>
               </h2>
-              <h3>San Diego UNITED Training Center</h3>
+              <h3>Shasta Gymnastics Academy</h3>
               <p>
-                Gymnastics &nbsp;&nbsp;&nbsp;&nbsp;November 2021 - Present
-                &nbsp;&nbsp;&nbsp;&nbsp;(San Diego, CA)
+                Front-end Development&nbsp;&nbsp;&nbsp;&nbsp;November 2022 -
+                Present &nbsp;&nbsp;&nbsp;&nbsp;(Redding, CA - Remote)
               </p>
+              <li>Designed and launched new website</li>
+              <li>Offer support and monthly website maintenance and upkeep</li>
               <li>
-                Coaching Developmental level 3/4/5, and assistant coaching
-                Optional level and Xcel Bronze-Diamond competitive women's
-                gymnastics.
-              </li>
-              <li>
-                Coaching introductory level women's artistic gymnastics and
-                tumbling classes
-              </li>
-              <li>
-                Maintaining a safe learning environment, creating lesson plans,
-                Fostering an encouraging and fun atmosphere. Completing daily
-                tasks and duties. Speaking with parents with regards to athlete
-                progress.
-              </li>
-              <h3>Tumbleweeds Gymnastics</h3>
-              <p>
-                Gymnastics/Camp Coach &nbsp;&nbsp;&nbsp;&nbsp;June 2018 -
-                September 2021 &nbsp;&nbsp;&nbsp;&nbsp;(Minden & Carson City,
-                NV)
-              </p>
-              <li>
-                Coaching introductory level men's and women's artistic
-                gymnastics, and trampoline gymnastics (T&T). As well as
-                Pre-Team, and assistant coaching competitive women's artistic
-                level 3, and Xcel Bronze.
-              </li>
-              <li>
-                Summer camp coach responsibilities include supervising campers,
-                completing daily tasks/chores, and organizing games/activities.
+                Implemented class calendar utilizing google calendar API and
+                backend email server for contact page
               </li>
             </div>
             <div className="Skills-Wrapper">
@@ -150,12 +228,9 @@ export default class Projects extends React.Component {
                 <li> User Experience</li>
                 <li> UI design</li>
                 <li> Leadership and Teaching experience</li>
-                <li>
-                  Continually seeking improvement and expanding education
-                </li>
-                <li> Passionate about teaching, learning, and mentorship</li>
+                <li>Continually seeking improvement and expanding education</li>
                 <li> Research experience</li>
-                <li> Background in psychology and human development</li>
+                <li>Background in psychology and human development</li>
               </div>
             </div>
             <div className="Leadership-Awards-Wrapper">
@@ -173,6 +248,10 @@ export default class Projects extends React.Component {
               <p>
                 <b>Media Chair </b>/ UCSD Club Gymnastics - June 2022 - June
                 2023
+              </p>
+              <p>
+                <b>Provost Honors | 4.0 GPA </b>/ UC San Diego - Terms: Fall Qtr
+                2021, Winter Qtr 2022
               </p>
               <p>
                 <b>Janice Tait Memorial Scholarship</b>/ Awarded Fall 2020

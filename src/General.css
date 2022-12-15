@@ -1,23 +1,23 @@
 button {
-	font-family: "EB Garamond", "Maven Pro", serif;
+  font-family: "EB Garamond", "Maven Pro", serif;
 }
 
 a {
-	background: transparent;
-	cursor: pointer;
-	color: inherit;
-	text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
-	border: 0;
+  border: 0;
 }
 
 body {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 body::-webkit-scrollbar {
-	display: none; /* Chrome */
+  display: none; /* Chrome */
 }

@@ -130,7 +130,7 @@ export default class Projects extends React.Component {
                   {this.state.isHovering && projectHoverID === 1 && (
                     <div className="on-hover-info">
                       <h2>
-                        Full stack web app, budget tracking app with
+                        Full stack budget tracking web app with
                         login/registration to save budgets. Allows users to
                         enter monthly expenses, savings, and investments. With
                         recommendations for saving and investing, users enter

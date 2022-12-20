@@ -19,6 +19,7 @@
 
 .languages-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .pdf-download-button {
@@ -63,7 +64,7 @@
   transition: transform 34ms;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .languages-wrapper {
     display: block;
   }
@@ -71,11 +72,14 @@
 
 .wakatime-piechart {
   width: 52vw;
+  margin: auto;
+  display: flex;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .wakatime-piechart {
-    width: 80vw;
+    width: 90vw;
+    margin: auto;
   }
 }
 

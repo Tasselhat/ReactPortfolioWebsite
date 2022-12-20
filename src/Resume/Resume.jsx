@@ -63,7 +63,7 @@ export default class Projects extends React.Component {
                 </span>
               </button>
               <h1>Tim Schneider</h1>
-              <h2>Web Development, Design, Gymnastics Coach</h2>
+              <h2>Web Development, Front-end, Full-stack</h2>
               <h4>
                 <a href="mailto:Tim.b.schneider@gmail.com">
                   Tim.b.schneider@gmail.com &nbsp;&nbsp;

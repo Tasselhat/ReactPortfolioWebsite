@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Header from "../Components/Header.js";
@@ -28,10 +29,18 @@ export default class Projects extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { isHovering: false };
+    this.state = { isHovering: false, wrapperHeight: 2000 };
 
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseOut = this.handleMouseOut.bind(this);
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      const totalHeight =
+        document.getElementById("content-wrapper").offsetHeight;
+      this.setState({ wrapperHeight: totalHeight });
+    }, 1000);
   }
 
   handleMouseOver(id) {
@@ -53,11 +62,15 @@ export default class Projects extends React.Component {
             src={backgroundDividerImg}
             alt=""
           />
-          <Canvas className="canvas" draw={ProximityGraph} />
+          <Canvas
+            className="canvas"
+            height={this.state.wrapperHeight}
+            draw={ProximityGraph}
+          />
           <h1 className="projects-header">
             Hover for more info, click to see more
           </h1>
-          <div className="content-wrapper">
+          <div id="content-wrapper" className="content-wrapper">
             <div className="content-container">
               <div className="grid-thumbs">
                 <a
@@ -265,16 +278,16 @@ export default class Projects extends React.Component {
               </div>
             </div>
           </div>
-          <img src={floatingMoney} alt="" className="offscreen" />
-          <img src={sortingVisImage} alt="" className="offscreen" />
-          <img src={howLongImage} alt="" className="offscreen" />
-          <img src={terminalImage} alt="" className="offscreen" />
-          <img src={howLongHover} alt="" className="offscreen" />
-          <img src={sortingHover} alt="" className="offscreen" />
-          <img src={terminalHover} alt="" className="offscreen" />
-          <img src={budgetHover} alt="" className="offscreen" />
-          <img src={shastaImage} alt="" className="offscreen" />
-          <img src={shastaPreviewImage} alt="" className="offscreen" />
+          <img src={floatingMoney} alt="" className="offscreen-img" />
+          <img src={sortingVisImage} alt="" className="offscreen-img" />
+          <img src={howLongImage} alt="" className="offscreen-img" />
+          <img src={terminalImage} alt="" className="offscreen-img" />
+          <img src={howLongHover} alt="" className="offscreen-img" />
+          <img src={sortingHover} alt="" className="offscreen-img" />
+          <img src={terminalHover} alt="" className="offscreen-img" />
+          <img src={budgetHover} alt="" className="offscreen-img" />
+          <img src={shastaImage} alt="" className="offscreen-img" />
+          <img src={shastaPreviewImage} alt="" className="offscreen-img" />
         </main>
         <div className="footer-background-overlay"></div>
         <Footer />

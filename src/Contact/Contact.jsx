@@ -62,35 +62,30 @@ export default class Contact extends React.Component {
               onSubmit={this.handleSubmit.bind(this)}
               method="POST"
             >
-              <div className="form-element">
-                <label className="form-labels" htmlFor="name">
-                  Name
-                </label>
+              <h2 className="form-h2">Send Me A Message</h2>
+              <label className="form-labels" htmlFor="name">
+                Name
                 <input
                   type="text"
+                  placeholder="Smart and charismatic recuiter (You)"
                   className="form-control"
                   value={this.state.name}
                   onChange={this.onNameChange.bind(this)}
                 />
-              </div>
-
-              <div className="form-element">
-                <label className="form-labels" htmlFor="exampleInputEmail">
-                  Email address
-                </label>
+              </label>
+              <label className="form-labels" htmlFor="inputEmail">
+                Email address
                 <input
                   type="email"
                   className="form-control"
+                  placeholder="your-email@example.com"
                   aria-describedby="emailHelp"
                   value={this.state.email}
                   onChange={this.onEmailChange.bind(this)}
                 />
-              </div>
-
-              <div className="form-element">
-                <label className="form-labels" htmlFor="message">
-                  Your message to me:
-                </label>
+              </label>
+              <label className="form-labels" htmlFor="message">
+                Your message to me:
                 <textarea
                   type="text"
                   className="message-box"
@@ -98,7 +93,7 @@ export default class Contact extends React.Component {
                   value={this.state.message}
                   onChange={this.onMessageChange.bind(this)}
                 ></textarea>
-              </div>
+              </label>
               <div className="submit-clear-buttons">
                 <button type="submit" className="form-button">
                   Submit

@@ -5,8 +5,8 @@ const getRandomInRange = (min, max) => {
 };
 
 const width = document.documentElement.clientWidth;
-const maxHeight = width < 700 ? 1100 : width < 1200 ? 1350 : 2200;
-const TOTAL_POINTS = width < 700 ? width - 300 : 1000;
+const maxHeight = 4000;
+const TOTAL_POINTS = width < 1080 ? width - 200 : 1000;
 
 const CONNECT_DISTANCE = 100;
 
@@ -52,7 +52,7 @@ const drawLine = (point, other, d, ctx) => {
 };
 
 const draw = (ctx, frameCount) => {
-  ctx.clearRect(0, 0, width, maxHeight);
+  ctx.clearRect(0, 0, width, maxHeight + 5);
 
   points.forEach((point) => {
     movePoint(point);

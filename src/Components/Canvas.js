@@ -25,7 +25,9 @@ const Canvas = (props) => {
     };
   }, [draw]);
 
-  return <canvas width={width} height="2200" ref={canvasRef} {...props} />;
+  return (
+    <canvas width={width} height={props.height} ref={canvasRef} {...props} />
+  );
 };
 
 export default Canvas;

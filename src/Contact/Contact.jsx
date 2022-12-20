@@ -67,7 +67,7 @@ export default class Contact extends React.Component {
                 Name
                 <input
                   type="text"
-                  placeholder="Smart and charismatic recuiter (You)"
+                  placeholder="Smart and charismatic recruiter (You)"
                   className="form-control"
                   value={this.state.name}
                   onChange={this.onNameChange.bind(this)}

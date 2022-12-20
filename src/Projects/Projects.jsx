@@ -130,14 +130,14 @@ export default class Projects extends React.Component {
                   {this.state.isHovering && projectHoverID === 1 && (
                     <div className="on-hover-info">
                       <h2>
-                        Full stack web app, budget tracker connected to mongoDB
-                        with registration to save budgets. Allows users to enter
-                        monthly expenses, savings, and investments. With
-                        reccomendations for saving and investing, users enter
-                        monthly income and the app will return charts with exact
-                        amounts for for expenses, discretionary spending, and
-                        saving, as well as a compound interest calculator to
-                        help users spend their money mindfully.
+                        Full stack web app, budget tracking app with
+                        login/registration to save budgets. Allows users to
+                        enter monthly expenses, savings, and investments. With
+                        recommendations for saving and investing, users enter
+                        monthly income and the app will return charts breaking
+                        down expenses, discretionary spending, and saving, as
+                        well as a compound interest calculator to help users
+                        spend their money mindfully.
                       </h2>
                     </div>
                   )}
@@ -169,10 +169,8 @@ export default class Projects extends React.Component {
                   {this.state.isHovering && projectHoverID === 2 && (
                     <div className="on-hover-info">
                       <h2>
-                        Sorting alogrithms vizualizer made with React and
-                        vanilla Javascript, vizualizer for bubble sort, gnome
-                        sort, selection sort, insertion sort, merge sort, and
-                        quick sort. (Laptop/Desktop and Google Chrome
+                        Sorting algorithms visualizer made with React and
+                        vanilla Javascript. (Laptop/Desktop and Google Chrome
                         recommended but can be used with any browser or device)
                       </h2>
                     </div>

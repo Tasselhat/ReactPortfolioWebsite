@@ -34,15 +34,15 @@ const Console = () => {
   };
 
   const processCommand = (inputText) => {
-    let newOuput = "";
+    let newOutput = "";
     if (consoleOutput !== "") {
-      newOuput = consoleOutput + "\n" + prompt + inputText + "\n";
+      newOutput = consoleOutput + "\n" + prompt + inputText + "\n";
     } else {
-      newOuput = prompt + inputText + "\n";
+      newOutput = prompt + inputText + "\n";
     }
     switch (inputText.toLowerCase()) {
       case "help":
-        newOuput += `about          Who is Tim Schneider?
+        newOutput += `about          Who is Tim Schneider?
           help           List commands
           clear          Clear the terminal feed 
           date / time    Display the current time
@@ -53,7 +53,7 @@ const Console = () => {
           vimoremacs     The less age old debate\n `;
         break;
       case "about":
-        newOuput += `\nName: Tim Schneider
+        newOutput += `\nName: Tim Schneider
             
             Location: San Diego/Poway, CA
             
@@ -77,28 +77,28 @@ const Console = () => {
             \n `;
         break;
       case "dir":
-        newOuput +=
+        newOutput +=
           "\n   Directory of " +
           prompt +
           "\n \n 08/04/2004  04:19 PM    <DIR>        Sorry nothing to see here \n ";
         break;
       case "log":
-        newOuput +=
+        newOutput +=
           "\n   Directory of " +
           prompt +
           "\n \n 06/05/2022  04:19 PM    <DIR>        Sorry nothing to see here \n ";
         break;
       case "ls":
-        newOuput += "\n Does this look like Linux to you silly?\n ";
+        newOutput += "\n Does this look like Linux to you silly?\n ";
         break;
       case "type":
-        newOuput += "\n Uhhhhhhhhhhhhh\n ";
+        newOutput += "\n Uhhhhhhhhhhhhh\n ";
         break;
       case "font":
-        newOuput += "IBM VGA 8x16 Plus\n ";
+        newOutput += "IBM VGA 8x16 Plus\n ";
         break;
       case "cat":
-        newOuput += `
+        newOutput += `
                         .--.
                         J   L
                         |   |
@@ -137,37 +137,37 @@ const Console = () => {
   \n Meow\n `;
         break;
       case "clear":
-        newOuput = "";
+        newOutput = "";
         break;
       case "erase":
-        newOuput = "";
+        newOutput = "";
         break;
       case "delete":
-        newOuput =
+        newOutput =
           "\n Careful with that one, don't want to go breaking anything\n ";
         break;
       case "rm":
-        newOuput =
+        newOutput =
           "\n Careful with that one, don't want to go breaking anything\n ";
         break;
       case "rm dir":
-        newOuput += "\n No, thanks.\n ";
+        newOutput += "\n No, thanks.\n ";
         break;
       case "date":
-        newOuput += currentDateTime + "\n ";
+        newOutput += currentDateTime + "\n ";
         break;
       case "time":
-        newOuput += currentDateTime + "\n ";
+        newOutput += currentDateTime + "\n ";
         break;
       case "tabsorspaces":
-        newOuput +=
+        newOutput +=
           "\nThe compiler doesn't care, but I do. My answer is tabs.\n ";
         break;
       case "vimoremacs":
-        newOuput += "\nWhat do I look like a neanderthal? Vim obviously.\n ";
+        newOutput += "\nWhat do I look like a neanderthal? Vim obviously.\n ";
         break;
       case "cd":
-        newOuput += "cd (directory)\n ";
+        newOutput += "cd (directory)\n ";
         break;
       case "cd ..":
         if (prompt === "C:\\WINDOWS\\system32>") {
@@ -201,11 +201,11 @@ const Console = () => {
         }
         break;
       default:
-        newOuput += "Invalid Command\n ";
+        newOutput += "Invalid Command\n ";
         break;
     }
     setPrompt(prompt);
-    setOutput(newOuput);
+    setOutput(newOutput);
     setInput("");
   };
 

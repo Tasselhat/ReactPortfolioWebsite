@@ -22,6 +22,8 @@ import backgroundDividerImg from "../images/background-divider-img.png";
 import terminalImage from "../images/TasselHat_vintage_computer_terminal_with_a_black_screen_b8caed54-9099-4b43-9803-7f9fc29ae758.png";
 import shastaImage from "../images/Screenshot 2022-12-06 141117.png";
 import shastaPreviewImage from "../images/P1070737.jpg";
+import optiwingImage from "../images/optiwing-pricing.jpg";
+import optiwingPreviewImage from "../images/Optiwing-landing.jpg";
 
 let projectHoverID = 0;
 
@@ -105,6 +107,39 @@ export default class Projects extends React.Component {
                   {(!this.state.isHovering || projectHoverID !== 5) && (
                     <div className="project-title">
                       <h1>Shasta Gymnastics Academy</h1>
+                    </div>
+                  )}
+                </a>
+                <a href="https://www.optiwing.com/" className="grid-item">
+                  <div className="preview-img">
+                    {this.state.isHovering && projectHoverID === 6 && (
+                      <img
+                        src={optiwingImage}
+                        alt="website preview"
+                        onMouseOver={() => this.handleMouseOver(6)}
+                        onMouseOut={() => this.handleMouseOut()}
+                      />
+                    )}
+                    {(!this.state.isHovering || projectHoverID !== 6) && (
+                      <img
+                        src={optiwingPreviewImage}
+                        alt="website preview"
+                        onMouseOver={() => this.handleMouseOver(6)}
+                        onMouseOut={() => this.handleMouseOut()}
+                      />
+                    )}
+                  </div>
+                  {this.state.isHovering && projectHoverID === 6 && (
+                    <div className="on-hover-info">
+                      <h2>
+                        Web Tool for grouping keywords by topical similarity
+                        using Google SERP API for search engine optimization.
+                      </h2>
+                    </div>
+                  )}
+                  {(!this.state.isHovering || projectHoverID !== 6) && (
+                    <div className="project-title">
+                      <h1>Optiwing SEO Keyword Grouping Tool</h1>
                     </div>
                   )}
                 </a>
@@ -250,29 +285,6 @@ export default class Projects extends React.Component {
                     </div>
                   )}
                 </Link>
-                <a href="https://www.optiwing.com/" className="grid-item">
-                  <div className="preview-img">
-                    <img
-                      src={placeholderImage}
-                      alt=""
-                      onMouseOver={() => this.handleMouseOver(6)}
-                      onMouseOut={() => this.handleMouseOut()}
-                    />
-                  </div>
-                  {this.state.isHovering && projectHoverID === 6 && (
-                    <div className="on-hover-info">
-                      <h2>
-                        Web Tool for grouping keywords by topical similarity
-                        using Google SERP API for search engine optimization.
-                      </h2>
-                    </div>
-                  )}
-                  {(!this.state.isHovering || projectHoverID !== 6) && (
-                    <div className="project-title">
-                      <h1>Optiwing SEO Keyword Grouping Tool</h1>
-                    </div>
-                  )}
-                </a>
               </div>
             </div>
           </div>
@@ -286,6 +298,8 @@ export default class Projects extends React.Component {
           <img src={budgetHover} alt="" className="offscreen-img" />
           <img src={shastaImage} alt="" className="offscreen-img" />
           <img src={shastaPreviewImage} alt="" className="offscreen-img" />
+          <img src={optiwingImage} alt="" className="offscreen-img" />
+          <img src={optiwingPreviewImage} alt="" className="offscreen-img" />
         </main>
         <div className="footer-background-overlay"></div>
         <Footer />

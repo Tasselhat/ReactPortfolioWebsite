@@ -72,7 +72,7 @@ export default class Projects extends React.Component {
                   -&nbsp;&nbsp; (503) 516-7078 &nbsp;&nbsp;
                 </a>
                 -&nbsp;&nbsp; San Diego, CA &nbsp;&nbsp;-&nbsp;&nbsp;
-                <a href="linkedin.com/in/timbschneider">
+                <a href="https://www.linkedin.com/in/timbschneider/">
                   <u>linkedin.com/in/timbschneider</u>
                   &nbsp;&nbsp;
                 </a>

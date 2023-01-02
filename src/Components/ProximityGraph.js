@@ -4,9 +4,10 @@ const getRandomInRange = (min, max) => {
   return Math.random() * (max - min) + min;
 };
 
-const width = 4080;
+const clientWidth = document.documentElement.clientWidth;
+const width = clientWidth + 300;
 const maxHeight = 4000;
-const TOTAL_POINTS = width < 1080 ? width - 200 : 1100;
+const TOTAL_POINTS = clientWidth < 1440 ? clientWidth - 300 : 1100;
 
 const CONNECT_DISTANCE = 100;
 

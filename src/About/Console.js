@@ -57,11 +57,11 @@ const Console = () => {
             
             Location: San Diego/Poway, CA
             
-            School: University of California, San Diego
+            Education: University of California, San Diego
             
             Programming Languages & Tools: 
 			Javascript | Next.js | React.js | HTML 5 | Responsive CSS | Tailwind CSS 
-			Node.js | Express.js | MongoDB + Atlas | Java (Elementary) | Python | Heroku 
+			Node.js | Express.js | MongoDB + Atlas | Java (Elementary) | Python (Familiar) | Heroku 
 			Git | Git Bash | npm (Node Package Manager) | CLI | Frontend | Full-Stack
 
             

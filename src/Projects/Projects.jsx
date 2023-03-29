@@ -10,6 +10,7 @@ import "./Main.css";
 import "../General.css";
 import "../index.css";
 
+import backgroundDividerImg from "../images/background-divider-img-dark.png";
 import placeholderImage from "../images/himalayas-mountain-range-sunrise-winter-above-clouds-3200x2560-1165.jpg";
 import floatingMoney from "../images/TasselHat_dollar_bills_floating_around_17529129-3d9b-4f68-8309-9596ec01b529 - Copy.png";
 import howLongImage from "../images/TasselHat_hourglass_ultra_realistic_cinematic_lighting_volumetr_6b725a44-8920-4117-8b52-5a2d212d9529.png";
@@ -18,7 +19,6 @@ import budgetHover from "../images/Screenshot 2022-10-18 204020.png";
 import sortingHover from "../images/SortingHover.png";
 import terminalHover from "../images/TerminalHover.png";
 import sortingVisImage from "../images/TasselHat_sorting_algorithm_visualizer_4da05818-e32d-4852-bda1-d11d7f3bfd87.png";
-import backgroundDividerImg from "../images/background-divider-img.png";
 import terminalImage from "../images/TasselHat_vintage_computer_terminal_with_a_black_screen_b8caed54-9099-4b43-9803-7f9fc29ae758.png";
 import shastaImage from "../images/Screenshot 2022-12-06 141117.png";
 import shastaPreviewImage from "../images/P1070737.jpg";
@@ -42,7 +42,7 @@ export default class Projects extends React.Component {
             const totalHeight =
                 document.getElementById("content-wrapper").offsetHeight;
             this.setState({ wrapperHeight: totalHeight });
-        }, 1000);
+        }, 500);
     }
 
     handleMouseOver(id) {
@@ -57,7 +57,7 @@ export default class Projects extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header dark={true} />
                 <main
                     id="projectspage"
                     className="projects-container"
@@ -71,11 +71,11 @@ export default class Projects extends React.Component {
                     <Canvas
                         className="canvas"
                         height={this.state.wrapperHeight}
+                        width={window.innerWidth + 400}
                         draw={ProximityGraph}
                     />
-                    <h1 className="projects-header">
-                        Hover for more info, click to see more
-                    </h1>
+                    <h1 className="projects-header">PROJECTS</h1>
+                    <h2 className="projects-header">Hover For More Info</h2>
                     <div id="content-wrapper" className="content-wrapper">
                         <div className="content-container">
                             <div className="grid-thumbs">
@@ -111,22 +111,31 @@ export default class Projects extends React.Component {
                                             />
                                         )}
                                     </div>
-                                    {this.state.isHovering &&
-                                        projectHoverID === 5 && (
-                                            <div className="on-hover-info">
-                                                <h2>
-                                                    Website for Shasta
-                                                    Gymnastics Academy of
-                                                    Redding, CA
-                                                </h2>
-                                            </div>
-                                        )}
-                                    {(!this.state.isHovering ||
-                                        projectHoverID !== 5) && (
-                                        <div className="project-title">
-                                            <h1>Shasta Gymnastics Academy</h1>
-                                        </div>
-                                    )}
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            projectHoverID === 5
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Website for Shasta Gymnastics
+                                            Academy of Redding, CA
+                                        </h2>
+                                    </div>
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            projectHoverID !== 5
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h1>
+                                            Shasta Gymnastics Academy Website
+                                        </h1>
+                                    </div>
                                 </a>
                                 <a
                                     href="https://www.optiwing.com/"
@@ -160,27 +169,32 @@ export default class Projects extends React.Component {
                                             />
                                         )}
                                     </div>
-                                    {this.state.isHovering &&
-                                        projectHoverID === 6 && (
-                                            <div className="on-hover-info">
-                                                <h2>
-                                                    Web Tool for grouping
-                                                    keywords by topical
-                                                    similarity using Google SERP
-                                                    API for search engine
-                                                    optimization.
-                                                </h2>
-                                            </div>
-                                        )}
-                                    {(!this.state.isHovering ||
-                                        projectHoverID !== 6) && (
-                                        <div className="project-title">
-                                            <h1>
-                                                Optiwing SEO Keyword Grouping
-                                                Tool
-                                            </h1>
-                                        </div>
-                                    )}
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            projectHoverID === 6
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Web Tool for grouping keywords by
+                                            topical similarity using Google SERP
+                                            API for search engine optimization.
+                                        </h2>
+                                    </div>
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            projectHoverID !== 6
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h2>
+                                            Optiwing SEO Keyword Grouping Tool
+                                        </h2>
+                                    </div>
                                 </a>
                                 <a
                                     href="https://www.budgetappfree.com/"
@@ -214,38 +228,39 @@ export default class Projects extends React.Component {
                                             />
                                         )}
                                     </div>
-                                    {this.state.isHovering &&
-                                        projectHoverID === 1 && (
-                                            <div className="on-hover-info">
-                                                <h2>
-                                                    Full stack budget tracking
-                                                    web app with
-                                                    login/registration to save
-                                                    budgets. Allows users to
-                                                    enter monthly expenses,
-                                                    savings, and investments.
-                                                    With recommendations for
-                                                    saving and investing, users
-                                                    enter monthly income and the
-                                                    app will return charts
-                                                    breaking down expenses,
-                                                    discretionary spending, and
-                                                    saving, as well as a
-                                                    compound interest calculator
-                                                    to help users spend their
-                                                    money mindfully.
-                                                </h2>
-                                            </div>
-                                        )}
-                                    {(!this.state.isHovering ||
-                                        projectHoverID !== 1) && (
-                                        <div className="project-title">
-                                            <h1>
-                                                Budget Tracker Web App (M.E.R.N
-                                                Stack)
-                                            </h1>
-                                        </div>
-                                    )}
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            projectHoverID === 1
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Full stack budget tracking web app
+                                            with login/registration to save
+                                            budgets. Allows users to enter
+                                            monthly expenses, savings, and
+                                            investments. With recommendations
+                                            for saving and investing, users
+                                            enter monthly income and the app
+                                            will return charts breaking down
+                                            expenses, discretionary spending,
+                                            and saving, as well as a compound
+                                            interest calculator to help users
+                                            spend their money mindfully.
+                                        </h2>
+                                    </div>
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            projectHoverID !== 1
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h2>Budget Tracker Web App</h2>
+                                    </div>
                                 </a>
                                 <Link
                                     to="/SortingVisualizer"
@@ -279,26 +294,32 @@ export default class Projects extends React.Component {
                                             />
                                         )}
                                     </div>
-                                    {this.state.isHovering &&
-                                        projectHoverID === 2 && (
-                                            <div className="on-hover-info">
-                                                <h2>
-                                                    Sorting algorithms
-                                                    visualizer made with React
-                                                    and vanilla Javascript.
-                                                    (Laptop/Desktop and Google
-                                                    Chrome recommended but can
-                                                    be used with any browser or
-                                                    device)
-                                                </h2>
-                                            </div>
-                                        )}
-                                    {(!this.state.isHovering ||
-                                        projectHoverID !== 2) && (
-                                        <div className="project-title">
-                                            <h1>Sorting Visualizer</h1>
-                                        </div>
-                                    )}
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            projectHoverID === 2
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Sorting algorithms visualizer made
+                                            with React and vanilla Javascript.
+                                            (Laptop/Desktop and Google Chrome
+                                            recommended but can be used with any
+                                            browser or device)
+                                        </h2>
+                                    </div>
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            projectHoverID !== 2
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h2>Sorting Visualizer</h2>
+                                    </div>
                                 </Link>
                                 <Link to="/HowLong" className="grid-item">
                                     <div className="preview-img">
@@ -329,26 +350,33 @@ export default class Projects extends React.Component {
                                             />
                                         )}
                                     </div>
-                                    {this.state.isHovering &&
-                                        projectHoverID === 3 && (
-                                            <div className="on-hover-info">
-                                                <h2>
-                                                    Simple react webpage that
-                                                    takes two input dates and
-                                                    tells you the length of time
-                                                    between those dates in days.
-                                                    As well as weeks, months,
-                                                    years, minutes, seconds, and
-                                                    hours.
-                                                </h2>
-                                            </div>
-                                        )}
-                                    {(!this.state.isHovering ||
-                                        projectHoverID !== 3) && (
-                                        <div className="project-title">
-                                            <h1>How Long Have I Been Alive?</h1>
-                                        </div>
-                                    )}
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            projectHoverID === 3
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Simple react webpage that takes two
+                                            input dates and tells you the length
+                                            of time between those dates in days.
+                                            As well as weeks, months, years,
+                                            minutes, seconds, and hours.
+                                        </h2>
+                                    </div>
+
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            projectHoverID !== 3
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h2>How Long Have I Been Alive?</h2>
+                                    </div>
                                 </Link>
                                 <Link to="/About" className="grid-item">
                                     <div className="preview-img">
@@ -379,24 +407,32 @@ export default class Projects extends React.Component {
                                             />
                                         )}
                                     </div>
-                                    {this.state.isHovering &&
-                                        projectHoverID === 4 && (
-                                            <div className="on-hover-info">
-                                                <h2>
-                                                    Animated vintage terminal
-                                                    display that takes simple
-                                                    commands as inputs and
-                                                    returns outputs on the
-                                                    terminal display.
-                                                </h2>
-                                            </div>
-                                        )}
-                                    {(!this.state.isHovering ||
-                                        projectHoverID !== 4) && (
-                                        <div className="project-title">
-                                            <h1>Vintage Computer Terminal</h1>
-                                        </div>
-                                    )}
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            projectHoverID === 4
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Animated vintage terminal display
+                                            that takes simple commands as inputs
+                                            and returns outputs on the terminal
+                                            display.
+                                        </h2>
+                                    </div>
+
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            projectHoverID !== 4
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h2>Vintage Computer Terminal</h2>
+                                    </div>
                                 </Link>
                             </div>
                         </div>
@@ -425,8 +461,8 @@ export default class Projects extends React.Component {
                         alt=""
                         className="offscreen-img"
                     />
+                    <div className="footer-background-overlay"></div>
                 </main>
-                <div className="footer-background-overlay"></div>
                 <Footer />
             </div>
         );

@@ -1,90 +1,89 @@
 .sortButton {
-  font-weight: 500;
-  font-style: normal;
-  font-size: calc(0.05 * 1vw + 1rem);
-  letter-spacing: 0em;
-  text-transform: none;
-  line-height: 1.6em;
+    font-weight: 500;
+    font-style: normal;
+    font-size: calc(0.05 * 1vw + 1rem);
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.6em;
 
-  background: transparent;
-  border-color: var(--secondary-color);
-  color: black;
-  border-style: solid;
-  cursor: pointer;
-  border-width: 1px;
-  border-radius: 2px;
-  padding: 0.3vw 0.4vw 0.3vw 0.4vw;
-  margin-right: 0.1vw;
-  margin-left: 0.1vw;
-  transition: background-color 200ms, color 60ms, padding 200ms, margin 200ms;
+    background: transparent;
+    border-color: var(--secondary-color);
+    color: black;
+    border-style: solid;
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    transition: background-color 200ms, color 60ms, padding 200ms, margin 200ms;
 }
 
 .sortButton:hover {
-  background-color: var(--secondary-color);
-  color: black;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  opacity: 0.9;
-  margin-left: 0;
-  margin-right: 0;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+    background-color: var(--secondary-color);
+    color: black;
+    opacity: 0.9;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
 }
 
 .sortButton:active {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
-.container {
-  padding-top: 9.5vh;
+.sortingContainer {
+    padding-top: 120px;
 }
 
 .array_bar {
-  width: 3px;
-  background-color: royalblue;
-  display: inline-block;
-  margin: 0 1px;
-  justify-content: center;
+    width: 3px;
+    background-color: cornflowerblue;
+    display: inline-block;
+    margin: 0 1px;
+    justify-content: center;
 }
 
 .array_container {
-  display: flex;
-  align-items: center;
-  height: 80vh;
-  margin-left: 3vw;
-  margin-right: 3vw;
+    display: flex;
+    align-items: center;
+    height: 65vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 .control_container {
-  display: flex;
-  margin: 10px 48px 10px 48px;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    margin: 10px 48px 10px 48px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .infoPanel {
-  position: absolute;
-  height: 22vh;
-  width: 30vw;
-  right: 48px;
-  top: 60vh;
-  border-radius: 3px;
-  color: white;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
+    position: absolute;
+    height: 22vh;
+    width: 30vw;
+    right: 48px;
+    top: 60vh;
+    border-radius: 3px;
+    color: white;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
 
 @media (max-width: 700px) {
-  .infoPanel {
-    width: 50vw;
-    height: 30vh;
-  }
+    .infoPanel {
+        width: 50vw;
+        height: 30vh;
+    }
 }
 
 .infoPanel::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .infoPanelHeader {
-  margin: 0.5em auto 0.5em auto;
+    margin: 0.5em auto 0.5em auto;
+}
+
+.speedSliderContainer {
+    padding: 1rem;
 }

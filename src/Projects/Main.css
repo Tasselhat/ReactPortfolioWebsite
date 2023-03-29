@@ -1,116 +1,153 @@
 .projects-container {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(2, 2, 2);
 }
 
 .projects-header {
-  text-shadow: 1px 1px 4px white;
-  margin: 3vh 0 0 0;
+    text-shadow: 1px 1px 9px white;
+    margin: 3vh 0 0 0;
 }
 
 .content-wrapper {
-  padding: 64px 6vw 0 6vw;
-  box-sizing: border-box;
+    padding: 64px 6vw 0 6vw;
+    box-sizing: border-box;
 }
 
 .background-divider-img {
-  width: 100%;
-  min-height: 125px;
+    width: 100%;
+    min-height: 125px;
 }
 
 .content-container {
-  max-width: 3840px;
-  margin-right: auto;
-  margin-left: auto;
-  flex: 1;
+    max-width: 3840px;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 1;
 }
 
-.on-hover-info {
-  text-shadow: 1px 1px white;
-  background: linear-gradient(
-    rgba(253, 253, 253, 0.2),
-    rgba(253, 253, 253, 0.8),
-    rgba(170, 170, 170, 0.8)
-  );
-  border-radius: 70px;
-  z-index: 3;
+.project-title {
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    margin: 0.75rem;
+    overflow: hidden;
+    list-style: none;
+    transition: all 450ms;
+    color: white;
 }
 
-.grid-thumbs {
-  width: 100%;
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 8vw;
-  grid-row-gap: 8vw;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-@media (max-width: 900px) {
-  .grid-thumbs {
-    grid-template-columns: 1fr;
-  }
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  color: black;
-}
-
-.preview-img img {
-  display: inline-block;
-  max-width: 100%;
-  max-height: 550px;
-  vertical-align: middle;
-  align-items: center;
-}
-
-.preview-img {
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  transition: 200ms;
-}
-
-.preview-img:hover {
-  transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-}
-
-.preview-img:active {
-  opacity: 0.7;
+.project-title.active {
+    height: auto;
+    padding: 0.5rem;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    transition: all 600ms;
 }
 
 .project-title:active {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
+.on-hover-info {
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    padding: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    transition: all 450ms;
+    text-shadow: 1px 1px 4px white;
+    background: linear-gradient(
+        rgba(253, 253, 253, 0.2),
+        rgba(253, 253, 253, 0.8),
+        rgba(170, 170, 170, 0.8)
+    );
+    border-radius: 0.5rem;
+}
+
+.on-hover-info.active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    transition: all 600ms;
+}
+
+.grid-thumbs {
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 8vw;
+    grid-row-gap: 8vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+@media (max-width: 900px) {
+    .grid-thumbs {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: black;
+}
+
+.preview-img img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 550px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.preview-img {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: 200ms;
+}
+
+.preview-img:hover {
+    transform: translate3d(0px, 0px, 0px) scale3d(0.95, 0.95, 1) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.preview-img:active {
+    opacity: 0.7;
+}
 .canvas {
-  position: absolute;
-  top: 200px;
-  left: 0;
+    position: absolute;
+    top: 200px;
+    left: -200px;
 }
 
 @media (min-width: 2200px) {
-  .canvas {
-    top: 300px;
-  }
+    .canvas {
+        top: 300px;
+    }
 }
 
 @media (min-width: 3000px) {
-  .canvas {
-    top: 400px;
-  }
+    .canvas {
+        top: 400px;
+    }
 }
 
 .offscreen-img {
-  position: absolute;
-  left: -9999px;
-  height: min-content;
-  max-width: 1px;
-  max-height: 1px;
+    position: absolute;
+    left: -9999px;
+    height: min-content;
+    max-width: 1px;
+    max-height: 1px;
 }

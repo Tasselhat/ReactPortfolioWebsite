@@ -56,23 +56,53 @@
     flex-wrap: wrap;
 }
 
+.infoPanelButton {
+    display: inline-block;
+    margin-right: 0;
+    margin-left: auto;
+}
+
 .infoPanel {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    height: 22vh;
-    width: 30vw;
+    height: min-content;
+    max-width: 40vw;
     right: 48px;
-    top: 60vh;
+    top: 20vh;
+    padding: 1rem;
     border-radius: 3px;
-    color: white;
+    color: transparent;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
+    transition: all 500ms;
+}
+
+.infoPanelContent {
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    padding: 0.5rem;
+    overflow: hidden;
+    list-style: none;
+    transition: all 450ms;
+}
+
+.infoPanelContent.active {
+    height: auto;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    transition: all 600ms;
 }
 
 @media (max-width: 700px) {
     .infoPanel {
-        width: 50vw;
-        height: 30vh;
+        max-width: 70vw;
     }
 }
 

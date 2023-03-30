@@ -7,11 +7,18 @@
 
 .projects-header {
     text-shadow: 1px 1px 9px white;
-    margin: 0 0 0 0;
+    padding: 0.3rem 0;
+    margin: 0;
+}
+
+.projects-subheader {
+    text-shadow: 1px 1px 9px white;
+    padding: 0.5rem 0 2rem 0;
+    margin: 0;
 }
 
 .content-wrapper {
-    padding: 64px 6vw 0 6vw;
+    margin: 0 6vw 0 6vw;
     box-sizing: border-box;
 }
 
@@ -128,19 +135,19 @@
 }
 .canvas {
     position: absolute;
-    top: 200px;
-    left: -200px;
+    top: 170px;
+    left: -100px;
 }
 
 @media (min-width: 2200px) {
     .canvas {
-        top: 300px;
+        top: 227px;
     }
 }
 
 @media (min-width: 3000px) {
     .canvas {
-        top: 400px;
+        top: 300px;
     }
 }
 

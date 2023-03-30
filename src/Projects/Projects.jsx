@@ -12,17 +12,17 @@ import "../index.css";
 import backgroundDividerImg from "../images/background-divider-img-dark.png";
 import placeholderImage from "../images/himalayas-mountain-range-sunrise-winter-above-clouds-3200x2560-1165.jpg";
 import floatingMoney from "../images/TasselHat_flood_of_100_dollar_bills_floating_around_99f70f51-a9f5-4454-8c18-af8a19b2c7ad.png";
-import howLongImage from "../images/TasselHat_hourglass_ultra_realistic_cinematic_lighting_volumetr_6b725a44-8920-4117-8b52-5a2d212d9529.png";
-import howLongHover from "../images/HowLongHover.png";
 import budgetHover from "../images/BudgetAppFreeExample.png";
-import sortingHover from "../images/SortingHover.png";
+import howLongImage from "../images/HowLongPreviewHourglass.png";
+import howLongHover from "../images/HowLongHover.png";
+import sortingVisImage from "../images/SortingVisPreview.png";
+import sortingHover from "../images/SortingVisHover.png";
+import terminalImage from "../images/VintageTerminal.png";
 import terminalHover from "../images/TerminalHover.png";
-import sortingVisImage from "../images/TasselHat_sorting_algorithm_visualizer_4da05818-e32d-4852-bda1-d11d7f3bfd87.png";
-import terminalImage from "../images/TasselHat_vintage_computer_terminal_with_a_black_screen_b8caed54-9099-4b43-9803-7f9fc29ae758.png";
+import shastaPreviewImage from "../images/P1070738.jpg";
 import shastaImage from "../images/ShastaHomepage.png";
-import shastaPreviewImage from "../images/P1070738.webp";
-import optiwingImage from "../images/OptiwingLogin.png";
 import optiwingPreviewImage from "../images/LandingPage5by3.png";
+import optiwingImage from "../images/OptiwingLogin.png";
 
 let projectHoverID = 0;
 
@@ -70,12 +70,14 @@ export default class Projects extends React.Component {
                     <Canvas
                         className="canvas"
                         height={this.state.wrapperHeight}
-                        width={window.innerWidth + 400}
+                        width={window.innerWidth + 100}
                         draw={ProximityGraph}
                     />
-                    <h1 className="projects-header">PROJECTS + WORK</h1>
-                    <h2 className="projects-header">Hover For More Info</h2>
                     <div id="content-wrapper" className="content-wrapper">
+                        <h1 className="projects-header">PROJECTS + WORK</h1>
+                        <h2 className="projects-subheader">
+                            Hover For More Info
+                        </h2>
                         <div className="content-container">
                             <div className="grid-thumbs">
                                 <a
@@ -119,8 +121,8 @@ export default class Projects extends React.Component {
                                         }
                                     >
                                         <h2>
-                                            Website for Shasta Gymnastics
-                                            Academy of Redding, CA
+                                            Custom React.js Website for Shasta
+                                            Gymnastics Academy of Redding, CA
                                         </h2>
                                     </div>
                                     <div

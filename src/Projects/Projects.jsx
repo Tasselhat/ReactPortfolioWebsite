@@ -10,27 +10,27 @@ import "../General.css";
 import "../index.css";
 
 import backgroundDividerImg from "../images/background-divider-img-dark.png";
-import placeholderImage from "../images/himalayas-mountain-range-sunrise-winter-above-clouds-3200x2560-1165.jpg";
-import floatingMoney from "../images/TasselHat_flood_of_100_dollar_bills_floating_around_99f70f51-a9f5-4454-8c18-af8a19b2c7ad.png";
-import budgetHover from "../images/BudgetAppFreeExample.png";
-import howLongImage from "../images/HowLongPreviewHourglass.png";
-import howLongHover from "../images/HowLongHover.png";
-import sortingVisImage from "../images/SortingVisPreview.png";
-import sortingHover from "../images/SortingVisHover.png";
-import terminalImage from "../images/VintageTerminal.png";
-import terminalHover from "../images/TerminalHover.png";
-import shastaPreviewImage from "../images/P1070738.jpg";
-import shastaImage from "../images/ShastaHomepage.png";
-import optiwingPreviewImage from "../images/LandingPage5by3.png";
-import optiwingImage from "../images/OptiwingLogin.png";
-
-let projectHoverID = 0;
-
+import floatingMoney from "../images/FloatingMoney.webp";
+import budgetHover from "../images/BudgetAppFreeExample.webp";
+import howLongImage from "../images/HowLongPreviewHourglass.webp";
+import howLongHover from "../images/HowLongHover.webp";
+import sortingVisImage from "../images/SortingVisPreview.webp";
+import sortingHover from "../images/SortingVisHover.webp";
+import terminalImage from "../images/VintageTerminal.webp";
+import terminalHover from "../images/TerminalHover.webp";
+import shastaPreviewImage from "../images/P1070738.webp";
+import shastaImage from "../images/ShastaHomepage.webp";
+import optiwingPreviewImage from "../images/LandingPage5by3.webp";
+import optiwingImage from "../images/OptiwingLogin.webp";
 export default class Projects extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { isHovering: false, wrapperHeight: 2000 };
+        this.state = {
+            projectHoverID: 0,
+            isHovering: false,
+            wrapperHeight: 2000,
+        };
 
         this.handleMouseOver = this.handleMouseOver.bind(this);
         this.handleMouseOut = this.handleMouseOut.bind(this);
@@ -46,7 +46,7 @@ export default class Projects extends React.Component {
 
     handleMouseOver(id) {
         this.setState({ isHovering: true });
-        projectHoverID = id;
+        this.setState({ projectHoverID: id });
     }
 
     handleMouseOut() {
@@ -86,7 +86,7 @@ export default class Projects extends React.Component {
                                 >
                                     <div className="preview-img">
                                         {this.state.isHovering &&
-                                            projectHoverID === 5 && (
+                                            this.state.projectHoverID === 5 && (
                                                 <img
                                                     src={shastaImage}
                                                     alt="Shasta Gymnastics Website"
@@ -99,7 +99,8 @@ export default class Projects extends React.Component {
                                                 />
                                             )}
                                         {(!this.state.isHovering ||
-                                            projectHoverID !== 5) && (
+                                            this.state.projectHoverID !==
+                                                5) && (
                                             <img
                                                 src={shastaPreviewImage}
                                                 alt=""
@@ -115,7 +116,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             this.state.isHovering &&
-                                            projectHoverID === 5
+                                            this.state.projectHoverID === 5
                                                 ? "on-hover-info active"
                                                 : "on-hover-info"
                                         }
@@ -128,7 +129,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             !this.state.isHovering ||
-                                            projectHoverID !== 5
+                                            this.state.projectHoverID !== 5
                                                 ? "project-title active"
                                                 : "project-title"
                                         }
@@ -144,7 +145,7 @@ export default class Projects extends React.Component {
                                 >
                                     <div className="preview-img">
                                         {this.state.isHovering &&
-                                            projectHoverID === 6 && (
+                                            this.state.projectHoverID === 6 && (
                                                 <img
                                                     src={optiwingImage}
                                                     alt="website preview"
@@ -157,7 +158,8 @@ export default class Projects extends React.Component {
                                                 />
                                             )}
                                         {(!this.state.isHovering ||
-                                            projectHoverID !== 6) && (
+                                            this.state.projectHoverID !==
+                                                6) && (
                                             <img
                                                 src={optiwingPreviewImage}
                                                 alt="website preview"
@@ -173,7 +175,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             this.state.isHovering &&
-                                            projectHoverID === 6
+                                            this.state.projectHoverID === 6
                                                 ? "on-hover-info active"
                                                 : "on-hover-info"
                                         }
@@ -187,7 +189,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             !this.state.isHovering ||
-                                            projectHoverID !== 6
+                                            this.state.projectHoverID !== 6
                                                 ? "project-title active"
                                                 : "project-title"
                                         }
@@ -203,7 +205,7 @@ export default class Projects extends React.Component {
                                 >
                                     <div className="preview-img">
                                         {this.state.isHovering &&
-                                            projectHoverID === 1 && (
+                                            this.state.projectHoverID === 1 && (
                                                 <img
                                                     src={budgetHover}
                                                     alt=""
@@ -216,7 +218,8 @@ export default class Projects extends React.Component {
                                                 />
                                             )}
                                         {(!this.state.isHovering ||
-                                            projectHoverID !== 1) && (
+                                            this.state.projectHoverID !==
+                                                1) && (
                                             <img
                                                 src={floatingMoney}
                                                 alt=""
@@ -232,7 +235,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             this.state.isHovering &&
-                                            projectHoverID === 1
+                                            this.state.projectHoverID === 1
                                                 ? "on-hover-info active"
                                                 : "on-hover-info"
                                         }
@@ -250,7 +253,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             !this.state.isHovering ||
-                                            projectHoverID !== 1
+                                            this.state.projectHoverID !== 1
                                                 ? "project-title active"
                                                 : "project-title"
                                         }
@@ -264,7 +267,7 @@ export default class Projects extends React.Component {
                                 >
                                     <div className="preview-img">
                                         {this.state.isHovering &&
-                                            projectHoverID === 2 && (
+                                            this.state.projectHoverID === 2 && (
                                                 <img
                                                     src={sortingHover}
                                                     alt=""
@@ -277,7 +280,8 @@ export default class Projects extends React.Component {
                                                 />
                                             )}
                                         {(!this.state.isHovering ||
-                                            projectHoverID !== 2) && (
+                                            this.state.projectHoverID !==
+                                                2) && (
                                             <img
                                                 src={sortingVisImage}
                                                 alt=""
@@ -293,7 +297,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             this.state.isHovering &&
-                                            projectHoverID === 2
+                                            this.state.projectHoverID === 2
                                                 ? "on-hover-info active"
                                                 : "on-hover-info"
                                         }
@@ -308,7 +312,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             !this.state.isHovering ||
-                                            projectHoverID !== 2
+                                            this.state.projectHoverID !== 2
                                                 ? "project-title active"
                                                 : "project-title"
                                         }
@@ -319,7 +323,7 @@ export default class Projects extends React.Component {
                                 <Link to="/HowLong" className="grid-item">
                                     <div className="preview-img">
                                         {this.state.isHovering &&
-                                            projectHoverID === 3 && (
+                                            this.state.projectHoverID === 3 && (
                                                 <img
                                                     src={howLongHover}
                                                     alt=""
@@ -332,7 +336,8 @@ export default class Projects extends React.Component {
                                                 />
                                             )}
                                         {(!this.state.isHovering ||
-                                            projectHoverID !== 3) && (
+                                            this.state.projectHoverID !==
+                                                3) && (
                                             <img
                                                 src={howLongImage}
                                                 alt=""
@@ -348,7 +353,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             this.state.isHovering &&
-                                            projectHoverID === 3
+                                            this.state.projectHoverID === 3
                                                 ? "on-hover-info active"
                                                 : "on-hover-info"
                                         }
@@ -362,7 +367,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             !this.state.isHovering ||
-                                            projectHoverID !== 3
+                                            this.state.projectHoverID !== 3
                                                 ? "project-title active"
                                                 : "project-title"
                                         }
@@ -373,7 +378,7 @@ export default class Projects extends React.Component {
                                 <Link to="/About" className="grid-item">
                                     <div className="preview-img">
                                         {this.state.isHovering &&
-                                            projectHoverID === 4 && (
+                                            this.state.projectHoverID === 4 && (
                                                 <img
                                                     src={terminalHover}
                                                     alt=""
@@ -386,7 +391,8 @@ export default class Projects extends React.Component {
                                                 />
                                             )}
                                         {(!this.state.isHovering ||
-                                            projectHoverID !== 4) && (
+                                            this.state.projectHoverID !==
+                                                4) && (
                                             <img
                                                 src={terminalImage}
                                                 alt="vintage computer terminal"
@@ -402,7 +408,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             this.state.isHovering &&
-                                            projectHoverID === 4
+                                            this.state.projectHoverID === 4
                                                 ? "on-hover-info active"
                                                 : "on-hover-info"
                                         }
@@ -418,7 +424,7 @@ export default class Projects extends React.Component {
                                     <div
                                         className={
                                             !this.state.isHovering ||
-                                            projectHoverID !== 4
+                                            this.state.projectHoverID !== 4
                                                 ? "project-title active"
                                                 : "project-title"
                                         }

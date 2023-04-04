@@ -81,65 +81,6 @@ export default class Projects extends React.Component {
                         <div className="content-container">
                             <div className="grid-thumbs">
                                 <a
-                                    href="https://shastagymnastics.com/"
-                                    className="grid-item"
-                                >
-                                    <div className="preview-img">
-                                        {this.state.isHovering &&
-                                            this.state.projectHoverID === 5 && (
-                                                <img
-                                                    src={shastaImage}
-                                                    alt="Shasta Gymnastics Website"
-                                                    onMouseOver={() =>
-                                                        this.handleMouseOver(5)
-                                                    }
-                                                    onMouseOut={() =>
-                                                        this.handleMouseOut()
-                                                    }
-                                                />
-                                            )}
-                                        {(!this.state.isHovering ||
-                                            this.state.projectHoverID !==
-                                                5) && (
-                                            <img
-                                                src={shastaPreviewImage}
-                                                alt=""
-                                                onMouseOver={() =>
-                                                    this.handleMouseOver(5)
-                                                }
-                                                onMouseOut={() =>
-                                                    this.handleMouseOut()
-                                                }
-                                            />
-                                        )}
-                                    </div>
-                                    <div
-                                        className={
-                                            this.state.isHovering &&
-                                            this.state.projectHoverID === 5
-                                                ? "on-hover-info active"
-                                                : "on-hover-info"
-                                        }
-                                    >
-                                        <h2>
-                                            Custom React.js Website for Shasta
-                                            Gymnastics Academy of Redding, CA
-                                        </h2>
-                                    </div>
-                                    <div
-                                        className={
-                                            !this.state.isHovering ||
-                                            this.state.projectHoverID !== 5
-                                                ? "project-title active"
-                                                : "project-title"
-                                        }
-                                    >
-                                        <h1>
-                                            Shasta Gymnastics Academy Website
-                                        </h1>
-                                    </div>
-                                </a>
-                                <a
                                     href="https://www.optiwing.com/"
                                     className="grid-item"
                                 >
@@ -197,6 +138,65 @@ export default class Projects extends React.Component {
                                         <h2>
                                             Optiwing SEO Keyword Grouping Tool
                                         </h2>
+                                    </div>
+                                </a>
+                                <a
+                                    href="https://shastagymnastics.com/"
+                                    className="grid-item"
+                                >
+                                    <div className="preview-img">
+                                        {this.state.isHovering &&
+                                            this.state.projectHoverID === 5 && (
+                                                <img
+                                                    src={shastaImage}
+                                                    alt="Shasta Gymnastics Website"
+                                                    onMouseOver={() =>
+                                                        this.handleMouseOver(5)
+                                                    }
+                                                    onMouseOut={() =>
+                                                        this.handleMouseOut()
+                                                    }
+                                                />
+                                            )}
+                                        {(!this.state.isHovering ||
+                                            this.state.projectHoverID !==
+                                                5) && (
+                                            <img
+                                                src={shastaPreviewImage}
+                                                alt=""
+                                                onMouseOver={() =>
+                                                    this.handleMouseOver(5)
+                                                }
+                                                onMouseOut={() =>
+                                                    this.handleMouseOut()
+                                                }
+                                            />
+                                        )}
+                                    </div>
+                                    <div
+                                        className={
+                                            this.state.isHovering &&
+                                            this.state.projectHoverID === 5
+                                                ? "on-hover-info active"
+                                                : "on-hover-info"
+                                        }
+                                    >
+                                        <h2>
+                                            Custom React.js Website for Shasta
+                                            Gymnastics Academy of Redding, CA
+                                        </h2>
+                                    </div>
+                                    <div
+                                        className={
+                                            !this.state.isHovering ||
+                                            this.state.projectHoverID !== 5
+                                                ? "project-title active"
+                                                : "project-title"
+                                        }
+                                    >
+                                        <h1>
+                                            Shasta Gymnastics Academy Website
+                                        </h1>
                                     </div>
                                 </a>
                                 <a

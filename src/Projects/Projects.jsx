@@ -123,8 +123,8 @@ export default class Projects extends React.Component {
                                     >
                                         <h2>
                                             Web Tool for grouping keywords by
-                                            topical similarity using Google SERP
-                                            data for search engine optimization.
+                                            topical similarity using live Google
+                                            SERP data. (M.E.R.N. Stack)
                                         </h2>
                                     </div>
                                     <div

@@ -65,7 +65,7 @@ const Console = () => {
 			Git | Git Bash | npm (Node Package Manager) | CLI | Frontend | Full-Stack
 
             
-            My name is Tim, I'm a web developer, design enthusiast, gymnastics coach, and eternal student. 
+            My name is Tim, I'm a developer, design enthusiast, gymnastics coach, and eternal student. 
             I enjoy designing user experiences and interactive web applications. 
             I've always had an interest in science and computers, 
             even back when I was 10 playing computer games on our dial up internet I would use inspect element on webpages to change the values of HTML elements 
@@ -153,7 +153,7 @@ const Console = () => {
                     "\n Careful with that one, don't want to go breaking anything\n ";
                 break;
             case "rm dir":
-                newOutput += "\n No, thanks.\n ";
+                newOutput += "\n No, let's not do that, thanks.\n ";
                 break;
             case "date":
                 newOutput += currentDateTime + "\n ";
@@ -247,8 +247,8 @@ const Console = () => {
                     .........!...:!TVBBBRPFT||||||||||!!^^""'&nbsp;&nbsp;&nbsp;||||
                     <br></br>
                     .........!.......:!?|||||!!^^""'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    I'm a frontend/web developer from sunny San Diego,
-                    California<br></br>
+                    I'm a software engineer from sunny San Diego, California
+                    <br></br>
                     .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
                     <br></br>
                     .........!.........||||&nbsp;&nbsp;##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||

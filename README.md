@@ -2,18 +2,18 @@
 
 This project is a collection of my projects and pages for my portfolio website.
 
-Project can be accessed at: https://tasselhat.github.io/ReactPortfolioWebsite/
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My portfolio can be found here: https://www.timbschneider.com/
 
 # Sorting Visualizer
-Sorting alogrithms and their time complexities, efficiency, and use cases have always been interesting to me. I also really enjoy the patterns that emerge when they are visualized. I built this app to both learn React native and create a sorting visualizer that I enjoy playing around with and watch as much as I enjoyed building. (Google Chrome recommended but can be used with any browser or device)
+The Sorting Visualizer is a web application that visualizes various sorting algorithms and their time complexities, efficiency, and use cases. Built using React, the app offers an interactive and fun way to explore the patterns that emerge when sorting algorithms are visualized.
+
 
 # How Long Have I Been Alive
-Program to calculate the number of days, as well as months/weeks/hours/minutes/seconds between two dates. One of my first programming projects I created in java that I then refactored to work with vanilla javascript + HTML/CSS, then refactored again to function within this react app.
+How Long Have I Been Alive is a program that calculates the number of days, as well as months/weeks/hours/minutes/seconds between two dates. The project was first created in Java and then refactored to work with vanilla JavaScript + HTML/CSS, and later integrated into this React Portfolio Website.
+
 
 # Vintage Computer Terminal
-An oldschool vintage black and green terminal display much like an old IBM dos, made this mostly for fun and visual appeal, also functions as an About page.
+The Vintage Computer Terminal is a nostalgic, old-school, black and green terminal display much like an old IBM DOS. The project was made mostly for fun and visual appeal but also functions as an About page.
 
 # Budget Tracker Web App
-A react web app with ability to login and track how to budget your paychecks based on user determined percentages or expenses. Made to help learn Node.js/Express/MongoDB backend development.
+The Budget Tracker Web App is a React web application that allows users to login and track how to budget their paychecks based on user-determined percentages or expenses. The app was made to help learn Node.js/Express/MongoDB backend development and hone my React skills and offers a simple and efficient way to track expenses and investments.

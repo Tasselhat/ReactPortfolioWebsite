@@ -12,6 +12,14 @@
     -webkit-filter: drop-shadow(0.2rem 0.2rem 1px #333333ce);
     filter: drop-shadow(0.2rem 0.2rem 2px #333333ce);
 }
+.p2 {
+    padding: 0 0 0.5rem 0;
+}
+
+.resumeIcons {
+    display: flex;
+    align-items: center;
+}
 
 .resume-info {
     text-align: center;

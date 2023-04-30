@@ -6,6 +6,7 @@ import CSS3logo from "../images/CSS3-Logo.png";
 import Githublogo from "../images/Github-logo.png";
 import Javalogo from "../images/Java-logo.png";
 import JavaScriptlogo from "../images/JavaScript-logo.png";
+import TypeScriptlogo from "../images/Typescript_logo_2020.svg";
 import Nodejslogo from "../images/Node.js-logo.png";
 import Npmlogo from "../images/Npm-logo.png";
 import Pythonlogo from "../images/Python-logo.png";
@@ -17,6 +18,7 @@ import Nextjslogo from "../images/nextjs-icon-svgrepo-com.svg";
 
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
+import * as Fa from "react-icons/fa";
 import "./Resume.css";
 import "../General.css";
 import "../index.css";
@@ -60,7 +62,7 @@ export default class Projects extends React.Component {
                                 className="pdf-download-button"
                             >
                                 <span className="pdf-download-button-front">
-                                    Download PDF Resume
+                                    <Fa.FaDownload /> Download Resume (PDF)
                                 </span>
                             </button>
                             <h1>Tim Schneider</h1>
@@ -92,81 +94,160 @@ export default class Projects extends React.Component {
                                     <u>PROGRAMMING LANGUAGES & TOOLS</u>
                                 </h3>
                                 <div>
-                                    <li>
-                                        Javascript
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>Javascript&nbsp;</span>
                                         <img
                                             src={JavaScriptlogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        React.js
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>
+                                            Typescript (Transitioning)&nbsp;
+                                        </span>
+                                        <img
+                                            src={TypeScriptlogo}
+                                            alt=""
+                                            className="tool-logo"
+                                        />
+                                    </li>
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>React.js&nbsp;</span>
                                         <img
                                             src={Reactlogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        Next.js
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>Next.js&nbsp;</span>
                                         <img
                                             src={Nextjslogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        HTML 5
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>HTML 5&nbsp;</span>
                                         <img
                                             src={HTMLlogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        Responsive CSS
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>Responsive CSS&nbsp;</span>
                                         <img
                                             src={CSS3logo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        Node.js + Express.js
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>Node.js + Express.js&nbsp;</span>
                                         <img
                                             src={Nodejslogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        Python (Familiar)
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>Python (Beginner)&nbsp;</span>
                                         <img
                                             src={Pythonlogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        MongoDB + Atlas
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>MongoDB + Atlas&nbsp;&nbsp;</span>
                                         <img
                                             src={MongoDBlogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        Java (Elementary)
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>Java (Beginner)&nbsp;</span>
                                         <img
                                             src={Javalogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
                                         <a href="https://github.com/Tasselhat">
-                                            Git + Github for version control
+                                            Git + Github for version
+                                            control&nbsp;
+                                        </a>
+                                        <a href="https://github.com/Tasselhat">
                                             <img
                                                 src={Githublogo}
                                                 alt=""
@@ -174,24 +255,46 @@ export default class Projects extends React.Component {
                                             />
                                         </a>
                                     </li>
-                                    <li>
-                                        VS Code Editor
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>VS Code Editor&nbsp;</span>
                                         <img
                                             src={VSCodelogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        npm (Node Package Manager)
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>
+                                            npm (Node Package Manager)&nbsp;
+                                        </span>
                                         <img
                                             src={Npmlogo}
                                             alt=""
                                             className="tool-logo"
                                         />
                                     </li>
-                                    <li>
-                                        Git Bash + Command Line{" "}
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 4px 0 0",
+                                            }}
+                                        />
+                                        <span>
+                                            Git Bash + Command Line&nbsp;&nbsp;
+                                        </span>
                                         <img
                                             src={CMDlogo}
                                             alt=""
@@ -224,23 +327,26 @@ export default class Projects extends React.Component {
                                 Remote)
                             </p>
                             <br />
-                            <li>
+                            <li className="p2">
                                 {" "}
                                 Designed, developed, and launched new website,
                                 optimizing to achieve a Lighthouse SEO,
                                 accessibility, and best practice score of 100
                             </li>
-                            <li>
-                                Facilitated dialogue with owner operator to
-                                assess client expectations, construct skeleton
-                                designs, offer support, and complete monthly
-                                website maintenance and upkeep
+                            <li className="p2">
+                                Facilitated ongoing dialogue with owner operator
+                                to assess client expectations, construct
+                                skeleton designs, offer support, and complete
+                                monthly website maintenance and upkeep,
+                                demonstrating strong communication and project
+                                management skills.
                             </li>
-                            <li>
+                            <li className="p2">
                                 Implemented class calendar utilizing google
                                 calendar API and backend email server for
                                 contact page, increasing average monthly email
-                                contact rate by over 400%
+                                contact rate by over 400%, improving customer
+                                engagement.
                             </li>
                         </div>
                         <div className="Projects-Wrapper">
@@ -253,7 +359,16 @@ export default class Projects extends React.Component {
                                     Live URL: <u>www.optiwing.com</u>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a>
-                                Private Repository
+                                <a
+                                    href="https://github.com/Tasselhat/optiwinglanding"
+                                    className="p2"
+                                >
+                                    Landing Page Code:{" "}
+                                    <u>github.com/Tasselhat/optiwinglanding</u>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                </a>
+                                <br />
+                                <p>Private Front/Backend Repository</p>
                             </p>
                             <br />
                             <p>
@@ -262,15 +377,32 @@ export default class Projects extends React.Component {
                                 Present
                             </p>
                             <br />
-                            <p>
-                                Web tool for uploading an CSV file imported from
-                                ahrefs or SEMrush, or a custom file, and
-                                receiving clusters of related search terms based
-                                on which share multiple top ranking pages in the
-                                first page of google SERP results, as well as an
-                                openAI GPT powered keyword recommendation tool.
-                                (Next, React, Node, Express, MongoDB, Heroku)
-                            </p>
+                            <li className="p2">
+                                Developed and launched a Full Stack SaaS Next.js
+                                Web Application to simplify the process of
+                                identifying clusters of related search terms for
+                                digital marketers and SEO professionals.
+                            </li>
+                            <li className="p2">
+                                Utilizes Google SERP API to cluster user
+                                submitted keywords based on top ranking pages,
+                                semantic similarity, user intent, and popularity
+                            </li>
+                            <li className="p2">
+                                Stores keyword groups in non-relational
+                                database, served from Node.js/Express.js cloud
+                                hosted server
+                            </li>
+                            <li className="p2">
+                                Achieved 50+ sign-ups, and $190.00 in sales in
+                                first 3 months from launch, as an entirely
+                                bootstrapped SaaS
+                            </li>
+                            <li className="p2">
+                                Demonstrates strong skills in web application
+                                development, data management, and familiarity
+                                with cloud hosting
+                            </li>
                             <p>
                                 <h3>Budget App Free</h3>
                                 <a href="https://www.budgetappfree.com/">
@@ -278,7 +410,7 @@ export default class Projects extends React.Component {
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a>
                                 <a href="https://github.com/Tasselhat/BudgetTracker">
-                                    Code:{" "}
+                                    Frontend Code:{" "}
                                     <u>github.com/Tasselhat/BudgetTracker</u>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a>
@@ -290,18 +422,29 @@ export default class Projects extends React.Component {
                                 2022
                             </p>
                             <br />
-                            <p>
-                                Web app for submitting and saving user budget,
-                                displaying to users a breakdown of their
-                                expenses and savings (React , Node , Express ,
-                                MongoDB, Heroku )
-                            </p>
+                            <li className="p2">
+                                Created a Single Page Web Application using
+                                React and Node.js/Express backend to allow users
+                                build and save personal budgets, display
+                                expenses and savings, and calculate compound
+                                interest.
+                            </li>
+                            <li className="p2">
+                                Collaborated with other students in the UCSD
+                                computer science department for ideas,
+                                assistance, and feedback.
+                            </li>
+                            <li className="p2">
+                                Successfully built and launched the app,
+                                providing users with a useful tool for managing
+                                their personal finances.
+                            </li>
                         </div>
                         <div className="Education-Wrapper">
                             <h2>
                                 <u>EDUCATION</u>
                             </h2>
-                            <p>
+                            <p className="p2">
                                 B.S. in Psychology with a Specialization in
                                 Developmental Psychology / 3.96 GPA /
                                 <b>UC San Diego </b>/ September 2021 - June 2023
@@ -317,16 +460,15 @@ export default class Projects extends React.Component {
                                 <u>SKILLS & FOCUSES</u>
                             </h3>
                             <div>
-                                <li> User Experience</li>
-                                <li> UI design</li>
-                                <li> Leadership and Teaching experience</li>
+                                <li> UI/UX design and development</li>
                                 <li>
                                     Continually seeking improvement and
                                     expanding education
                                 </li>
                                 <li> Research experience</li>
+                                <li> Leadership and Teaching experience</li>
                                 <li>
-                                    Background in psychology and human
+                                    Unique background in psychology and human
                                     development
                                 </li>
                             </div>
@@ -337,31 +479,25 @@ export default class Projects extends React.Component {
                             </h3>
                             <p>
                                 <b>Eagle Scout Award </b>/ Boy Scouts of America
-                                - Awarded July 18, 2016
                             </p>
                             <p>
                                 <b>Treasurer </b>/ AGS Honor Society & Circle K
-                                - Kiwanis Service Club Tahoe Branch - Sept 2020
-                                - June 2021
+                                - Kiwanis Service Club Tahoe Branch
                             </p>
                             <p>
-                                <b>Media Chair </b>/ UCSD Club Gymnastics - June
-                                2022 - June 2023
+                                <b>Media Chair </b>/ UCSD Club Gymnastics
                             </p>
                             <p>
-                                <b>Provost Honors | 4.0 GPA </b>/ UC San Diego -
-                                Terms: Fall Qtr 2021, Winter Qtr 2022
+                                <b>Provost Honors </b>/ UC San Diego
                             </p>
                             <p>
-                                <b>Janice Tait Memorial Scholarship</b>/ Awarded
-                                Fall 2020
+                                <b>Janice Tait Memorial Scholarship</b>
                             </p>
                             <p>
                                 <b>
                                     Soroptimist International of South Lake
                                     Tahoe Scholarship
                                 </b>
-                                / Awarded Fall 2020
                             </p>
                         </div>
                         <div>

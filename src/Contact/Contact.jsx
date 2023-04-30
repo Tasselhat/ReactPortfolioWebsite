@@ -62,12 +62,12 @@ export default class Contact extends React.Component {
                             onSubmit={this.handleSubmit.bind(this)}
                             method="POST"
                         >
-                            <h2 className="form-h2">Send Me A Message</h2>
+                            <h2 className="form-h2">Contact Me</h2>
                             <label className="form-labels" htmlFor="name">
-                                Name
+                                Name / Company Name
                                 <input
                                     type="text"
-                                    placeholder="Smart and Charismatic Recruiter (That's You)"
+                                    placeholder="Your Name || Company / Agency Name"
                                     className="form-control"
                                     value={this.state.name}
                                     onChange={this.onNameChange.bind(this)}

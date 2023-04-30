@@ -98,7 +98,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>Javascript&nbsp;</span>
@@ -112,7 +112,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>
@@ -128,7 +128,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>React.js&nbsp;</span>
@@ -142,7 +142,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>Next.js&nbsp;</span>
@@ -156,7 +156,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>HTML 5&nbsp;</span>
@@ -170,7 +170,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>Responsive CSS&nbsp;</span>
@@ -184,7 +184,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>Node.js + Express.js&nbsp;</span>
@@ -198,7 +198,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>Python (Beginner)&nbsp;</span>
@@ -212,7 +212,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>MongoDB + Atlas&nbsp;&nbsp;</span>
@@ -226,7 +226,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>Java (Beginner)&nbsp;</span>
@@ -240,7 +240,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <a href="https://github.com/Tasselhat">
@@ -259,7 +259,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>VS Code Editor&nbsp;</span>
@@ -273,7 +273,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>
@@ -289,7 +289,7 @@ export default class Projects extends React.Component {
                                         <Fa.FaCircle
                                             style={{
                                                 fontSize: "8px",
-                                                padding: "0 4px 0 0",
+                                                padding: "0 16px 0 0",
                                             }}
                                         />
                                         <span>
@@ -334,12 +334,12 @@ export default class Projects extends React.Component {
                                 accessibility, and best practice score of 100
                             </li>
                             <li className="p2">
-                                Facilitated ongoing dialogue with owner operator
-                                to assess client expectations, construct
-                                skeleton designs, offer support, and complete
-                                monthly website maintenance and upkeep,
-                                demonstrating strong communication and project
-                                management skills.
+                                Facilitated ongoing dialogue with owner to
+                                assess client expectations, construct skeleton
+                                designs, offer support, and complete monthly
+                                website maintenance and upkeep, demonstrating
+                                strong communication and project management
+                                skills.
                             </li>
                             <li className="p2">
                                 Implemented class calendar utilizing google

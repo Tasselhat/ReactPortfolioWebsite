@@ -26,17 +26,20 @@ import "../index.css";
 // Function will execute on click of button
 const onButtonClick = () => {
     // using JavaScript method to get PDF file
-    fetch("Engineering Resume Tim Schneider.pdf").then((response) => {
-        response.blob().then((blob) => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement("a");
-            alink.href = fileURL;
-            alink.download = "Engineering Resume Tim Schneider.pdf";
-            alink.click();
-        });
-    });
+    fetch("Software Engineering Resume - Tim Schneider.pdf").then(
+        (response) => {
+            response.blob().then((blob) => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download =
+                    "Software Engineering Resume - Tim Schneider.pdf";
+                alink.click();
+            });
+        }
+    );
 };
 export default class Projects extends React.Component {
     constructor(props) {
@@ -328,10 +331,9 @@ export default class Projects extends React.Component {
                             </p>
                             <br />
                             <li className="p2">
-                                {" "}
-                                Designed, developed, and launched new website,
+                                Designed, developed, and deployed new website,
                                 optimizing to achieve a Lighthouse SEO,
-                                accessibility, and best practice score of 100
+                                accessibility, and best practice score of 100.
                             </li>
                             <li className="p2">
                                 Facilitated ongoing dialogue with owner to
@@ -378,30 +380,32 @@ export default class Projects extends React.Component {
                             </p>
                             <br />
                             <li className="p2">
-                                Developed and launched a Full Stack SaaS Next.js
-                                Web Application to simplify the process of
+                                Developed and launched a full stack SaaS web
+                                application to simplify the process of
                                 identifying clusters of related search terms for
                                 digital marketers and SEO professionals.
                             </li>
                             <li className="p2">
                                 Utilizes Google SERP API to cluster user
                                 submitted keywords based on top ranking pages,
-                                semantic similarity, user intent, and popularity
+                                semantic similarity, user intent, and
+                                popularity.
                             </li>
                             <li className="p2">
-                                Stores keyword groups in non-relational
-                                database, served from Node.js/Express.js cloud
-                                hosted server
+                                Stores keyword groups in a non-relational
+                                database, served from Node.js/Express cloud
+                                hosted server.
                             </li>
                             <li className="p2">
                                 Achieved 50+ sign-ups, and $190.00 in sales in
                                 first 3 months from launch, as an entirely
-                                bootstrapped SaaS
+                                bootstrapped SaaS.
                             </li>
                             <li className="p2">
                                 Demonstrates strong skills in web application
                                 development, data management, and familiarity
-                                with cloud hosting
+                                with cloud hosting, built primarily with React,
+                                Next, and Node.
                             </li>
                             <p>
                                 <h3>Budget App Free</h3>
@@ -424,20 +428,20 @@ export default class Projects extends React.Component {
                             <br />
                             <li className="p2">
                                 Created a Single Page Web Application using
-                                React and Node.js/Express backend to allow users
+                                React and Node/Express backend to allow users to
                                 build and save personal budgets, display
                                 expenses and savings, and calculate compound
                                 interest.
                             </li>
                             <li className="p2">
                                 Collaborated with other students in the UCSD
-                                computer science department for ideas,
-                                assistance, and feedback.
+                                computer science department for ideas, and
+                                feedback.
                             </li>
                             <li className="p2">
                                 Successfully built and launched the app,
-                                providing users with a useful tool for managing
-                                their personal finances.
+                                providing a useful tool for managing personal
+                                finances.
                             </li>
                         </div>
                         <div className="Education-Wrapper">

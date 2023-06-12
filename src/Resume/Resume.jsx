@@ -15,6 +15,7 @@ import HTMLlogo from "../images/HTML5-logo.png";
 import VSCodelogo from "../images/VSCode-logo.png";
 import MongoDBlogo from "../images/mongodb.svg";
 import Nextjslogo from "../images/nextjs-icon-svgrepo-com.svg";
+import Flasklogo from "../images/flask.svg";
 
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
@@ -118,9 +119,7 @@ export default class Projects extends React.Component {
                                                 padding: "0 16px 0 0",
                                             }}
                                         />
-                                        <span>
-                                            Typescript (Transitioning)&nbsp;
-                                        </span>
+                                        <span>Typescript&nbsp;</span>
                                         <img
                                             src={TypeScriptlogo}
                                             alt=""
@@ -204,9 +203,23 @@ export default class Projects extends React.Component {
                                                 padding: "0 16px 0 0",
                                             }}
                                         />
-                                        <span>Python (Beginner)&nbsp;</span>
+                                        <span>Python (Intermediate)&nbsp;</span>
                                         <img
                                             src={Pythonlogo}
+                                            alt=""
+                                            className="tool-logo"
+                                        />
+                                    </li>
+                                    <li className="resumeIcons">
+                                        <Fa.FaCircle
+                                            style={{
+                                                fontSize: "8px",
+                                                padding: "0 16px 0 0",
+                                            }}
+                                        />
+                                        <span>Flask&nbsp;</span>
+                                        <img
+                                            src={Flasklogo}
                                             alt=""
                                             className="tool-logo"
                                         />
@@ -324,31 +337,38 @@ export default class Projects extends React.Component {
                                 </a>
                                 <br />
                                 <br />
-                                Contractor | Web
-                                Development&nbsp;&nbsp;&nbsp;&nbsp;November 2022
-                                - Present &nbsp;&nbsp;&nbsp;&nbsp;(Redding, CA -
-                                Remote)
+                                Web Developer&nbsp;&nbsp;&nbsp;&nbsp;November
+                                2022 - Present &nbsp;&nbsp;&nbsp;&nbsp;(Redding,
+                                CA - Remote)
                             </p>
                             <br />
                             <li className="p2">
-                                Designed, developed, and deployed new website,
-                                optimizing to achieve a Lighthouse SEO,
+                                <strong>
+                                    Designed, developed, and deployed a new
+                                    custom website
+                                </strong>
+                                , optimizing to achieve a Lighthouse SEO,
                                 accessibility, and best practice score of 100.
                             </li>
                             <li className="p2">
-                                Facilitated ongoing dialogue with owner to
-                                assess client expectations, construct skeleton
-                                designs, offer support, and complete monthly
-                                website maintenance and upkeep, demonstrating
-                                strong communication and project management
-                                skills.
+                                <strong>
+                                    Facilitated ongoing dialogue with
+                                    owner&nbsp;
+                                </strong>
+                                to assess client expectations, construct
+                                skeleton designs, offer support, and complete
+                                monthly website maintenance and upkeep,
+                                demonstrating strong communication and project
+                                management skills.
                             </li>
                             <li className="p2">
-                                Implemented class calendar utilizing google
-                                calendar API and backend email server for
-                                contact page, increasing average monthly email
-                                contact rate by over 400%, improving customer
-                                engagement.
+                                <strong>
+                                    Increased average monthly email contact rate
+                                    by over 400%
+                                </strong>
+                                , improving customer engagement by implementing
+                                a class calendar utilizing google calendar API
+                                and backend email server for contact page.
                             </li>
                         </div>
                         <div className="Projects-Wrapper">
@@ -380,15 +400,21 @@ export default class Projects extends React.Component {
                             </p>
                             <br />
                             <li className="p2">
-                                Developed and launched a full stack SaaS web
-                                application to simplify the process of
-                                identifying clusters of related search terms for
-                                digital marketers and SEO professionals.
+                                <strong>
+                                    Developed and launched a full stack SaaS web
+                                    application&nbsp;
+                                </strong>
+                                to simplify the process of identifying clusters
+                                of related search terms for digital marketers
+                                and SEO professionals.
                             </li>
                             <li className="p2">
-                                Utilizes Google SERP API to cluster user
-                                submitted keywords based on top ranking pages,
-                                semantic similarity, user intent, and
+                                <strong>
+                                    Utilizes Google SERP API to cluster user
+                                    submitted keywords based on top ranking
+                                    pages
+                                </strong>
+                                , semantic similarity, user intent, and
                                 popularity.
                             </li>
                             <li className="p2">
@@ -397,15 +423,20 @@ export default class Projects extends React.Component {
                                 hosted server.
                             </li>
                             <li className="p2">
-                                Achieved 50+ sign-ups, and $190.00 in sales in
-                                first 3 months from launch, as an entirely
-                                bootstrapped SaaS.
+                                <strong>
+                                    Achieved 50+ sign-ups, and over $200 in
+                                    sales in first 3 months from launch
+                                </strong>
+                                , as an entirely bootstrapped SaaS.
                             </li>
                             <li className="p2">
-                                Demonstrates strong skills in web application
-                                development, data management, and familiarity
-                                with cloud hosting, built primarily with React,
-                                Next, and Node.
+                                <strong>
+                                    Demonstrates strong skills in web
+                                    application development
+                                </strong>
+                                , data management, and familiarity with cloud
+                                hosting, built primarily with React, Next, and
+                                Node.
                             </li>
                             <p>
                                 <h3>Budget App Free</h3>
@@ -427,19 +458,26 @@ export default class Projects extends React.Component {
                             </p>
                             <br />
                             <li className="p2">
-                                Created a Single Page Web Application using
-                                React and Node/Express backend to allow users to
-                                build and save personal budgets, display
-                                expenses and savings, and calculate compound
-                                interest.
+                                <strong>
+                                    Used React.js and Node/Express backend to
+                                    create a single page application (SPA)
+                                </strong>
+                                allowing users to build and save personal
+                                budgets, display expenses and savings, and
+                                calculate compound interest.
                             </li>
                             <li className="p2">
-                                Collaborated with other students in the UCSD
-                                computer science department for ideas, and
-                                feedback.
+                                <strong>
+                                    Collaborated with other students in the UCSD
+                                    computer science department
+                                </strong>
+                                for ideas, and feedback.
                             </li>
                             <li className="p2">
-                                Successfully built and launched the app,
+                                <strong>
+                                    Successfully built and launched the
+                                    app,&nbsp;
+                                </strong>
                                 providing a useful tool for managing personal
                                 finances.
                             </li>
@@ -450,11 +488,11 @@ export default class Projects extends React.Component {
                             </h2>
                             <p className="p2">
                                 B.S. in Psychology with a Specialization in
-                                Developmental Psychology / 3.96 GPA /
+                                Developmental Psychology / 3.82 GPA /
                                 <b>UC San Diego </b>/ September 2021 - June 2023
                             </p>
                             <p>
-                                AA-T Psychology / 3.87 GPA /
+                                AA Psychology / 3.87 GPA /
                                 <b>Lake Tahoe Community College </b>/ September
                                 2019 - June 2021
                             </p>
@@ -464,6 +502,7 @@ export default class Projects extends React.Component {
                                 <u>SKILLS & FOCUSES</u>
                             </h3>
                             <div>
+                                <li> Full-stack web development</li>
                                 <li> UI/UX design and development</li>
                                 <li>
                                     Continually seeking improvement and

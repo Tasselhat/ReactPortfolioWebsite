@@ -78,9 +78,6 @@ export default class Projects extends React.Component {
                                 <a href="mailto:Tim.b.schneider@gmail.com">
                                     Tim.b.schneider@gmail.com &nbsp;&nbsp;
                                 </a>
-                                <a href="tel:5035167078">
-                                    -&nbsp;&nbsp; (503) 516-7078 &nbsp;&nbsp;
-                                </a>
                                 -&nbsp;&nbsp; San Diego, CA
                                 &nbsp;&nbsp;-&nbsp;&nbsp;
                                 <a href="https://www.linkedin.com/in/timbschneider/">

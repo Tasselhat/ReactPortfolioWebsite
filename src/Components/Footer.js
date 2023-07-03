@@ -92,12 +92,6 @@ class Footer extends Component {
                             >
                                 Tim.b.schneider@gmail.com
                             </a>
-                            <a
-                                href="tel:5035167078"
-                                className="footer-link padding-bottom-24"
-                            >
-                                (503)-516-7078
-                            </a>
                             <div className="line"></div>
                             <div>
                                 <a

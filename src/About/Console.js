@@ -1,7 +1,26 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+
+const TARGET_TEXT =
+    "....███▒.....▄█▒...▄▄▄▄███▄▄▄▄...........▄████████▒.▄████████▒...▄█▒...█▄....███▄▄▄▄......▄████████▒.▄█▒.████████▄.....▄████████▒...▄████████▒███████████.███▒.▄██▀▀▀███▀▀▀██▄........███▒...███▒███▒...███▒..███▒...███▒..███▀▀▀██▄...███▒...███▒███▒.███▒..▀███...███▒...███▒..███▒...███▒█▀..███▒▀██▒███▌.███▒..███▒..███▒.......███▒...█▀..███▒...█▀....███▒...███▒..███▒..███▒..███▒...█▀..███▌.███▒...███▒..███▒...█▀....███▒...███▒....███▒..▀.███▌.███▒..███▒..███▒.......███▒.......███▒........▄███▄▄▄▄███▄▄.███▒..███▒.▄███▄▄▄.....███▌.███▒...███▒.▄███▄▄▄......▄███▄▄▄▄██▀.....███▒....███▌.███▒..███▒..███▒.....▀███████████▒███▒.......▀▀███▀▀▀▀███▀..███▒..███▒▀▀███▀▀▀.....███▌.███▒...███▒▀▀███▀▀▀.....▀▀███▀▀▀▀▀.......███▒....███▒.███▒..███▒..███▒..............███▒███▒...█▄....███▒...███▒..███▒..███▒..███▒...█▄..███▒.███▒...███▒..███▒...█▄..▀███████████.....███▒....███▒.███▒..███▒..███▒........▄█▒...███▒███▒...███▒..███▒...███▒..███▒..███▒..███▒...███▒███▒.███▒..▄███▒..███▒...███...███▒...███▒...▄████▀...█▀....▀█▒..███▒..█▀........▄████████▀..████████▀....███▒...█▀.....▀█▒..█▀....██████████▒█▀...████████▀....██████████▒..███▒...███▒...................................................................................................................................███▒...███▒";
+const CYCLES_PER_LETTER = 2;
+const SHUFFLE_TIME = 60;
+
+const CHARS =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz0123456789çµñ©æáßðøöóíúüþéåäö¶×&^%$#@>:+)*=];";
 
 const Console = () => {
+    const intervalRef = useRef(null);
+    const [text, setText] = useState(
+        Array.from(
+            { length: TARGET_TEXT.length },
+            () => CHARS[Math.floor(Math.random() * CHARS.length)]
+        )
+            .join("")
+            .replace(/(.{142})/g, "$1\n")
+    );
+
     const [inputText, setInput] = useState("");
     const [consoleOutput, setOutput] = useState("");
     let [prompt, setPrompt] = useState("C:\\WINDOWS\\system32>");
@@ -32,6 +51,60 @@ const Console = () => {
             setInput("");
         }
     };
+
+    const shuffle = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
+    const arrayLengthTargetText = Array.from(Array(TARGET_TEXT.length).keys());
+
+    const scramble = (TARGET_TEXT, setText) => {
+        let pos = 0;
+        let randomizedArray = shuffle(arrayLengthTargetText);
+
+        intervalRef.current = setInterval(() => {
+            const scrambled = TARGET_TEXT.split("")
+                .map((c, i) => {
+                    if (!randomizedArray.includes(i)) return c;
+                    const randomChar =
+                        CHARS[Math.floor(Math.random() * CHARS.length)];
+                    return randomChar;
+                })
+                .join("");
+            if (pos < 40) {
+                randomizedArray.splice(0, 20);
+            } else if (pos < 150) {
+                randomizedArray.splice(0, 9);
+            } else {
+                randomizedArray.splice(0, 3);
+            }
+            const stringWithNewlines = scrambled.replace(/(.{142})/g, "$1\n");
+            setText(stringWithNewlines);
+            pos++;
+
+            if (
+                pos >= TARGET_TEXT.length ||
+                arrayLengthTargetText.length === 0
+            ) {
+                stopScramble1();
+            }
+        }, SHUFFLE_TIME);
+    };
+
+    const stopScramble1 = () => {
+        clearInterval(intervalRef.current || undefined);
+        const stringWithNewlines = TARGET_TEXT.replace(/(.{142})/g, "$1\n");
+        setText(stringWithNewlines);
+    };
+
+    const stopScramble = (TARGET_TEXT, setTextFunc) => {
+        clearInterval(intervalRef.current || undefined);
+        setTextFunc(TARGET_TEXT);
+    };
+
+    useEffect(() => {
+        scramble(TARGET_TEXT, setText);
+    }, []);
 
     const processCommand = (inputText) => {
         let newOutput = "";
@@ -220,86 +293,64 @@ const Console = () => {
             }}
         >
             <section className="Console" ref={scrollRef}>
-                <p className="asciiName">
-                    ....███▒.....▄█▒...▄▄▄▄███▄▄▄▄...........▄████████▒.▄████████▒...▄█▒...█▄....███▄▄▄▄......▄████████▒.▄█▒.████████▄.....▄████████▒...▄████████▒
-                    <br></br>
-                    ███████████.███▒.▄██▀▀▀███▀▀▀██▄........███▒...███▒███▒...███▒..███▒...███▒..███▀▀▀██▄...███▒...███▒███▒.███▒..▀███...███▒...███▒..███▒...███▒
-                    <br></br>
-                    █▀..███▒▀██▒███▌.███▒..███▒..███▒.......███▒...█▀..███▒...█▀....███▒...███▒..███▒..███▒..███▒...█▀..███▌.███▒...███▒..███▒...█▀....███▒...███▒
-                    <br></br>
-                    ....███▒..▀.███▌.███▒..███▒..███▒.......███▒.......███▒........▄███▄▄▄▄███▄▄.███▒..███▒.▄███▄▄▄.....███▌.███▒...███▒.▄███▄▄▄......▄███▄▄▄▄██▀.
-                    <br></br>
-                    ....███▒....███▌.███▒..███▒..███▒.....▀███████████▒███▒.......▀▀███▀▀▀▀███▀..███▒..███▒▀▀███▀▀▀.....███▌.███▒...███▒▀▀███▀▀▀.....▀▀███▀▀▀▀▀...
-                    <br></br>
-                    ....███▒....███▒.███▒..███▒..███▒..............███▒███▒...█▄....███▒...███▒..███▒..███▒..███▒...█▄..███▒.███▒...███▒..███▒...█▄..▀███████████.
-                    <br></br>
-                    ....███▒....███▒.███▒..███▒..███▒........▄█▒...███▒███▒...███▒..███▒...███▒..███▒..███▒..███▒...███▒███▒.███▒..▄███▒..███▒...███...███▒...███▒
-                    <br></br>
-                    ...▄████▀...█▀....▀█▒..███▒..█▀........▄████████▀..████████▀....███▒...█▀.....▀█▒..█▀....██████████▒█▀...████████▀....██████████▒..███▒...███▒
-                    <br></br>
-                    ...................................................................................................................................███▒...███▒
-                    <br></br>
-                    <br></br>
-                    ........................,,uod8B8bou,,.<br></br>
-                    ................,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.<br></br>
+                <motion.div>{text}</motion.div>
+                <p className="asciiName" id="asciiName">
+                    <br /> <br /> ........................,,uod8B8bou,,. <br />
+                    ................,uod8BBBBBBBBBBBBBBBBRPFT?l!i:. <br />
                     .........,=m8BBBBBBBBBBBBBBBRPFT?!|||||||||||||| Welcome to
-                    my website! My name is Tim Schneider.<br></br>
+                    my website! My name is Tim Schneider. <br />
                     .........!...:!TVBBBRPFT||||||||||!!^^""'&nbsp;&nbsp;&nbsp;||||
-                    <br></br>
+                    <br />
                     .........!.......:!?|||||!!^^""'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    I'm a software engineer from sunny San Diego, California
-                    <br></br>
+                    I'm a software engineer from sunny San Diego, California{" "}
+                    <br />
                     .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    <br></br>
+                    <br />
                     .........!.........||||&nbsp;&nbsp;##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
                     I primarily use React.js, which is what was used to build
-                    this website
-                    <br></br>
+                    this website <br />
                     .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    <br></br>
+                    <br />
                     .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    Want to know more or just a curious soul?<br></br>
+                    Want to know more or just a curious soul? <br />
                     .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    <br></br>
+                    <br />
                     .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    Try some commands in the terminal below<br></br>
+                    Try some commands in the terminal below <br />
                     .........`.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,||||
-                    <br></br>
+                    <br />
                     ...........;.......||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_.-!!|||||
-                    <br></br>
+                    <br />
                     ....,uodWBBBBb.....||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_.-!!|||||||||!:'
-                    <br></br>
-                    !YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
-                    <br></br>
-                    !..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::...`.
-                    <br></br>
-                    !....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::.....`.
-                    <br></br>
+                    <br /> !YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....{" "}
+                    <br />
+                    !..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::...`.{" "}
+                    <br />
+                    !....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::.....`.{" "}
+                    <br />
                     !......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::.......`.
-                    <br></br>
+                    <br />
                     !........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;.........iBBbo.
-                    <br></br>
+                    <br />
                     `..........YBRPFT?!::::::::::::::::::::::::;iof68bo.......WBBBBbo.
-                    <br></br>
+                    <br />
                     ..`..........:::::::::::::::::::::::;iof688888888888b......`YBBBP^'
-                    <br></br>
+                    <br />
                     ....`........::::::::::::::::;iof688888888888888888888b......`
-                    <br></br>
+                    <br />
                     ......`......:::::::::;iof688888888888888888888888888888b.
-                    <br></br>
+                    <br />
                     ........`....:::;iof688888888888888888888888888888888899fT!
-                    <br></br>
+                    <br />{" "}
                     ..........`..::!8888888888888888888888888888888899fT|!^"'
-                    <br></br>
-                    ............`'.!!988888888888888888888888899fT|!^"'<br></br>
-                    ................`!!8888888888888888899fT|!^"'<br></br>
-                    ..................`!988888888899fT|!^"'<br></br>
-                    ....................`!9899fT|!^"'<br></br>
-                    ......................`!^"'<br></br>
-                    <br></br>
-                    Type 'help' for a list of possible commands, or try some you
-                    already know.<br></br>
-                    <br></br>
+                    <br /> ............`'.!!988888888888888888888888899fT|!^"'{" "}
+                    <br />
+                    ................`!!8888888888888888899fT|!^"' <br />
+                    ..................`!988888888899fT|!^"' <br />
+                    ....................`!9899fT|!^"' <br />
+                    ......................`!^"' <br /> <br /> Type 'help' for a
+                    list of possible commands, or try some you already know.{" "}
+                    <br /> <br />
                 </p>
                 <div id="terminalOutput" className="terminalOutput">
                     {consoleOutput}

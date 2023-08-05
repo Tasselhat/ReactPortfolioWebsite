@@ -3,7 +3,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 
 const TARGET_TEXT = `....███▒.....▄█▒...▄▄▄▄███▄▄▄▄...........▄████████▒.▄████████▒...▄█▒...█▄....███▄▄▄▄......▄████████▒.▄█▒.████████▄.....▄████████▒...▄████████▒¶███████████.███▒.▄██▀▀▀███▀▀▀██▄........███▒...███▒███▒...███▒..███▒...███▒..███▀▀▀██▄...███▒...███▒███▒.███▒..▀███...███▒...███▒..███▒...███▒¶█▀..███▒▀██▒███▌.███▒..███▒..███▒.......███▒...█▀..███▒...█▀....███▒...███▒..███▒..███▒..███▒...█▀..███▌.███▒...███▒..███▒...█▀....███▒...███▒¶....███▒..▀.███▌.███▒..███▒..███▒.......███▒.......███▒........▄███▄▄▄▄███▄▄.███▒..███▒.▄███▄▄▄.....███▌.███▒...███▒.▄███▄▄▄......▄███▄▄▄▄██▀.¶....███▒....███▌.███▒..███▒..███▒.....▀███████████▒███▒.......▀▀███▀▀▀▀███▀..███▒..███▒▀▀███▀▀▀.....███▌.███▒...███▒▀▀███▀▀▀.....▀▀███▀▀▀▀▀...¶....███▒....███▒.███▒..███▒..███▒..............███▒███▒...█▄....███▒...███▒..███▒..███▒..███▒...█▄..███▒.███▒...███▒..███▒...█▄..▀███████████.¶....███▒....███▒.███▒..███▒..███▒........▄█▒...███▒███▒...███▒..███▒...███▒..███▒..███▒..███▒...███▒███▒.███▒..▄███▒..███▒...███...███▒...███▒¶...▄████▀...█▀....▀█▒..███▒..█▀........▄████████▀..████████▀....███▒...█▀.....▀█▒..█▀....██████████▒█▀...████████▀....██████████▒..███▒...███▒¶...................................................................................................................................███▒...███▒¶`;
-const TARGET_TEXT_COMPUTER = `¶¶........................,,uod8B8bou,,.¶................,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.¶.........,=m8BBBBBBBBBBBBBBBRPFT?!|||||||||||||| Welcome to my website, My name is Tim Schneider.¶.........!...:!TVBBBRPFT||||||||||!!^^""'   ||||¶.........!.......:!?|||||!!^^""'            |||| I'm a software engineer from sunny San Diego, California¶.........!.........||||                     ||||¶.........!.........||||  ##                 |||| I primarily use JS/TS, Next.js, Node.js, and React.js, which is what was used to build this website¶.........!.........||||                     ||||¶.........!.........||||                     |||| Want to know more or just a curious soul?¶.........!.........||||                     ||||¶.........!.........||||                     |||| Try some commands in the terminal below¶.........'.........||||                    ,||||¶...........;.......||||              _.-!!|||||¶....,uodWBBBBb.....||||       _.-!!|||||||||!:'¶!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....¶!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::...'.¶!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::.....'.¶!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"';:::.......'.¶!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;.........iBBbo.¶'..........YBRPFT?!::::::::::::::::::::::::;iof68bo.......WBBBBbo.¶..'..........:::::::::::::::::::::::;iof688888888888b......'YBBBP^'¶....'........::::::::::::::::;iof688888888888888888888b......'¶......'......:::::::::;iof688888888888888888888888888888b.¶........'....:::;iof688888888888888888888888888888888899fT!¶..........'..::!8888888888888888888888888888888899fT|!^"'¶............''.!!988888888888888888888888899fT|!^"'¶................'!!8888888888888888899fT|!^"'¶..................'!988888888899fT|!^"'¶....................'!9899fT|!^"'¶......................'!^"'¶¶Type 'help' for a list of possible commands, or try some you already know.¶¶`;
+const TARGET_TEXT_COMPUTER = `¶¶........................,,uod8B8bou,,.¶................,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.¶.........,=m8BBBBBBBBBBBBBBBRPFT?!|||||||||||||| Welcome to my website, My name is Tim Schneider.¶.........!...:!TVBBBRPFT||||||||||!!^^""'   ||||¶.........!.......:!?|||||!!^^""'            |||| I'm a software engineer from sunny San Diego, California¶.........!.........||||                     ||||¶.........!.........||||  ##                 |||| I primarily use JS/TS, Next.js, Node.js, and React.js, which is what was used to build this website¶.........!.........||||                     ||||¶.........!.........||||                     |||| Want to know more or just a curious soul?¶.........!.........||||                     ||||¶.........!.........||||                     |||| Try some commands in the terminal below¶.........\`.........||||                    ,||||¶...........;.......||||              _.-!!|||||¶....,uodWBBBBb.....||||       _.-!!|||||||||!:'¶!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....¶!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::...\`.¶!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::.....\`.¶!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"\`;:::.......\`.¶!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;........iBBbo.¶\`..........YBRPFT?!::::::::::::::::::::::::;iof68bo.......WBBBBbo.¶..\`..........:::::::::::::::::::::::;iof688888888888b......\`YBBBP^'¶....\`........::::::::::::::::;iof688888888888888888888b......\`¶......\`......:::::::::;iof688888888888888888888888888888b.¶........\`....:::;iof688888888888888888888888888888888899fT!¶..........\`..::!8888888888888888888888888888888899fT|!^"'¶............\`'.!!988888888888888888888888899fT|!^"'¶................\`!!8888888888888888899fT|!^"'¶..................\`!988888888899fT|!^"'¶....................\`!9899fT|!^"'¶......................\`!^"'¶¶Type 'help' for a list of possible commands, or try some you already know.¶¶`;
 const SHUFFLE_TIME = 70;
 
 const CHARS = "01";
@@ -30,7 +30,7 @@ const Console = () => {
 
     const [inputText, setInput] = useState("");
     const [consoleOutput, setOutput] = useState("");
-    let [prompt, setPrompt] = useState("C:\\WINDOWS\\system32>");
+    let [prompt, setPrompt] = useState("C:\\WINDOWS\\System32>");
     const inputRef = useRef();
     const scrollRef = useRef();
 
@@ -51,7 +51,7 @@ const Console = () => {
 
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
-            // Process the user's input as a command
+            // Process the user\`s input as a command
             processCommand(inputText);
 
             // Clear the input field
@@ -96,7 +96,7 @@ const Console = () => {
 
     const stopScramble = (TARGET_TEXT_SCOPED, setTextFunc) => {
         clearInterval(intervalRef.current || undefined);
-        setTextFunc(TARGET_TEXT_SCOPED);
+        setTextFunc(TARGET_TEXT_SCOPED.replace(/¶/g, "\n"));
     };
 
     useEffect(() => {
@@ -245,7 +245,7 @@ const Console = () => {
                 newOutput += "cd (directory)\n ";
                 break;
             case "cd ..":
-                if (prompt === "C:\\WINDOWS\\system32>") {
+                if (prompt === "C:\\WINDOWS\\System32>") {
                     prompt = "C:\\WINDOWS>";
                 } else if (prompt === "C:\\WINDOWS>") {
                     prompt = "C:\\>";
@@ -270,9 +270,9 @@ const Console = () => {
                     prompt = "C:\\WINDOWS>";
                 }
                 break;
-            case "cd system32":
+            case "cd System32":
                 if (prompt === "C:\\WINDOWS>") {
-                    prompt = "C:\\WINDOWS\\system32>";
+                    prompt = "C:\\WINDOWS\\System32>";
                 }
                 break;
             default:
@@ -296,7 +296,6 @@ const Console = () => {
                 <motion.div style={{ whiteSpace: "pre", overflow: "visible" }}>
                     {computerText}
                 </motion.div>
-                <p className="asciiName" id="asciiName"></p>
                 <div id="terminalOutput" className="terminalOutput">
                     {consoleOutput}
                 </div>

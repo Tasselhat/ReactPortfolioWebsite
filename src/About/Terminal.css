@@ -13,10 +13,6 @@
     text-shadow: 0 0.2rem 1rem #27e90e;
 }
 
-.asciiName {
-    white-space: nowrap;
-}
-
 #terminal {
     margin: 0;
 }
@@ -106,8 +102,6 @@
     transform: scale(-1, 1);
 }
 
-/* flicker animation from http://goonhub.com/secret */
-
 .flicker {
     position: fixed;
     top: 0;
@@ -118,7 +112,7 @@
     opacity: 0;
     z-index: 1000;
     pointer-events: none;
-    animation: flicker 0.12s infinite;
+    animation: flicker 0.1s infinite;
 }
 
 @keyframes flicker {
@@ -213,8 +207,8 @@
     background: linear-gradient(
         to bottom,
         rgba(255, 0, 0, 0) 0%,
-        rgba(255, 250, 250, 0.2) 50%,
-        rgba(255, 255, 255, 0.2) 51%,
+        rgba(255, 250, 250, 0.5) 50%,
+        rgba(255, 255, 255, 0.5) 51%,
         rgba(255, 0, 0, 0) 100%
     ); /* W3C */
     opacity: 0.1;
@@ -241,6 +235,7 @@
         transform: translate(0, 100vh);
     }
 }
+
 /* turn off animation */
 
 .tv.collapse {

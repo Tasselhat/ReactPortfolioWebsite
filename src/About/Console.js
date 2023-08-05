@@ -1,14 +1,12 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 
-const TARGET_TEXT =
-    "....███▒.....▄█▒...▄▄▄▄███▄▄▄▄...........▄████████▒.▄████████▒...▄█▒...█▄....███▄▄▄▄......▄████████▒.▄█▒.████████▄.....▄████████▒...▄████████▒███████████.███▒.▄██▀▀▀███▀▀▀██▄........███▒...███▒███▒...███▒..███▒...███▒..███▀▀▀██▄...███▒...███▒███▒.███▒..▀███...███▒...███▒..███▒...███▒█▀..███▒▀██▒███▌.███▒..███▒..███▒.......███▒...█▀..███▒...█▀....███▒...███▒..███▒..███▒..███▒...█▀..███▌.███▒...███▒..███▒...█▀....███▒...███▒....███▒..▀.███▌.███▒..███▒..███▒.......███▒.......███▒........▄███▄▄▄▄███▄▄.███▒..███▒.▄███▄▄▄.....███▌.███▒...███▒.▄███▄▄▄......▄███▄▄▄▄██▀.....███▒....███▌.███▒..███▒..███▒.....▀███████████▒███▒.......▀▀███▀▀▀▀███▀..███▒..███▒▀▀███▀▀▀.....███▌.███▒...███▒▀▀███▀▀▀.....▀▀███▀▀▀▀▀.......███▒....███▒.███▒..███▒..███▒..............███▒███▒...█▄....███▒...███▒..███▒..███▒..███▒...█▄..███▒.███▒...███▒..███▒...█▄..▀███████████.....███▒....███▒.███▒..███▒..███▒........▄█▒...███▒███▒...███▒..███▒...███▒..███▒..███▒..███▒...███▒███▒.███▒..▄███▒..███▒...███...███▒...███▒...▄████▀...█▀....▀█▒..███▒..█▀........▄████████▀..████████▀....███▒...█▀.....▀█▒..█▀....██████████▒█▀...████████▀....██████████▒..███▒...███▒...................................................................................................................................███▒...███▒";
-const CYCLES_PER_LETTER = 2;
-const SHUFFLE_TIME = 60;
+const TARGET_TEXT = `....███▒.....▄█▒...▄▄▄▄███▄▄▄▄...........▄████████▒.▄████████▒...▄█▒...█▄....███▄▄▄▄......▄████████▒.▄█▒.████████▄.....▄████████▒...▄████████▒¶███████████.███▒.▄██▀▀▀███▀▀▀██▄........███▒...███▒███▒...███▒..███▒...███▒..███▀▀▀██▄...███▒...███▒███▒.███▒..▀███...███▒...███▒..███▒...███▒¶█▀..███▒▀██▒███▌.███▒..███▒..███▒.......███▒...█▀..███▒...█▀....███▒...███▒..███▒..███▒..███▒...█▀..███▌.███▒...███▒..███▒...█▀....███▒...███▒¶....███▒..▀.███▌.███▒..███▒..███▒.......███▒.......███▒........▄███▄▄▄▄███▄▄.███▒..███▒.▄███▄▄▄.....███▌.███▒...███▒.▄███▄▄▄......▄███▄▄▄▄██▀.¶....███▒....███▌.███▒..███▒..███▒.....▀███████████▒███▒.......▀▀███▀▀▀▀███▀..███▒..███▒▀▀███▀▀▀.....███▌.███▒...███▒▀▀███▀▀▀.....▀▀███▀▀▀▀▀...¶....███▒....███▒.███▒..███▒..███▒..............███▒███▒...█▄....███▒...███▒..███▒..███▒..███▒...█▄..███▒.███▒...███▒..███▒...█▄..▀███████████.¶....███▒....███▒.███▒..███▒..███▒........▄█▒...███▒███▒...███▒..███▒...███▒..███▒..███▒..███▒...███▒███▒.███▒..▄███▒..███▒...███...███▒...███▒¶...▄████▀...█▀....▀█▒..███▒..█▀........▄████████▀..████████▀....███▒...█▀.....▀█▒..█▀....██████████▒█▀...████████▀....██████████▒..███▒...███▒¶...................................................................................................................................███▒...███▒¶`;
+const TARGET_TEXT_COMPUTER = `¶¶........................,,uod8B8bou,,.¶................,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.¶.........,=m8BBBBBBBBBBBBBBBRPFT?!|||||||||||||| Welcome to my website, My name is Tim Schneider.¶.........!...:!TVBBBRPFT||||||||||!!^^""'   ||||¶.........!.......:!?|||||!!^^""'            |||| I'm a software engineer from sunny San Diego, California¶.........!.........||||                     ||||¶.........!.........||||  ##                 |||| I primarily use JS/TS, Next.js, Node.js, and React.js, which is what was used to build this website¶.........!.........||||                     ||||¶.........!.........||||                     |||| Want to know more or just a curious soul?¶.........!.........||||                     ||||¶.........!.........||||                     |||| Try some commands in the terminal below¶.........'.........||||                    ,||||¶...........;.......||||              _.-!!|||||¶....,uodWBBBBb.....||||       _.-!!|||||||||!:'¶!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....¶!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::...'.¶!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::.....'.¶!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"';:::.......'.¶!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;.........iBBbo.¶'..........YBRPFT?!::::::::::::::::::::::::;iof68bo.......WBBBBbo.¶..'..........:::::::::::::::::::::::;iof688888888888b......'YBBBP^'¶....'........::::::::::::::::;iof688888888888888888888b......'¶......'......:::::::::;iof688888888888888888888888888888b.¶........'....:::;iof688888888888888888888888888888888899fT!¶..........'..::!8888888888888888888888888888888899fT|!^"'¶............''.!!988888888888888888888888899fT|!^"'¶................'!!8888888888888888899fT|!^"'¶..................'!988888888899fT|!^"'¶....................'!9899fT|!^"'¶......................'!^"'¶¶Type 'help' for a list of possible commands, or try some you already know.¶¶`;
+const SHUFFLE_TIME = 70;
 
-const CHARS =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmopqrstuvwxyz0123456789çµñ©æáßðøöóíúüþéåäö¶×&^%$#@>:+)*=];";
+const CHARS = "01";
 
 const Console = () => {
     const intervalRef = useRef(null);
@@ -18,7 +16,16 @@ const Console = () => {
             () => CHARS[Math.floor(Math.random() * CHARS.length)]
         )
             .join("")
-            .replace(/(.{142})/g, "$1\n")
+            .replace(/(.{142})./g, "$1\n")
+    );
+    const [computerText, setComputerText] = useState(
+        Array.from(
+            TARGET_TEXT_COMPUTER.replace(/[^ ¶]/g, (match) =>
+                match === "¶"
+                    ? "\n"
+                    : CHARS[Math.floor(Math.random() * CHARS.length)]
+            )
+        ).join("")
     );
 
     const [inputText, setInput] = useState("");
@@ -56,54 +63,45 @@ const Console = () => {
         return array.sort(() => Math.random() - 0.5);
     };
 
-    const arrayLengthTargetText = Array.from(Array(TARGET_TEXT.length).keys());
-
-    const scramble = (TARGET_TEXT, setText) => {
+    const scramble = (TARGET_TEXT, setTextFunc, revealNo) => {
+        const arrayLengthTargetText = Array.from(
+            Array(TARGET_TEXT.length).keys()
+        );
         let pos = 0;
         let randomizedArray = shuffle(arrayLengthTargetText);
+        let noOfLettersToReveal = revealNo;
 
         intervalRef.current = setInterval(() => {
             const scrambled = TARGET_TEXT.split("")
                 .map((c, i) => {
+                    if (c === "¶") return "\n";
                     if (!randomizedArray.includes(i)) return c;
+
                     const randomChar =
                         CHARS[Math.floor(Math.random() * CHARS.length)];
                     return randomChar;
                 })
                 .join("");
-            if (pos < 40) {
-                randomizedArray.splice(0, 20);
-            } else if (pos < 150) {
-                randomizedArray.splice(0, 9);
-            } else {
-                randomizedArray.splice(0, 3);
-            }
-            const stringWithNewlines = scrambled.replace(/(.{142})/g, "$1\n");
-            setText(stringWithNewlines);
+
+            randomizedArray.splice(0, noOfLettersToReveal);
+            noOfLettersToReveal = Math.max(noOfLettersToReveal * 0.92, 6);
+            setTextFunc(scrambled);
             pos++;
 
-            if (
-                pos >= TARGET_TEXT.length ||
-                arrayLengthTargetText.length === 0
-            ) {
-                stopScramble1();
+            if (pos >= TARGET_TEXT.length) {
+                stopScramble(TARGET_TEXT, setTextFunc);
             }
         }, SHUFFLE_TIME);
     };
 
-    const stopScramble1 = () => {
+    const stopScramble = (TARGET_TEXT_SCOPED, setTextFunc) => {
         clearInterval(intervalRef.current || undefined);
-        const stringWithNewlines = TARGET_TEXT.replace(/(.{142})/g, "$1\n");
-        setText(stringWithNewlines);
-    };
-
-    const stopScramble = (TARGET_TEXT, setTextFunc) => {
-        clearInterval(intervalRef.current || undefined);
-        setTextFunc(TARGET_TEXT);
+        setTextFunc(TARGET_TEXT_SCOPED);
     };
 
     useEffect(() => {
-        scramble(TARGET_TEXT, setText);
+        scramble(TARGET_TEXT, setText, 100);
+        scramble(TARGET_TEXT_COMPUTER, setComputerText, 140);
     }, []);
 
     const processCommand = (inputText) => {
@@ -115,15 +113,15 @@ const Console = () => {
         }
         switch (inputText.toLowerCase()) {
             case "help":
-                newOutput += `	  about          Who is Tim Schneider?
-          help           List commands
-          clear          Clear the terminal feed 
-          date / time    Display the current time
-          font           Display font name
-          dir            List directory
-          cat            conCATenate
-          tabsorspaces   The age old debate
-          vimoremacs     The less age old debate\n `;
+                newOutput += `	    about          Who is Tim Schneider?
+            help           List commands
+            clear          Clear the terminal feed 
+            date / time    Display the current time
+            font           Display font name
+            dir            List directory
+            cat            conCATenate
+            tabsorspaces   The age old debate
+            vimoremacs     The less age old debate\n `;
                 break;
             case "about":
                 newOutput += `\nName: Tim Schneider
@@ -133,29 +131,30 @@ const Console = () => {
             Education: University of California, San Diego
             
             Programming Languages & Tools: 
-			Javascript | Next.js | React.js | HTML 5 | Responsive CSS | Tailwind CSS 
-			Node.js | Express.js | MongoDB + Atlas | Java (Elementary) | Python (Familiar) | Heroku 
-			Git | Git Bash | npm (Node Package Manager) | CLI | Frontend | Full-Stack
+			JavaScript | TypeScript | Next.js | React.js | HTML 5 | Responsive CSS | Tailwind CSS 
+			Node.js | Express.js | MongoDB + Atlas | MySQL | Java | Python | Heroku | Azure | Netlify | Vercel
+			Git | Bash | npm (Node Package Manager) | CLI | Frontend | Full-Stack
 
             
             My name is Tim, I'm a developer, design enthusiast, gymnastics coach, and eternal student. 
-            I enjoy designing user experiences and interactive web applications. 
+            I enjoy building immersive and interactive web applications. 
             I've always had an interest in science and computers, 
             even back when I was 10 playing computer games on our dial up internet I would use inspect element on webpages to change the values of HTML elements 
             to trick my friends into thinking I was better at online games than I actually was.
             
-            Now I use programming tools to make web apps to solve problems and create interactive experiences!
+            Now I use programming tools to make my ideas into reality.
             
-            If you want to see my resume, contact me, or see more of my work, click one of the buttons in the bottom right corner to be redirected.
-            
-            
+            If you want to see my resume, contact me, or see more of my work, click one of the buttons in the bottom right corner to be redirected.            
             \n `;
                 break;
             case "dir":
                 newOutput +=
                     "\n   Directory of " +
                     prompt +
-                    "\n \n 08/04/2004  04:19 PM    <DIR>        Sorry nothing to see here \n ";
+                    `\n \n
+08/04/2004  16:20    <DIR>        Code I copied from stack overflow \n
+12/20/2005  01:19    <DIR>        Program Files \n
+05/16/2006  19:19    <DIR>        Users \n\n`;
                 break;
             case "log":
                 newOutput +=
@@ -167,7 +166,7 @@ const Console = () => {
                 newOutput += "\n Does this look like Linux to you silly?\n ";
                 break;
             case "type":
-                newOutput += "\n Uhhhhhhhhhhhhh\n ";
+                newOutput += "\n Uhhhhhhhhhhhhh, yes?\n ";
                 break;
             case "font":
                 newOutput += "IBM VGA 8x16 Plus\n ";
@@ -294,64 +293,10 @@ const Console = () => {
         >
             <section className="Console" ref={scrollRef}>
                 <motion.div>{text}</motion.div>
-                <p className="asciiName" id="asciiName">
-                    <br /> <br /> ........................,,uod8B8bou,,. <br />
-                    ................,uod8BBBBBBBBBBBBBBBBRPFT?l!i:. <br />
-                    .........,=m8BBBBBBBBBBBBBBBRPFT?!|||||||||||||| Welcome to
-                    my website! My name is Tim Schneider. <br />
-                    .........!...:!TVBBBRPFT||||||||||!!^^""'&nbsp;&nbsp;&nbsp;||||
-                    <br />
-                    .........!.......:!?|||||!!^^""'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    I'm a software engineer from sunny San Diego, California{" "}
-                    <br />
-                    .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    <br />
-                    .........!.........||||&nbsp;&nbsp;##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    I primarily use React.js, which is what was used to build
-                    this website <br />
-                    .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    <br />
-                    .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    Want to know more or just a curious soul? <br />
-                    .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    <br />
-                    .........!.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||||
-                    Try some commands in the terminal below <br />
-                    .........`.........||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,||||
-                    <br />
-                    ...........;.......||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_.-!!|||||
-                    <br />
-                    ....,uodWBBBBb.....||||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_.-!!|||||||||!:'
-                    <br /> !YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....{" "}
-                    <br />
-                    !..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::...`.{" "}
-                    <br />
-                    !....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::.....`.{" "}
-                    <br />
-                    !......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"`;:::.......`.
-                    <br />
-                    !........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;.........iBBbo.
-                    <br />
-                    `..........YBRPFT?!::::::::::::::::::::::::;iof68bo.......WBBBBbo.
-                    <br />
-                    ..`..........:::::::::::::::::::::::;iof688888888888b......`YBBBP^'
-                    <br />
-                    ....`........::::::::::::::::;iof688888888888888888888b......`
-                    <br />
-                    ......`......:::::::::;iof688888888888888888888888888888b.
-                    <br />
-                    ........`....:::;iof688888888888888888888888888888888899fT!
-                    <br />{" "}
-                    ..........`..::!8888888888888888888888888888888899fT|!^"'
-                    <br /> ............`'.!!988888888888888888888888899fT|!^"'{" "}
-                    <br />
-                    ................`!!8888888888888888899fT|!^"' <br />
-                    ..................`!988888888899fT|!^"' <br />
-                    ....................`!9899fT|!^"' <br />
-                    ......................`!^"' <br /> <br /> Type 'help' for a
-                    list of possible commands, or try some you already know.{" "}
-                    <br /> <br />
-                </p>
+                <motion.div style={{ whiteSpace: "pre", overflow: "visible" }}>
+                    {computerText}
+                </motion.div>
+                <p className="asciiName" id="asciiName"></p>
                 <div id="terminalOutput" className="terminalOutput">
                     {consoleOutput}
                 </div>

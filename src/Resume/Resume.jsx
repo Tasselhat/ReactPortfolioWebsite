@@ -74,7 +74,7 @@ export default class Projects extends React.Component {
                                 Web Development, Front-end, Full-stack Software
                                 Engineering
                             </h2>
-                            <h4>
+                            <h3>
                                 <a href="mailto:Tim.b.schneider@gmail.com">
                                     Tim.b.schneider@gmail.com &nbsp;&nbsp;
                                 </a>
@@ -87,7 +87,7 @@ export default class Projects extends React.Component {
                                 <a href="https://github.com/Tasselhat">
                                     -&nbsp;&nbsp; <u>github.com/Tasselhat</u>
                                 </a>
-                            </h4>
+                            </h3>
                         </header>
                         <div className="languages-wrapper">
                             <div className="languages-container">
@@ -372,7 +372,7 @@ export default class Projects extends React.Component {
                             <h2>
                                 <u>PROJECTS</u>
                             </h2>
-                            <p>
+                            <div>
                                 <h3>Optiwing SEO tool</h3>
                                 <a href="https://www.optiwing.com/">
                                     Live URL: <u>www.optiwing.com</u>
@@ -388,7 +388,7 @@ export default class Projects extends React.Component {
                                 </a>
                                 <br />
                                 <p>Private Front/Backend Repository</p>
-                            </p>
+                            </div>
                             <br />
                             <p>
                                 Founder&nbsp;&nbsp;&nbsp;&nbsp;Full-Stack SaaS
@@ -435,7 +435,7 @@ export default class Projects extends React.Component {
                                 hosting, built primarily with React, Next, and
                                 Node.
                             </li>
-                            <p>
+                            <div>
                                 <h3>Budget App Free</h3>
                                 <a href="https://www.budgetappfree.com/">
                                     Live URL: <u>www.BudgetAppFree.com</u>
@@ -446,7 +446,7 @@ export default class Projects extends React.Component {
                                     <u>github.com/Tasselhat/BudgetTracker</u>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                                 </a>
-                            </p>
+                            </div>
                             <br />
                             <p>
                                 Full-stack Personal

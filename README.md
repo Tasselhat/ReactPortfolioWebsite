@@ -1,6 +1,6 @@
-## React Portfolio Website
+## OLD: React Portfolio Website
 
-This project is a collection of my projects and pages for my portfolio website.
+OLD: This project is a collection of my projects and pages for my portfolio website.
 
 My portfolio can be found here: https://www.timbschneider.com/
 
